@@ -7,107 +7,6 @@
     <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/about/educatie.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/about/scoli.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/about/youth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/blog/cd_sedinta2021.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/blog/juriu_gala_profi_2024.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/blog/jurizare_gala.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/blog/stefan_jurizare_gala.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/gvr-people.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/hero-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/invitati_abc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/parteneri/bdv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/parteneri/canva.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/parteneri/github.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/parteneri/google.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/parteneri/microsoft-azure.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/parteneri/nooka.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/parteneri/okta.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/planul-nostru/aptitudini.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/planul-nostru/management.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/planul-nostru/online.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/premii/Newsletter-SPCMA-mai-iunie-2021.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/premii/cnv2020.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/premii/cnv2021.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/premii/codeweek.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/premii/gala-galati.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/premii/gala-nemo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/premii/lit-digit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/produse/bag-tedx-with-pen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/raly_nooka.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/raly_workshop_cje.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/AmExamen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Andrei.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Asistent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Catalog.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Concursuri.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Cosmin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Eva.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/HowTo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/InfoStart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Larisa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/LearnHub.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Mara.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Stefan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/StudFund.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Teme.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/Teste.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/adolescentin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/solutions/fiide10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/stories/iulia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/stories/maya.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/stories/stefan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team-group/bkm_centru.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team-group/tedx_stage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team-group/tgmures_abc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team/bianca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team/claudiu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team/crina.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team/darius-merian.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team/darius.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team/florin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team/mariana.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team/raly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/team/stefan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/tedx_principalphoto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/workshop_cj_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logos/SAL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logos/SOL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logos/logo-black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logos/logo-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logos/web365-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/despre/echipa.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/echipa.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/despre/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/doneaza/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/doneaza/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/parteneri/PartenerCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/parteneri/PartenerCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/plan/SolutionPopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/plan/SolutionPopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/plan/digitalsolutions-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/plan/digitalsolutions-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/plan/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/plan/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/premii/PremiuCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/premii/PremiuCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sponsorizeaza/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sponsorizeaza/hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sponsorizeaza/info-popup.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sponsorizeaza/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sponsorizeaza/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/transfer/transfer-data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/transfer/transfer-data.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/donationModal/PaymentModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/PaymentModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageContent/column-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageContent/column-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageContent/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageContent/hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/ceFacem.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/ceFacem.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/parteneri.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/parteneri.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/premii.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/premii.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/solutions.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/solutions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/studentsStories.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/studentsStories.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +36,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/cosmin-andrei/onedu-website.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/ONeduRomania/onedu.ro.git&quot;,
     &quot;accountId&quot;: &quot;67c43df5-1059-4bc2-acec-0b0717d223fa&quot;
   }
 }</component>
@@ -155,32 +54,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.10.2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ONedu/onedu-website/public/image&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\ONedu\\onedu-website\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.10.2",
+    "last_opened_file_path": "D:/ONedu/onedu-website/public/image",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\ONedu\\onedu.ro\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ONedu\onedu-website\public\image" />
@@ -250,22 +149,8 @@
       <workItem from="1737047299528" duration="11000" />
       <workItem from="1737058642346" duration="193000" />
       <workItem from="1737806291635" duration="8560000" />
-    </task>
-    <task id="LOCAL-00019" summary="fix error">
-      <option name="closed" value="true" />
-      <created>1734133597199</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1734133597199</updated>
-    </task>
-    <task id="LOCAL-00020" summary="fix error">
-      <option name="closed" value="true" />
-      <created>1734133681982</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1734133681982</updated>
+      <workItem from="1737815555102" duration="817000" />
+      <workItem from="1737816502516" duration="30000" />
     </task>
     <task id="LOCAL-00021" summary="fix error">
       <option name="closed" value="true" />
@@ -643,7 +528,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736853863126</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="update">
+      <option name="closed" value="true" />
+      <created>1737815764214</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1737815764214</updated>
+    </task>
+    <task id="LOCAL-00069" summary="update">
+      <option name="closed" value="true" />
+      <created>1737816312510</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1737816312510</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
