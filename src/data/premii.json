@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "imageSrc": "premii/codeweek.png",
+    "imageAlt": "codeweek",
+    "title": "Certificat CodeWeek EU",
+    "date": "10.11.2021",
+    "description": "Comunitatea ONedu România primește aprecierea Comisiei Europene pentru activitatea sa în promovarea educației digitale din cadrul Săptămânii Europene de Codare."
+  },
+  {
+    "id": 2,
+    "imageSrc": "premii/lit-digit.png",
+    "imageAlt": "certificat literatie digit",
+    "title": "Certificat de Excelență în Literație Digitală",
+    "date": "10.11.2021",
+    "description": "Comunitatea ONedu România primește aprecierea directorului Comisiei Europene pentru activitatea sa din Săptămâna EU de codare."
+  },
+  {
+    "id": 3,
+    "imageSrc": "premii/cnv2021.png",
+    "imageAlt": "SNV2021",
+    "title": "Certificat - Săptămâna Națională a Voluntariatului",
+    "date": "10.05.2021",
+    "description": "Comunitatea ONedu România primește aprecierea Pro Vobis pentru primul raport din România privind implementarea Legii Voluntariatului."
+  },
+  {
+    "id": 4,
+    "imageSrc": "premii/cnv2020.png",
+    "imageAlt": "SNV2020",
+    "title": "Certificat - Săptămâna Națională a Voluntariatului",
+    "date": "13.09.2020",
+    "description": "Comunitatea ONedu România primește aprecierea Pro Vobis pentru primul târg de voluntariat online din România, de la debutul pandemiei."
+  },
+  {
+    "id": 5,
+    "imageSrc": "premii/gala-galati.jpeg",
+    "imageAlt": "Gala Galati",
+    "title": "Premiul special - Gala Comunității Gălățene",
+    "date": "03.12.2019",
+    "description": "Cosmin, fondatorul Comunității ONedu România, a primit o distincție în cadrul Galei Comunității Gălățene, ca urmare a activității sale în comunitate."
+  },
+  {
+    "id": 6,
+    "imageSrc": "premii/gala-nemo.jpeg",
+    "imageAlt": "Gala Nemo",
+    "title": "Premiul Maria Margareta Salvanu",
+    "date": "29.11.2019",
+    "description": "Cosmin, fondatorul Comunității ONedu România, a primit o distincție în cadrul Galei Caritabile Nemo, secțiunea Leaderul care schimbă lumea."
+  }
+]

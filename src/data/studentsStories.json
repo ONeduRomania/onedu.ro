@@ -1,0 +1,26 @@
+[
+  {
+    "imageSrc": "stories/iulia.jpg",
+    "imageAlt": "Iulia",
+    "title": "Iulia, clasa a XII-a",
+    "description": "Iulia ne spune că nu știe ce facultate să aleagă, având nevoie de orientare în carieră.",
+    "linkText": "Citește povestea ei",
+    "linkHref": "https://onedu.ro/blog/povestea-iulia"
+  },
+  {
+    "imageSrc": "stories/maya.jpg",
+    "imageAlt": "Maya",
+    "title": "Maya, clasa a X-a",
+    "description": "Maya ne povestește cât de dificil îi este să găsească informații educaționale corecte pe internet.",
+    "linkText": "Citește povestea ei",
+    "linkHref": "https://onedu.ro/blog/povestea-maya"
+  },
+  {
+    "imageSrc": "stories/stefan.jpg",
+    "imageAlt": "Ștefan",
+    "title": "Ștefan, fost elev",
+    "description": "Ștefan visează să construiască pentru educația elevilor din România, investind în educație din 2021.",
+    "linkText": "Citește povestea lui",
+    "linkHref": "https://onedu.ro/blog/povestea-stefan"
+  }
+]

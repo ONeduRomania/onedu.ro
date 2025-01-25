@@ -1,0 +1,242 @@
+{
+  "sponsori": [
+    {
+      "id": 1,
+      "url": "https://glo-marine.com",
+      "src": "glomarine.png",
+      "alt": "glo marine"
+    },
+    {
+      "id": 2,
+      "url": "https://tipografiaelco.ro",
+      "src": "tipografiaelco.png",
+      "alt": "Tipografia Elco"
+    },
+    {
+      "id": 3,
+      "url": "",
+      "src": "printarea.jpg",
+      "alt": "Printarea"
+    },
+    {
+      "id": 4,
+      "url": "https://bookster.ro",
+      "src": "bookster.png",
+      "alt": "Bookster"
+    },
+    {
+      "id": 5,
+      "url": "",
+      "src": "craftup.png",
+      "alt": "CraftUp"
+    },
+    {
+      "id": 6,
+      "url": "",
+      "src": "prosim.png",
+      "alt": "Prosim"
+    },
+    {
+      "id": 7,
+      "url": "https://mycontinental-bucuresti.continentalhotels.ro/en",
+      "src": "continental.jpg",
+      "alt": "Continental"
+    },
+    {
+      "id": 8,
+      "url": "https://aboutyou.ro",
+      "src": "aboutyou.png",
+      "alt": "About You"
+    },
+    {
+      "id": 9,
+      "url": "https://trofez-shop.ro/",
+      "src": "trofezshop.png",
+      "alt": "Trofez Shop"
+    },
+    {
+      "id": 10,
+      "url": "",
+      "src": "jidvei.png",
+      "alt": "Jidvei"
+    },
+    {
+      "id": 11,
+      "url": "https://cartofisserie.ro",
+      "src": "cartofiserie.png",
+      "alt": "Cartofiserie"
+    },
+    {
+      "id": 12,
+      "url": "https://www.publica.ro/",
+      "src": "publica.webp",
+      "alt": "Publica"
+    },
+    {
+      "id": 13,
+      "url": "https://www.avon.ro/",
+      "src": "avon.png",
+      "alt": "Avon"
+    },
+    {
+      "id": 14,
+      "url": "",
+      "src": "aquacarpatica.png",
+      "alt": "Aqua Carpatica"
+    },
+    {
+      "id": 15,
+      "url": "",
+      "src": "magnolia.png",
+      "alt": "Magnolia"
+    }
+  ],
+  "sponsoriInKind": [
+    {
+      "id": 1,
+      "url": "https://google.ro",
+      "src": "google-for-nonprofits.png",
+      "alt": "Google for Nonprofits"
+    },
+    {
+      "id": 2,
+      "url": "https://www.azure.microsoft.com",
+      "src": "microsoft-azure.png",
+      "alt": "Microsoft Azure"
+    },
+    {
+      "id": 3,
+      "url": "https://web365.ro",
+      "src": "web365-logo.webp",
+      "alt": "Web365"
+    },
+    {
+      "id": 4,
+      "url": "https://www.github.com",
+      "src": "github.png",
+      "alt": "GitHub"
+    },
+    {
+      "id": 5,
+      "url": "https://www.okta.com",
+      "src": "okta.png",
+      "alt": "Okta"
+    },
+    {
+      "id": 6,
+      "url": "https://www.canva.com",
+      "src": "canva.png",
+      "alt": "Canva"
+    },
+    {
+      "id": 7,
+      "url": "https://www.nookaspace.com",
+      "src": "nooka.png",
+      "alt": "Nooka Space"
+    },
+    {
+      "id": 8,
+      "url": "",
+      "src": "bdvbestauto.png",
+      "alt": "bdvbestauto"
+    }
+  ],
+  "teamCOR": [
+    {
+      "id": 1,
+      "url": "",
+      "src": "iuliusmall.png",
+      "alt": "Iulius Mall"
+    },
+    {
+      "id": 2,
+      "url": "",
+      "src": "m5.webp",
+      "alt": "M5"
+    },
+    {
+      "id": 3,
+      "url": "",
+      "src": "epg.png",
+      "alt": "EPG"
+    },
+    {
+      "id": 4,
+      "url": "",
+      "src": "galantom.png",
+      "alt": "Galantom"
+    },
+    {
+      "id": 5,
+      "url": "",
+      "src": "fabine.png",
+      "alt": "Fa Bine"
+    },
+    {
+      "id": 6,
+      "url": "",
+      "src": "attu.png",
+      "alt": "ATTU"
+    },
+    {
+      "id" : 7,
+        "url": "",
+        "src": "stiri.ong.png",
+        "alt": "StiriONG"
+    },
+    {
+      "id": 8,
+        "url": "",
+        "src": "iqadcs.png",
+        "alt": "IQADS"
+    },
+    {
+      "id" : 9,
+        "url": "",
+        "src": "primariacluj.webp",
+        "alt": "Primaria Cluj"
+    },
+    {
+      "id"  : 10,
+        "url": "",
+        "src": "sgg.png",
+        "alt": "SGG"
+    },
+    {
+      "id": 11,
+      "url": "",
+        "src": "cnpt.png",
+        "alt": "CNPT"
+    },
+    {
+      "id": 12,
+        "url": "",
+        "src": "cmeb.png",
+        "alt": "CMEB"
+    },
+    {
+      "id" : 13,
+        "url": "",
+        "src": "cjgalati.jpg",
+        "alt": "CJ Galati"
+    },
+    {
+      "id": 14,
+        "url": "",
+        "src": "cjecluj.png",
+        "alt": "CJE Cluj"
+    },
+    {
+      "id": 15,
+        "url": "",
+        "src": "ccsbuc.png",
+        "alt": "CCS Bucuresti"
+    },
+    {
+      "id": 16,
+        "url": "",
+        "src": "cinemadacia.webp",
+        "alt": "Cinema Dacia"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "solutii": [
+
+    {
+      "id": "howto",
+      "title": "How to: România",
+      "category": "Abilități și aptitudini",
+      "status": "Soluție live",
+      "image": "solutions/HowTo.png",
+      "description": "How to: România este un instrument digital dedicat informării cetățenilor despre activitatea instituțiilor statului și despre candidații pe care îi votează. Are scopul de a sprijini un vot informat și de a îmbunătăți transparența în administrația publică.",
+      "link": "https://howto.onedu.ro/"
+
+    },
+    {
+      "id": "larisa",
+      "title": "Larisa: asistentul tău în alegerea facultății",
+      "category": "Abilități și aptitudini",
+      "status": "Soluție proiectată",
+      "image": "solutions/Larisa.png",
+      "description": "Larisa este un asistent digital care te ghidează în procesul de alegere a facultății potrivite pentru tine. Cu ajutorul său, poți explora opțiuni educaționale diverse, descoperi informații esențiale despre facultăți și programe de studii, și poți compara oportunitățile pe baza intereselor și abilităților tale. Larisa te ajută să iei o decizie informată și să-ți trasezi drumul academic cu încredere.",
+      "link": ""
+    },
+    {
+      "id": "andrei",
+      "title": "Andrei: asistentul tău în alegerea liceului",
+      "category": "Abilități și aptitudini",
+      "status": "Soluție în lucru",
+      "image": "solutions/Andrei.png",
+      "description": "Andrei este un asistent digital creat pentru a te ghida în procesul de alegere a liceului potrivit pentru tine. Cu ajutorul său, poți explora opțiuni educaționale variate, afla informații importante despre licee, profile și oportunități de studiu, și poți compara opțiunile în funcție de interesele și abilitățile tale. Andrei îți oferă sprijinul necesar pentru a lua o decizie informată și pentru a-ți începe parcursul educațional cu încredere.",
+      "link": ""
+    },
+    {
+      "id": "asistent",
+      "title": "Asistent de 10!",
+      "category": "Management școlar",
+      "status": "Soluție proiectată",
+      "image": "solutions/Asistent.png",
+      "description": "Mai mult timp pentru activități care chiar contează, oferind profesorilor și secretariatelor școlilor un instrument de gestiune rapidă a documentelor și redactare a acestora. Pe baza unor șabloare predefinite, timpul petrecut de profesori pentru activități birocratice scade considerabil.",
+      "link": ""
+    },
+    {
+      "id": "catalog",
+      "title": "Catalog de 10!",
+      "category": "Management școlar",
+      "status": "Soluție în lucru",
+      "image": "solutions/Catalog.png",
+      "description": "Credem că educația trebuie să fie gratuită, ca și accesul digital la notele elevilor. Catalog de 10! este o platformă ce ajută elevii, părinții și profesorii să țină ușor și digital evidența notelor. Platforma va calcula automat mediile, va permite profesorilor să ofere feedback elevilor și posibilitatea de a vedea de către elevi și părinți 24/7 situația școlară.",
+      "link": ""
+    },
+    {
+      "id": "teme",
+      "title": "Teme de 10!",
+      "category": "Management școlar",
+      "status": "Soluție în lucru",
+      "image": "solutions/Teme.png",
+      "description": "Teme de 10! este o soluție digitală creată pentru gestionarea eficientă a temelor școlare. Platforma ajută atât elevii, cât și profesorii să urmărească și să organizeze temele într-un mod structurat, oferind o modalitate simplă de a seta termene limită, de a verifica progresul și de a asigura finalizarea sarcinilor la timp. Printr-o gestionare optimizată, Teme de 10! facilitează un flux de lucru clar și bine organizat, contribuind la îmbunătățirea performanțelor academice.",
+      "link": ""
+    },
+    {
+      "id": "teste",
+      "title": "Teste de 10!",
+      "category": "Management școlar",
+      "status": "Soluție proiectată",
+      "image": "solutions/Teste.png",
+      "description": "Teste de 10! este o platformă digitală care permite profesorilor să creeze și să administreze teste online, facilitând evaluarea elevilor într-un mod modern și eficient. Această soluție se integrează cu StudyTok, oferind astfel resurse suplimentare pentru a acoperi eventualele lacune în cunoștințele elevilor. Platforma combină evaluarea continuă cu suportul educațional personalizat, asigurându-se că fiecare elev primește sprijinul de care are nevoie pentru a-și îmbunătăți performanțele școlare.",
+      "link": ""
+    },
+    {
+      "id": "concursuri",
+      "title": "Concursuri de 10!",
+      "category": "Educație în online",
+      "status": "Soluție proiectată",
+      "image": "solutions/Concursuri.png",
+      "description": "Aplicație dedicată managementului și organizării concursurilor școlare, facilitează stimularea performanței elevilor pe plan local și național. Atât școlile, cât și alte concursuri și organizații private de educație pot desfășura concursuri în format digital și fizic prin aplicație.",
+      "link": ""
+    },
+    {
+      "id": "cosmin",
+      "title": "Cosmin: asistentul tău în alegerea carierei",
+      "category": "Abilități și aptitudini",
+      "status": "Soluție proiectată",
+      "image": "solutions/Cosmin.png",
+      "description": "Liceeni, de cele mai multe ori, nu știu ce drum să aleagă în viitoarea carieră. Cosmin vine în sprijinul acestora printr-un instrument de recomandare, pe baza aptitudinilor și hobby-urilor elevului, a carierelor pe care le poate urma, cât și ajutor în deciderea viitorului acestuia.",
+      "link": ""
+    },
+    {
+      "id": "eva",
+      "title": "Eva: competențe digitale de 10!",
+      "category": "Abilități și aptitudini",
+      "status": "Soluție proiectată",
+      "image": "solutions/Eva.png",
+      "description": "Eva este o aplicație destinată tuturor categoriilor de vârstă, având ca scop creșterea nivelului de competențe digitale la nivel național. Prin intermediul acestei soluții, utilizatorii pot accesa cursuri și resurse interactive care îi ajută să dezvolte abilități digitale esențiale, indiferent de nivelul lor inițial de cunoștințe. Aplicația este gândită pentru a susține transformarea digitală a societății, oferind un parcurs accesibil și structurat către o mai bună înțelegere și utilizare a tehnologiei.",
+      "link": ""
+    },
+    {
+      "id": "amexamen",
+      "title": "AmExamen - Hubul tău de pregătire pentru examene",
+      "category": "Educație în online",
+      "status": "Soluție în lucru",
+      "image": "solutions/AmExamen.png",
+      "description": "AmExamen este un ecosistem dedicat celor care susțin Evaluarea Națională și examenul de Bacalaureat. Prin aplicație, elevii obțin rezultate și feedback în timp real la simulări de examen, au acces la informații în timp real despre examen și multe altele.",
+      "link": ""
+    },
+    {
+      "id": "infostart",
+      "title": "InfoStart - Ghidul tău de info la liceu",
+      "category": "Educație în online",
+      "status": "Soluție proiectată",
+      "image": "solutions/InfoStart.png",
+      "description": "Informatica din clasele IX – XII este importantă și reprezintă baza pentru cei care decid să urmeze cursuri de licență pentru informatică. Astfel, elevii au nevoie de o aplicație unde pot studia suplimentar și rezolva probleme cu rezultatul pe loc. Aplicația va fi potrivită și pentru cei care vor să înceapă să studieze programare și nu știu de unde să înceapă.",
+      "link": ""
+    },
+    {
+      "id": "learnhub",
+      "title": "LearnHub - Învață de 10!",
+      "category": "Educație în online",
+      "status": "Soluție proiectată",
+      "image": "solutions/LearnHub.png",
+      "description": "LearnHub este o platformă de e-learning creată special pentru elevi, oferind un conținut atractiv și structurat, ușor de urmărit. Prin intermediul acestei soluții, elevii pot accesa resurse educaționale interactive care fac învățarea mai interesantă și eficientă, permițându-le să-și urmărească progresul și să își organizeze studiul într-un mod simplu și eficient.",
+      "link": ""
+    },
+    {
+      "id": "mara",
+      "title": "Mara - Asistentul tău în relația cu banii",
+      "category": "Abilități și aptitudini",
+      "status": "Soluție proiectată",
+      "image": "solutions/Mara.png",
+      "description": "Mara este un asistent digital care te ajută să îți gestionezi mai bine finanțele și să-ți construiești o relație sănătoasă cu banii. Cu ajutorul său, poți învăța cum să economisești, să îți planifici bugetul, să înțelegi concepte financiare esențiale și să iei decizii informate. Mara îți oferă sfaturi personalizate și instrumente utile pentru a-ți atinge obiectivele financiare și a-ți simplifica viața de zi cu zi.",
+      "link": ""
+    },
+    {
+      "id": "stefan",
+      "title": "Ștefan: asistentul tău pentru bullying",
+      "category": "Management școlar",
+      "status": "Soluție proiectată",
+      "image": "solutions/Stefan.png",
+      "description": "Ștefan este un asistent digital creat pentru a sprijini elevii și profesorii în gestionarea situațiilor de bullying. Platforma oferă resurse, sfaturi și ghiduri pentru a recunoaște, preveni și interveni în cazurile de bullying. Printr-un proces discret și sigur, Ștefan facilitează raportarea incidentelor și oferă soluții pentru a îmbunătăți climatul școlar și relațiile interpersonale, asigurându-se că toți elevii se simt în siguranță și respectați.",
+      "link": ""
+    },
+    {
+      "id": "studfund",
+      "title": "StudFund",
+      "category": "Management școlar",
+      "status": "Soluție proiectată",
+      "image": "solutions/StudFund.png",
+      "description": "Tinerii au idei inovative pentru comunitate, dificil de pus în practică de cele mai multe ori din cauza lipsei unei entități juridice. Asociația ONedu, prin intermediul StudFund, va ajuta elevii și studenții să strângă fonduri pentru proiectele lor, prin donațiile prietenilor și a persoanelor ce susțin inițiativele acestora.",
+      "link": ""
+    },
+    {
+      "id": "adolescentin",
+      "title": "adolescentin.ro - Ghidul adolescentului în devenire",
+      "category": "Abilități și aptitudini",
+      "status": "Soluție proiectată",
+      "image": "solutions/adolescentin.png",
+      "description": "La o simplă căutare pe Google, adolescenții găsesc sute de informații pentru problemele cu care se confruntă. Adolescentin.ro este o platformă ce oferă răspuns la întrebările adolescentului, care, de cele mai multe ori, este bulversat de multitudinea de informații, unele contradictorii. Platforma va oferi informații de la experți cu date la zi, un instrument util pentru adolescenții în devenire.",
+      "link": ""
+    },
+    {
+      "id": "hub",
+      "title": "Fii de 10 HUB",
+      "category": "Management școlar",
+      "status": "Soluție în lucru",
+      "image": "solutions/fiide10.png",
+      "description": "Vom integra toate soluțiile noastre digitale dedicate managementului școlar într-un singur loc, utilizând principiul unui singur cont pentru educație gratuită în mediul digital.",
+      "link": ""
+    }
+  ]
+}

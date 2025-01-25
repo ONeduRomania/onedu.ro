@@ -1,0 +1,26 @@
+[
+  {
+    "imageSrc": "about/educatie.jpg",
+    "imageAlt": "Educatie",
+    "title": "Soluții digitale gratuite",
+    "description": "Construim aplicații online pentru elevi, profesori, părinți, școli, tineri și organizații non-guvernamentale.",
+    "linkText": "",
+    "linkHref": ""
+  },
+  {
+    "imageSrc": "about/scoli.jpg",
+    "imageAlt": "Renovăm școli",
+    "title": "Renovăm școli",
+    "description": "Prin programul Școala ONedu, aducem un mediu de învățare modern și atractiv pentru elevi.",
+    "linkText": "",
+    "linkHref": ""
+  },
+  {
+    "imageSrc": "about/youth.jpg",
+    "imageAlt": "Tineri și voluntariat",
+    "title": "Tineri și voluntariat",
+    "description": "Construim programe și evenimente destinate acestora. Facilităm accesul la oportunități.",
+    "linkText": "",
+    "linkHref": ""
+  }
+]

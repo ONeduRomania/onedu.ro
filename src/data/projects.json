@@ -1,0 +1,21 @@
+{
+  "projects": [
+
+    {
+      "id": "scoala-onedu",
+      "title": "Școala ONedu - Modernizăm educația din școli",
+      "category": "Modernizare școli",
+      "status": "Finalizat",
+      "date": "Ianuarie 2025",
+      "image": "/image/raly_nooka.jpg"
+    },
+    {
+      "id": "hub-educatie-digitala",
+      "title": "Hubul de educație digitală - Fii de 10!",
+      "category": "Educație digitală",
+      "status": "În desfășurare",
+      "date": "Septembrie 2023",
+      "image": "/image/gvr-people.jpg"
+    }
+  ]
+}

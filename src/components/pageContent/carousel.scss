@@ -1,0 +1,38 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/carousel';
+
+/* Asigură-te că săgețile implicite sunt vizibile */
+
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: transparent; /* Asigură-te că fundalul este transparent */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 2rem;
+}
+
+.carousel-control-prev .visually-hidden,
+.carousel-control-next .visually-hidden {
+  display: none !important; /* Ascunde complet textul „Next” și „Previous” */
+}
+
+/* Efect de hover pe săgețile implicite */
+.carousel-control-next:hover::before,
+.carousel-control-prev:hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
+

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "bag-tedx-with-pen",
+    "title": "Sacoșă textilă TEDxAvram Iancu Street",
+    "category": "Accesorii",
+    "price": 100,
+    "images": [
+      "/image/produse/bag-tedx-with-pen.png"
+    ],
+    "description": "Disponibilă în ediție limitată, sacoșa textilă TEDxAvram Iancu Street este un accesoriu util și elegant, perfect pentru a-ți transporta obiectele personale într-un mod eco-friendly. Ieși în evidența prin marca „Life Changing Decisions”"
+  },
+  {
+    "id": "tricou-educatie",
+    "title": "Tricou Educație",
+    "category": "Tricouri",
+    "price": 50,
+    "images": [
+      "/image/produse/tricou-educatie.jpg"
+    ],
+    "description": "Tricoul Educație este disponibil în varianta Feminin și Masculin..."
+  }
+]

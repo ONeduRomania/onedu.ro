@@ -1,0 +1,37 @@
+[
+  {
+    "id": "introduction",
+    "title": "Introducere",
+    "content": "<p>Bine ați venit la Politica de Confidențialitate a site-ului nostru. Protejarea datelor dumneavoastră personale este foarte importantă pentru noi.</p>"
+  },
+  {
+    "id": "data-collection",
+    "title": "Colectarea Datelor",
+    "content": "<h3>Ce date colectăm</h3><p>Colectăm informații personale precum numele, adresa de email și alte detalii pe care le furnizați voluntar.</p>"
+  },
+  {
+    "id": "data-use",
+    "title": "Utilizarea Datelor",
+    "content": "<h3>Cum utilizăm datele</h3><p>Utilizăm datele pentru a vă oferi servicii personalizate și pentru a îmbunătăți experiența dumneavoastră pe site.</p>"
+  },
+  {
+    "id": "data-sharing",
+    "title": "Partajarea Datelor",
+    "content": "<h3>Cum partajăm datele</h3><p>Nu vindem sau închiriem datele dumneavoastră personale terților fără consimțământul dumneavoastră.</p>"
+  },
+  {
+    "id": "data-security",
+    "title": "Securitatea Datelor",
+    "content": "<h3>Măsuri de securitate</h3><p>Implementăm măsuri de securitate adecvate pentru a proteja datele dumneavoastră împotriva accesului neautorizat sau a pierderii.</p>"
+  },
+  {
+    "id": "user-rights",
+    "title": "Drepturile Utilizatorilor",
+    "content": "<h3>Drepturi ale utilizatorilor</h3><p>Vă puteți exercita drepturile de acces, rectificare sau ștergere a datelor personale în orice moment.</p>"
+  },
+  {
+    "id": "changes-policy",
+    "title": "Modificări ale Politicii",
+    "content": "<h3>Actualizări ale politicii</h3><p>Ne rezervăm dreptul de a actualiza această politică de confidențialitate în orice moment. Vă vom informa despre modificări prin postarea noilor termeni pe această pagină.</p>"
+  }
+]
