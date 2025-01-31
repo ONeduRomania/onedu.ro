@@ -170,7 +170,7 @@ const Formular230Page: React.FC = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/api/formulare230/submit', {
+            const response = await fetch(`${process.env.BASE_API_URL}api/formulare230/submit`, {
                 method: 'POST',
                 body: formData,
             });

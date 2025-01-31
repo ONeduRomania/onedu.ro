@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/app/redirectioneaza/hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+    <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="final">
       <change beforePath="$PROJECT_DIR$/src/app/formular230/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/formular230/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/redirectioneaza/infoRedirect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/redirectioneaza/infoRedirect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/redirectioneaza/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/redirectioneaza/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/redirectioneaza/redirectCall.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/donationModal/PaymentModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/PaymentModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,15 +157,7 @@
       <workItem from="1737816502516" duration="636000" />
       <workItem from="1737818012486" duration="1561000" />
       <workItem from="1738003721054" duration="5066000" />
-      <workItem from="1738328253538" duration="9735000" />
-    </task>
-    <task id="LOCAL-00022" summary="fix error">
-      <option name="closed" value="true" />
-      <created>1734133788186</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1734133788186</updated>
+      <workItem from="1738328253538" duration="9894000" />
     </task>
     <task id="LOCAL-00023" summary="navbar fix">
       <option name="closed" value="true" />
@@ -561,7 +543,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737816538906</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="final">
+      <option name="closed" value="true" />
+      <created>1738364157574</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1738364157574</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,6 +583,7 @@
     <MESSAGE value="update and API donation implementation" />
     <MESSAGE value="blog and article page" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
 </project>
