@@ -8,7 +8,7 @@ const FOOTER_MENUS = {
     donate: [
         {href: '/doneaza', label: 'Donează online'},
         {href: '/transfer', label: 'Transfer bancar'},
-        // {href: '/redirectioneaza', label: 'Redirecționează 3.5%'},
+        {href: '/redirectioneaza', label: 'Redirecționează 3.5%'},
         {href: '/sponsorizeaza', label: 'Sponsorizează 20%'},
         // {href: '/sms', label: 'Donează SMS'},
     ],
@@ -91,7 +91,6 @@ export function Footer() {
                 </div>
             </div>
 
-            {/* Social Media Links */}
             <div className="flex justify-center gap-4 mt-6">
                 <Link href="https://facebook.com/ONeduRomania"
                       className="bg-white text-[#16366d] rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#d2e2ff]">

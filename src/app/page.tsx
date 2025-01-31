@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 
 export default function Page() {
-    redirect('/doneaza');
+    redirect('/redirectioneaza');
     return null;
 }
