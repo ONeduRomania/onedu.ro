@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    swcMinify: false,
     env: {
         BASE_IMAGE_URL: "https://assets.onedu.ro/",
-        BASE_API_URL: "https://api.onedu.ro/",
+        BASE_API_URL: "http://localhost:5000/",
     },
     images: {
         remotePatterns: [

@@ -12,7 +12,7 @@ const MENU_ITEMS = [
             { label: "Donează online", href: "/doneaza" },
             { label: "Transfer bancar", href: "/transfer" },
             // { label: "SMS", href: "/sms" },
-            // { label: "Redirecționează 3,5%", href: "/redirectioneaza" },
+            { label: "Redirecționează 3,5%", href: "/redirectioneaza" },
             { label: "Sponsorizează 20%", href: "/sponsorizeaza" }
             // { label: "Campania ta", href: "/campanii" },
         ]

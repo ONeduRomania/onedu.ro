@@ -56,7 +56,9 @@ const Formular230Page: React.FC = () => {
         if (selectedCounty) {
             const judet = judete.find((j) => j.nume === selectedCounty);
             if (judet) {
-                const sortedCities = judet.localitati.map((loc) => loc.nume).sort((a, b) => a.localeCompare(b));
+                const sortedCities = judet.localitati
+                    .map((loc) => loc.nume)
+                    .sort((a, b) => a.localeCompare(b));
                 setCities(sortedCities);
             } else {
                 setCities([]);
@@ -75,64 +77,102 @@ const Formular230Page: React.FC = () => {
 
     const openModal = () => {
         setShowModal(true);
-        setTimeout(() => {
-            router.push('/');
-        }, 3000);
     };
 
     const closeModal = () => {
         setShowModal(false);
+        router.push('/');
+    };
+
+    const validateForm = (): boolean => {
+        if (!lastName.trim() || !firstName.trim() || !initialaTatalui.trim()) {
+            setErrorMessage('Nume, prenume și inițiala tatălui sunt obligatorii.');
+            return false;
+        }
+        if (initialaTatalui.length !== 1) {
+            setErrorMessage('Inițiala tatălui trebuie să fie o singură literă.');
+            return false;
+        }
+        if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            setErrorMessage('Adresa de email nu este validă.');
+            return false;
+        }
+        if (!cnp.match(/^\d{13}$/)) {
+            setErrorMessage('CNP-ul trebuie să conțină exact 13 cifre.');
+            return false;
+        }
+        if (phone && !/^(\+4)?07[0-9]{8}$/.test(phone)) {
+            setErrorMessage('Numărul de telefon trebuie să fie valid (ex. 07XXXXXXXX sau +407XXXXXXXX).');
+            return false;
+        }
+        if (!street.trim() || !number.trim()) {
+            setErrorMessage('Strada și numărul sunt obligatorii.');
+            return false;
+        }
+        if (!selectedCounty || !selectedCity) {
+            setErrorMessage('Județul și orașul sunt obligatorii.');
+            return false;
+        }
+        if (!isAgreed) {
+            setErrorMessage('Trebuie să accepți termenii și politica de confidențialitate.');
+            return false;
+        }
+
+        setErrorMessage('');
+        return true;
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
         setLoading(true);
         setSuccessMessage('');
         setErrorMessage('');
-        
-        if (initialaTatalui.length !== 1) {
-            setErrorMessage('Inițiala tatălui trebuie să fie o singură literă.');
+
+        if (!validateForm()) {
             setLoading(false);
             return;
         }
 
-        let signatureImage = '';
+        let signatureBlob = null;
+        let signatureFilename = null;
+
         if (selectedSignature === 'manual' && sigCanvas.current && !sigCanvas.current.isEmpty()) {
-            signatureImage = sigCanvas.current.getTrimmedCanvas().toDataURL('image/png');
+            const signatureDataUrl = sigCanvas.current.getTrimmedCanvas().toDataURL('image/png');
+            const response = await fetch(signatureDataUrl);
+            signatureBlob = await response.blob();
+            signatureFilename = 'signature.png';
         }
 
-        const formData = {
-            selectedPeriod,
-            lastName,
-            initialaTatalui,
-            firstName,
-            email,
-            phone,
-            cnp,
-            address: {
-                street,
-                number,
-                block,
-                staircase,
-                floor,
-                apartment,
-                county: selectedCounty,
-                city: selectedCity,
-            },
-            selectedSignature,
-            signatureImage,
-            isAgreed,
-            isSubscribed,
-        };
+        const formData = new FormData();
+        formData.append("nume", lastName);
+        formData.append("prenume", firstName);
+        formData.append("initiala_tatalui", initialaTatalui);
+        formData.append("cnp", cnp);
+        formData.append("email", email);
+        formData.append("telefon", phone);
+        formData.append("strada", street);
+        formData.append("numarul", number);
+        formData.append("bloc", block);
+        formData.append("scara", staircase);
+        formData.append("etaj", floor);
+        formData.append("apartament", apartment);
+        formData.append("judet", selectedCounty);
+        formData.append("oras", selectedCity);
+        formData.append("perioada_redirectionare", selectedPeriod);
+        formData.append("selectedSignature", selectedSignature);
+        formData.append("isAgreed", isAgreed.toString());
+        formData.append("isSubscribed", isSubscribed.toString());
+
+        if (signatureBlob) {
+            formData.append("semnatura", signatureBlob, signatureFilename);
+        } else {
+            formData.append("semnaturaText", `${firstName} ${lastName}`);
+        }
 
         try {
-            const response = await fetch('https://api.onedu.ro/api/formulare230/submit', {
+            const response = await fetch('http://localhost:5000/api/formulare230/submit', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
+                body: formData,
             });
 
             if (response.ok) {
@@ -149,6 +189,7 @@ const Formular230Page: React.FC = () => {
             setLoading(false);
         }
     };
+
 
     const resetForm = () => {
         setSelectedPeriod('2');
@@ -207,7 +248,9 @@ const Formular230Page: React.FC = () => {
                             <button
                                 type="button"
                                 className={`py-2 px-4 text-sm font-bold border border-gray-300 rounded-lg bg-gray-100 text-gray-600 cursor-pointer transition duration-300 ${
-                                    selectedPeriod === '1' ? 'bg-white text-indigo-700 border-2 border-indigo-700' : 'hover:bg-gray-200 text-gray-800'
+                                    selectedPeriod === '1'
+                                        ? 'bg-white text-indigo-700 border-2 border-indigo-700'
+                                        : 'hover:bg-gray-200 text-gray-800'
                                 }`}
                                 onClick={() => setSelectedPeriod('1')}
                             >
@@ -216,7 +259,9 @@ const Formular230Page: React.FC = () => {
                             <button
                                 type="button"
                                 className={`py-2 px-4 text-sm font-bold border border-gray-300 rounded-lg bg-gray-100 text-gray-600 cursor-pointer transition duration-300 ${
-                                    selectedPeriod === '2' ? 'bg-white text-indigo-700 border-2 border-indigo-700' : 'hover:bg-gray-200 text-gray-800'
+                                    selectedPeriod === '2'
+                                        ? 'bg-white text-indigo-700 border-2 border-indigo-700'
+                                        : 'hover:bg-gray-200 text-gray-800'
                                 }`}
                                 onClick={() => setSelectedPeriod('2')}
                             >
@@ -225,9 +270,12 @@ const Formular230Page: React.FC = () => {
                         </div>
                     </div>
 
+                    {/* DATE PERSONALE */}
                     <section className="mb-6">
                         <h2 className="text-xl font-bold mb-2">Date personale</h2>
+
                         <div className="flex flex-wrap gap-4">
+                            {/* Nume de familie */}
                             <div className="flex-1 min-w-[120px] mb-4">
                                 <label htmlFor="lastName" className="text-sm font-bold text-gray-600 mb-1 block">
                                     Nume de familie <span className="text-red-500 ml-1 text-sm">*</span>
@@ -238,12 +286,19 @@ const Formular230Page: React.FC = () => {
                                     required
                                     value={lastName}
                                     onChange={(e) => setLastName(e.target.value)}
+                                    // pattern permite doar litere (românești), spații și câteva semne uzuale
+                                    pattern="^[A-Za-zĂÂÎȘȚăâîșț \.'-]+$"
+                                    title="Te rugăm să introduci doar litere și caractere uzuale ( -, ', . )."
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
                             </div>
-                            <div className="flex-none min-w-[80px] mb-4">
-                                <label htmlFor="initiala_tatalui"
-                                       className="text-sm font-bold text-gray-600 mb-1 block">
+
+                            {/* Inițiala tatălui */}
+                            <div className="flex-none min-w-[150px] mb-4">
+                                <label
+                                    htmlFor="initiala_tatalui"
+                                    className="text-sm font-bold text-gray-600 mb-1 block"
+                                >
                                     Inițiala tatălui <span className="text-red-500 ml-1 text-sm">*</span>
                                 </label>
                                 <input
@@ -253,9 +308,15 @@ const Formular230Page: React.FC = () => {
                                     maxLength={1}
                                     value={initialaTatalui}
                                     onChange={(e) => setInitialaTatalui(e.target.value)}
-                                    className="w-8 p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300 text-center"
+                                    pattern="^[A-Za-zĂÂÎȘȚăâîșț]$"
+                                    title="Te rugăm să introduci o singură literă."
+                                    className="w-full p-2 text-base border border-gray-300 rounded
+                                               focus:outline-none focus:border-indigo-600
+                                               transition-colors duration-300 text-center"
                                 />
                             </div>
+
+                            {/* Prenume */}
                             <div className="flex-1 min-w-[120px] mb-4">
                                 <label htmlFor="firstName" className="text-sm font-bold text-gray-600 mb-1 block">
                                     Prenume <span className="text-red-500 ml-1 text-sm">*</span>
@@ -266,11 +327,15 @@ const Formular230Page: React.FC = () => {
                                     required
                                     value={firstName}
                                     onChange={(e) => setFirstName(e.target.value)}
+                                    pattern="^[A-Za-zĂÂÎȘȚăâîșț \.'-]+$"
+                                    title="Te rugăm să introduci doar litere și caractere uzuale ( -, ', . )."
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
                             </div>
                         </div>
+
                         <div className="flex flex-wrap gap-4">
+                            {/* Email */}
                             <div className="flex-1 min-w-[200px] mb-4">
                                 <label htmlFor="email" className="text-sm font-bold text-gray-600 mb-1 block">
                                     Email <span className="text-red-500 ml-1 text-sm">*</span>
@@ -281,9 +346,11 @@ const Formular230Page: React.FC = () => {
                                     required
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
+                                    // HTML5 deja validează formatul email
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
                             </div>
+                            {/* Telefon (opțional) */}
                             <div className="flex-1 min-w-[200px] mb-4">
                                 <label htmlFor="phone" className="text-sm font-bold text-gray-600 mb-1 block">
                                     Telefon (opțional)
@@ -293,10 +360,14 @@ const Formular230Page: React.FC = () => {
                                     type="tel"
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
+                                    pattern="^\+?[0-9\s\-\(\)]{7,}$"
+                                    title="Număr de telefon valid (minim 7 cifre). Ex: +40712345678"
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
                             </div>
                         </div>
+
+                        {/* CNP */}
                         <div className="flex flex-wrap gap-4">
                             <div className="flex flex-col mb-4 w-full">
                                 <label htmlFor="cnp" className="text-sm font-bold text-gray-600 mb-1 block">
@@ -307,13 +378,21 @@ const Formular230Page: React.FC = () => {
                                     type="text"
                                     required
                                     value={cnp}
-                                    onChange={(e) => setCnp(e.target.value)}
+                                    onChange={(e) => {
+                                        const value = e.target.value.replace(/\D/g, ''); // Permite doar cifre
+                                        if (value.length <= 13) setCnp(value);
+                                    }}
+                                    pattern="\d{13}"
+                                    maxLength={13}
+                                    title="CNP-ul trebuie să conțină exact 13 cifre."
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
+
                             </div>
                         </div>
                     </section>
 
+                    {/* ADRESĂ DE DOMICILIU */}
                     <section className="mb-6">
                         <h2 className="text-xl font-bold mb-2">Adresă de domiciliu</h2>
                         <div className="flex flex-wrap gap-4">
@@ -327,6 +406,8 @@ const Formular230Page: React.FC = () => {
                                     required
                                     value={street}
                                     onChange={(e) => setStreet(e.target.value)}
+                                    pattern="^[A-Za-zĂÂÎȘȚăâîșț0-9\.\,\-\s]+$"
+                                    title="Introdu doar litere, cifre și caractere uzuale (., -)."
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
                             </div>
@@ -340,6 +421,8 @@ const Formular230Page: React.FC = () => {
                                     required
                                     value={number}
                                     onChange={(e) => setNumber(e.target.value)}
+                                    pattern="^[0-9A-Za-z\/-]+$"
+                                    title="Poți folosi cifre și caractere uzuale (/, -)."
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
                             </div>
@@ -355,6 +438,8 @@ const Formular230Page: React.FC = () => {
                                     type="text"
                                     value={block}
                                     onChange={(e) => setBlock(e.target.value)}
+                                    pattern="^[0-9A-Za-z]+$"
+                                    title="Doar cifre și/sau litere. Poți lăsa gol dacă nu se aplică."
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
                             </div>
@@ -367,6 +452,8 @@ const Formular230Page: React.FC = () => {
                                     type="text"
                                     value={staircase}
                                     onChange={(e) => setStaircase(e.target.value)}
+                                    pattern="^[0-9A-Za-z]+$"
+                                    title="Doar cifre și/sau litere. Poți lăsa gol dacă nu se aplică."
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
                             </div>
@@ -379,6 +466,8 @@ const Formular230Page: React.FC = () => {
                                     type="text"
                                     value={floor}
                                     onChange={(e) => setFloor(e.target.value)}
+                                    pattern="^[0-9A-Za-z]+$"
+                                    title="Doar cifre și/sau litere. Poți lăsa gol dacă nu se aplică."
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
                             </div>
@@ -391,6 +480,8 @@ const Formular230Page: React.FC = () => {
                                     type="text"
                                     value={apartment}
                                     onChange={(e) => setApartment(e.target.value)}
+                                    pattern="^[0-9A-Za-z]+$"
+                                    title="Doar cifre și/sau litere. Poți lăsa gol dacă nu se aplică."
                                     className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
                                 />
                             </div>
@@ -439,6 +530,7 @@ const Formular230Page: React.FC = () => {
                         </div>
                     </section>
 
+                    {/* SEMNĂTURĂ */}
                     <section className="mb-6">
                         <h2 className="text-xl font-bold mb-2">Semnătură</h2>
                         <p className="text-sm font-bold text-gray-600 mb-2">Alege cum dorești să semnezi:</p>
@@ -496,6 +588,7 @@ const Formular230Page: React.FC = () => {
                         )}
                     </section>
 
+                    {/* ACORDURI */}
                     <section className="mb-6">
                         <div className="mt-4 p-4 border border-gray-300 rounded bg-gray-100">
                             <div className="flex items-center gap-2 text-base">
@@ -507,10 +600,16 @@ const Formular230Page: React.FC = () => {
                                     className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
                                 />
                                 <label htmlFor="terms" className="flex-1">
-                                    Sunt de acord cu <Link href="/terms" target="_blank" rel="noopener noreferrer"
-                                                           className="text-indigo-700 underline">Termenii</Link> și{' '}
+                                    Sunt de acord cu{' '}
+                                    <Link href="/terms" target="_blank" rel="noopener noreferrer"
+                                          className="text-indigo-700 underline">
+                                        Termenii
+                                    </Link>{' '}
+                                    și{' '}
                                     <Link href="/privacy" target="_blank" rel="noopener noreferrer"
-                                          className="text-indigo-700 underline">Politica de Confidențialitate</Link>
+                                          className="text-indigo-700 underline">
+                                        Politica de Confidențialitate
+                                    </Link>
                                 </label>
                             </div>
                         </div>
@@ -536,7 +635,7 @@ const Formular230Page: React.FC = () => {
                     <button
                         type="submit"
                         disabled={loading}
-                        className={`bg-indigo-700 text-white py-4 px-6 text-lg font-bold border-none rounded-lg cursor-pointer text-center w-full hover:bg-indigo-800 transition-colors duration-300 ${
+                        className={`bg-custom-blue text-white py-4 px-6 text-lg font-bold border-none rounded-lg cursor-pointer text-center w-full hover:bg-custom-blue-dark transition-colors duration-300 ${
                             loading ? 'opacity-50 cursor-not-allowed' : ''
                         }`}
                     >
@@ -544,24 +643,30 @@ const Formular230Page: React.FC = () => {
                     </button>
                 </form>
 
+
                 {showModal && (
                     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                        <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
-                            <h2 className="text-2xl font-bold mb-4">Formularul a fost trimis cu succes!</h2>
-                            <p className="mb-6">Toate informațiile au fost procesate corect.</p>
+                        <div className="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full text-center">
+                            <h2 className="text-2xl font-bold mb-4">Formularul a fost semnat cu succes!</h2>
+                            <p className="mb-6 text-lg">
+                                Îți mulțumim pentru generozitatea ta. Ți-am trimis o copie a formularului pe email-ul
+                                comunicat de tine,
+                                alături de certificatul tău de donator pentru educație.
+                            </p>
                             <button
                                 onClick={closeModal}
-                                className="bg-indigo-700 text-white px-4 py-2 rounded hover:bg-indigo-800 transition-colors duration-300"
+                                className="bg-custom-blue text-white px-6 py-3 text-lg font-bold rounded-lg hover:bg-custom-blue-dark transition-colors duration-300"
                             >
-                                OK
+                                Am înțeles
                             </button>
                         </div>
                     </div>
                 )}
+
             </div>
             <Footer/>
         </>
     );
-}
+};
 
 export default Formular230Page;

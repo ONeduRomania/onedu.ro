@@ -1,7 +1,19 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 
 const InfoRedirect: React.FC = () => {
+
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = `${process.env.BASE_IMAGE_URL}docs/D230_AsociatiaONedu.pdf`;
+        link.download = "Formular_230.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <section className="w-full py-12 bg-custom-blue-light">
             <h2 className="text-2xl font-bold text-center text-[#333] mb-8">
@@ -14,7 +26,9 @@ const InfoRedirect: React.FC = () => {
                         <strong>Formularul poate fi depus în persoană</strong> la sediul ANAF de care aparții cu
                         domiciliul sau trimis prin curier sau prin poștă cu scrisoare recomandată.
                     </p>
-                    <Link href="https://static.anaf.ro/static/10/Anaf/AsistentaContribuabili_r/telefoane_judete/Regiuni.htm" className="text-custom-blue font-bold text-base mb-4 hover:underline">
+                    <Link
+                        href="https://static.anaf.ro/static/10/Anaf/AsistentaContribuabili_r/telefoane_judete/Regiuni.htm"
+                        className="text-custom-blue font-bold text-base mb-4 hover:underline">
                         Vezi aici lista administrațiilor financiare
                     </Link>
                     <p className="text-base text-[#555] mb-6">
@@ -23,7 +37,6 @@ const InfoRedirect: React.FC = () => {
                     </p>
                 </div>
 
-                {/* A doua Coloană */}
                 <div className="flex flex-col">
                     <p className="text-base text-[#555] mb-4">
                         <strong>Formularul poate fi depus și online</strong> prin <Link
@@ -43,8 +56,9 @@ const InfoRedirect: React.FC = () => {
 
             <div className="flex justify-center mt-6">
                 <button
-                    className="bg-custom-blue text-white px-6 py-3 text-base font-bold rounded-lg cursor-pointer transition-colors duration-300 hover:bg-custom-blue">
-                    Descarcă formularul 230 pre-completat
+                    onClick={handleDownload}
+                    className="bg-custom-blue text-white px-6 py-3 text-base font-bold rounded-lg cursor-pointer transition-colors duration-300 hover:bg-custom-blue-dark"
+                > Descarcă formularul 230 pre-completat
                 </button>
             </div>
         </section>
