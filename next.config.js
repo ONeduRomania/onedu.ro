@@ -2,7 +2,7 @@
 const nextConfig = {
     env: {
         BASE_IMAGE_URL: "https://assets.onedu.ro/",
-        BASE_API_URL: "http://localhost:5000/",
+        BASE_API_URL: "https://api.onedu.ro/",
     },
     images: {
         remotePatterns: [
