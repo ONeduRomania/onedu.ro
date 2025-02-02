@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="Politici + some of donation sys">
-      <change afterPath="$PROJECT_DIR$/src/app/terms/sections/03-retur.md" afterDir="false" />
+    <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="update final politici">
+      <change afterPath="$PROJECT_DIR$/src/app/hr/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="impl_HR" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -159,15 +160,7 @@
       <workItem from="1737818012486" duration="1561000" />
       <workItem from="1738003721054" duration="5066000" />
       <workItem from="1738328253538" duration="9894000" />
-      <workItem from="1738441784996" duration="15293000" />
-    </task>
-    <task id="LOCAL-00025" summary="update">
-      <option name="closed" value="true" />
-      <created>1734136566333</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1734136566333</updated>
+      <workItem from="1738441784996" duration="15949000" />
     </task>
     <task id="LOCAL-00026" summary="despre page">
       <option name="closed" value="true" />
@@ -553,7 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738511743597</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="update final politici">
+      <option name="closed" value="true" />
+      <created>1738512441765</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1738512441765</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,6 +588,7 @@
     <MESSAGE value="update" />
     <MESSAGE value="final" />
     <MESSAGE value="Politici + some of donation sys" />
-    <option name="LAST_COMMIT_MESSAGE" value="Politici + some of donation sys" />
+    <MESSAGE value="update final politici" />
+    <option name="LAST_COMMIT_MESSAGE" value="update final politici" />
   </component>
 </project>

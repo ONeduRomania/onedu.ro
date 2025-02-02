@@ -1,6 +1,6 @@
-import { createServer } from "http";
-import { parse } from "url";
-import next from "next";
+const { createServer } = require("http");
+const { parse } = require("url");
+const next = require("next");
 
 const dev = process.env.NODE_ENV !== "production";
 const hostname = "localhost";
@@ -33,6 +33,6 @@ app.prepare().then(() => {
             process.exit(1);
         })
         .listen(port, () => {
-            console.log(`> Ready on https://${hostname}:${port}`);
+            console.log(`> Ready on http://${hostname}:${port}`);
         });
 });
