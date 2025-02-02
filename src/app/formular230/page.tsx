@@ -134,14 +134,13 @@ const Formular230Page: React.FC = () => {
         }
 
         let signatureBlob = null;
-        let signatureFilename = null;
 
         if (selectedSignature === 'manual' && sigCanvas.current && !sigCanvas.current.isEmpty()) {
             const signatureDataUrl = sigCanvas.current.getTrimmedCanvas().toDataURL('image/png');
             const response = await fetch(signatureDataUrl);
             signatureBlob = await response.blob();
-            signatureFilename = 'signature.png';
         }
+
 
         const formData = new FormData();
         formData.append("nume", lastName);
@@ -162,12 +161,12 @@ const Formular230Page: React.FC = () => {
         formData.append("selectedSignature", selectedSignature);
         formData.append("isAgreed", isAgreed.toString());
         formData.append("isSubscribed", isSubscribed.toString());
-
         if (signatureBlob) {
-            formData.append("semnatura", signatureBlob, signatureFilename);
+            formData.append("signature", signatureBlob, "signature.png");
         } else {
             formData.append("semnaturaText", `${firstName} ${lastName}`);
         }
+
 
         try {
             const response = await fetch(`${process.env.BASE_API_URL}api/formulare230/submit`, {

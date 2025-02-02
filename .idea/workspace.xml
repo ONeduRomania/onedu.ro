@@ -5,8 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="final">
+      <change afterPath="$PROJECT_DIR$/src/app/privacy/PrivacyContent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/privacy/sections/01-introducere.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/privacy/sections/02-colectaredate.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/privacy/sections/03-utilizaredate.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/privacy/sections/04-drepturiuseri.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/privacy/sections/05-partajaredate.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/privacy/sections/06-protectiadatelor.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/privacy/sections/07-cookie.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/privacy/sections/08-modificari.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/terms/sections/01-conditions.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/terms/sections/02-evenimente.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GlobalScripts.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/donationModal/CardModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/donationModal/WalletModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/formular230/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/formular230/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/privacy/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/privacy/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/terms/TermsContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/TermsContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/terms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/terms/sections/terms.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/donationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/donationModal/PaymentModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/SmartPayModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,32 +84,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.10.2",
-    "last_opened_file_path": "D:/ONedu/onedu-website/public/image",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\ONedu\\onedu.ro\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.10.2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ONedu/onedu-website/public/image&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\ONedu\\onedu.ro\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql",
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ONedu\onedu-website\public\image" />
@@ -159,14 +184,7 @@
       <workItem from="1737818012486" duration="1561000" />
       <workItem from="1738003721054" duration="5066000" />
       <workItem from="1738328253538" duration="9894000" />
-    </task>
-    <task id="LOCAL-00023" summary="navbar fix">
-      <option name="closed" value="true" />
-      <created>1734134107071</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1734134107071</updated>
+      <workItem from="1738441784996" duration="14540000" />
     </task>
     <task id="LOCAL-00024" summary="update">
       <option name="closed" value="true" />
@@ -552,7 +570,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738364157574</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="final">
+      <option name="closed" value="true" />
+      <created>1738423061238</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1738423061238</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

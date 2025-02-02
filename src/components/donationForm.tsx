@@ -1,24 +1,30 @@
 "use client";
-import React, {useState, ChangeEvent} from 'react';
-import {FaCreditCard, FaUniversity} from 'react-icons/fa';
-import PaymentModal from './donationModal/PaymentModal';
+import React, {useState, ChangeEvent, useEffect} from 'react';
+import {FaCreditCard, FaFileInvoice, FaUniversity, FaWallet} from 'react-icons/fa';
+import SmartPayModal from './donationModal/SmartPayModal';
 import TransferModal from './donationModal/TransferModal';
+import CardModal from "@/components/donationModal/CardModal";
+import WalletModal from "@/components/donationModal/WalletModal";
 
 export function DonationForm() {
     const [amount, setAmount] = useState(100);
     const [frequency, setFrequency] = useState('lunar');
     const [paymentMethod, setPaymentMethod] = useState('Card');
     const [error, setError] = useState('');
-    const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+    const [isSmartPayModal, setIsSmartPayModal] = useState(false);
     const [isTransferModalOpen, setIsTransferModalOpen] = useState(false);
+    const [isCardModal, setIsCardModal] = useState(false);
+    const [isWalletModal, setIsWalletModal] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-    const handleInputFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-        e.target.style.borderColor = '#16366d';
-    };
-
-    const handleInputBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-        e.target.style.borderColor = '#d3d3d3';
-    };
+    useEffect(() => {
+        const checkIfMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        checkIfMobile();
+        window.addEventListener('resize', checkIfMobile);
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
 
     const handleAmountChange = (e: ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.target.value, 10);
@@ -36,10 +42,14 @@ export function DonationForm() {
             return;
         }
 
-        if (paymentMethod === 'Card') {
-            setIsPaymentModalOpen(true);
-        } else if (paymentMethod === 'Transfer') {
+        if (paymentMethod === 'Transfer bancar') {
+            setIsSmartPayModal(true);
+        } else if (paymentMethod === 'Date bancare') {
             setIsTransferModalOpen(true);
+        } else if (paymentMethod === 'Card') {
+            setIsCardModal(true);
+        } else if (paymentMethod === 'Wallet') {
+            setIsWalletModal(true);
         }
     };
 
@@ -57,8 +67,6 @@ export function DonationForm() {
                             onChange={handleAmountChange}
                             className="flex-1 p-2 border rounded-lg font-bold text-lg focus:outline-none focus:border-blue-800 border-gray-300"
                             min="10"
-                            onFocus={handleInputFocus}
-                            onBlur={handleInputBlur}
                         />
                         <span className="absolute right-3 text-gray-500">RON</span>
                     </div>
@@ -72,9 +80,7 @@ export function DonationForm() {
                     <div className="flex gap-2">
                         <button
                             className={`flex-1 p-2 text-sm rounded-lg border transition hover:border-custom-blue ${
-                                frequency === 'lunar'
-                                    ? 'bg-white text-black border-custom-blue'
-                                    : 'bg-gray-100 text-gray-600 border-gray-300'
+                                frequency === 'lunar' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
                             }`}
                             onClick={() => setFrequency('lunar')}
                         >
@@ -82,9 +88,7 @@ export function DonationForm() {
                         </button>
                         <button
                             className={`flex-1 p-2 text-sm rounded-lg border transition hover:border-custom-blue ${
-                                frequency === 'o singura data'
-                                    ? 'bg-white text-black border-custom-blue'
-                                    : 'bg-gray-100 text-gray-600 border-gray-300'
+                                frequency === 'o singura data' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
                             }`}
                             onClick={() => setFrequency('o singura data')}
                         >
@@ -97,26 +101,41 @@ export function DonationForm() {
                     <label className="block text-sm font-bold mb-2 text-gray-700">
                         Modalitate donație
                     </label>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 flex-wrap justify-center">
                         <button
-                            className={`flex-1 p-2 text-sm rounded-lg border flex items-center justify-center transition hover:border-custom-blue${
-                                paymentMethod === 'Card'
-                                    ? 'bg-white text-black border-custom-blue'
-                                    : 'bg-gray-100 text-gray-600 border-gray-300'
+                            className={`flex-1 p-2 text-sm rounded-lg border flex flex-col items-center justify-center transition hover:border-custom-blue ${
+                                paymentMethod === 'Card' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
                             }`}
                             onClick={() => setPaymentMethod('Card')}
                         >
-                            <FaCreditCard className="mr-2"/> Card
+                            <FaCreditCard className="mb-1"/> Card
+                        </button>
+                        {isMobile && (
+                            <button
+                                className={`flex-1 p-2 text-sm rounded-lg border flex flex-col items-center justify-center transition hover:border-custom-blue ${
+                                    paymentMethod === 'Wallet' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
+                                }`}
+                                onClick={() => setPaymentMethod('Wallet')}
+                            >
+                                <FaWallet
+                                    className="mb-1"/> {navigator.userAgent.includes('iPhone') ? 'Apple Pay' : 'Google Pay'}
+                            </button>
+                        )}
+                        <button
+                            className={`flex-1 p-2 text-sm rounded-lg border flex flex-col items-center justify-center transition hover:border-custom-blue ${
+                                paymentMethod === 'Transfer bancar' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
+                            }`}
+                            onClick={() => setPaymentMethod('Transfer bancar')}
+                        >
+                            <FaUniversity className="mb-1"/> Transfer bancar
                         </button>
                         <button
-                            className={`flex-1 p-2 text-sm rounded-lg border flex items-center justify-center transition hover:border-custom-blue ${
-                                paymentMethod === 'Transfer'
-                                    ? 'bg-white text-black border-custom-blue'
-                                    : 'bg-gray-100 text-gray-600 border-gray-300'
+                            className={`flex-1 p-2 text-sm rounded-lg border flex flex-col items-center justify-center transition hover:border-custom-blue ${
+                                paymentMethod === 'Date bancare' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
                             }`}
-                            onClick={() => setPaymentMethod('Transfer')}
+                            onClick={() => setPaymentMethod('Date bancare')}
                         >
-                            <FaUniversity className="mr-2"/> Transfer
+                            <FaFileInvoice className="mb-1"/> Date bancare
                         </button>
                     </div>
                 </div>
@@ -129,9 +148,23 @@ export function DonationForm() {
                 </button>
             </div>
 
-            <PaymentModal
-                isOpen={isPaymentModalOpen}
-                onClose={() => setIsPaymentModalOpen(false)}
+            <SmartPayModal
+                isOpen={isSmartPayModal}
+                onClose={() => setIsSmartPayModal(false)}
+                amount={amount}
+                frequency={frequency === 'lunar' ? 'Lunar' : 'OneTime'}
+            />
+
+            <CardModal
+                isOpen={isCardModal}
+                onClose={() => setIsCardModal(false)}
+                amount={amount}
+                frequency={frequency === 'lunar' ? 'Lunar' : 'OneTime'}
+            />
+
+            <WalletModal
+                isOpen={isWalletModal}
+                onClose={() => setIsWalletModal(false)}
                 amount={amount}
                 frequency={frequency === 'lunar' ? 'Lunar' : 'OneTime'}
             />

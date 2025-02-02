@@ -1,10 +1,9 @@
 import "./globals.css";
-import type {Metadata} from "next";
-import {Roboto} from "next/font/google";
-import {Layout} from "@/components";
-import React, {Suspense} from "react";
-import Head from "next/head";
-import Script from "next/script";
+import type { Metadata } from "next";
+import { Roboto } from "next/font/google";
+import { Layout } from "@/components";
+import GlobalScripts from "@/components/GlobalScripts";
+import React, { Suspense } from "react";
 
 const roboto = Roboto({
     subsets: ["latin"],
@@ -16,6 +15,9 @@ export const metadata: Metadata = {
     title: "Asociația ONedu",
     description:
         "Asociația ONedu este organizația tinerilor pentru digitalizarea educației din România",
+    icons: {
+        icon: "https://assets.onedu.ro/logos/favicon.png",
+    },
 };
 
 export default function RootLayout({
@@ -25,11 +27,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="ro">
-        <Head>
-            {/* Favicon */}
-            <link rel="shortcut icon" href="https://assets.onedu.ro/logos/favicon.png" type="image/png"/>
-
-            {/* Font Awesome */}
+        <head>
             <link
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -37,30 +35,14 @@ export default function RootLayout({
                 crossOrigin="anonymous"
                 referrerPolicy="no-referrer"
             />
-        </Head>
-
+        </head>
         <body className={roboto.className}>
-        <Script
-            id="cookieyes"
-            type="text/javascript"
-            src="https://cdn-cookieyes.com/client_data/065537713e9f3f75679a8979/script.js"
-            async
-        ></Script>
-        <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-72E9MLT5DC"
-            strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-            {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-72E9MLT5DC');
-              `}
-        </Script>
         <Layout>
+            <Suspense fallback={null}>
+                <GlobalScripts />
+            </Suspense>
+
             {children}
-            {/*<FixedPlugin />*/}
         </Layout>
         </body>
         </html>

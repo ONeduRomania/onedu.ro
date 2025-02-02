@@ -1,43 +1,44 @@
+// TermsPage (server)
 import React from 'react';
-import {Footer, Navbar} from "@/components";
+import { Footer, Navbar } from '@/components';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import {remark} from 'remark';
-import html from 'remark-html';
+// Eliminăm remark + remark-html aici, pentru că parsează la HTML
+// import { remark } from 'remark';
+// import remarkGfm from 'remark-gfm';
+// import remarkBreaks from 'remark-breaks';
+// import html from 'remark-html';
 import TermsContent from './TermsContent';
 
 interface Section {
     id: string;
     title: string;
-    content: string;
+    content: string;  // Stocăm direct markdown brut
 }
 
 const getSections = async (): Promise<Section[]> => {
     const sectionsDirectory = path.join(process.cwd(), 'src', 'app', 'terms', 'sections');
-    const filenames = fs.readdirSync(sectionsDirectory).filter(file => file.endsWith('.md'));
+    const filenames = fs.readdirSync(sectionsDirectory).filter((file) => file.endsWith('.md'));
 
-    return await Promise.all(
-        filenames.map(async (filename) => {
-            const filePath = path.join(sectionsDirectory, filename);
-            const fileContents = fs.readFileSync(filePath, 'utf8');
+    return filenames.map((filename) => {
+        const filePath = path.join(sectionsDirectory, filename);
+        const fileContents = fs.readFileSync(filePath, 'utf8');
 
-            // Parse frontmatter și conținutul
-            const {data, content} = matter(fileContents);
+        const { data, content } = matter(fileContents);
 
-            // Convertire Markdown la HTML
-            const processedContent = await remark()
-                .use(html)
-                .process(content);
-            const contentHtml = processedContent.toString();
+        const id = path.parse(filename).name.toLowerCase();
 
-            return {
-                id: data.id || path.parse(filename).name,
-                title: data.title || path.parse(filename).name.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase()),
-                content: contentHtml,
-            };
-        })
-    );
+        const fallbackTitle = path.parse(filename).name.replace(/\.md$/, '');
+        const title = data.title || fallbackTitle.replace(/-/g, ' ');
+
+        // Aici stocăm conținutul brut (markdown), fără parse
+        return {
+            id,
+            title,
+            content // conținutul brut .md
+        };
+    });
 };
 
 const TermsPage = async () => {
@@ -45,17 +46,14 @@ const TermsPage = async () => {
 
     return (
         <div className="min-h-screen flex flex-col">
-            {/* Navbar */}
             <header>
                 <Navbar />
             </header>
 
             <div className="flex flex-1 flex-col md:flex-row">
-                {/* Sidebar și Content */}
                 <TermsContent sections={sections} />
             </div>
 
-            {/* Footer */}
             <Footer />
         </div>
     );

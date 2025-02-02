@@ -15,7 +15,9 @@ const config: Config = withMT({
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 });
 
 export default config;

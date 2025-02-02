@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
-interface PaymentModalProps {
+interface WalletModalProps {
     isOpen: boolean;
     onClose: () => void;
     amount: number;
     frequency: string;
 }
 
-export function PaymentModal({ isOpen, onClose, amount, frequency }: PaymentModalProps) {
+export function WalletModal({ isOpen, onClose, amount, frequency }: WalletModalProps) {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [isSubscribed, setIsSubscribed] = useState(false);
-    const [selectedBank, setSelectedBank] = useState('');
-
-    const banks = [
-        { id: 'BCR', name: 'Banca Comercială Română' },
-        { id: 'BT', name: 'Banca Transilvania' },
-        { id: 'ING', name: 'ING Bank' },
-        { id: 'BRD', name: 'BRD - Groupe Société Générale' },
-    ];
 
     useEffect(() => {
         if (isOpen) {
@@ -47,12 +39,11 @@ export function PaymentModal({ isOpen, onClose, amount, frequency }: PaymentModa
             telefon: phone,
             suma: amount,
             frecventa: frequency,
-            banca: selectedBank,
             newsletter: isSubscribed,
         };
 
         try {
-            const response = await fetch('http://localhost:5000/api/donations/submit', {
+            const response = await fetch('http://localhost:5000/api/donations/wallet', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
@@ -105,7 +96,7 @@ export function PaymentModal({ isOpen, onClose, amount, frequency }: PaymentModa
                             Donație: {amount} RON{frequency === 'Lunar' ? ' / lună' : ''}
                         </p>
                         <small className="text-sm text-gray-600">
-                            Donațiile cu cardul sunt procesate prin SmartFintech.
+                            Plățile prin portofel digital sunt procesate prin Google Pay / Apple Pay.
                         </small>
                     </div>
                     <div className="flex-2">
@@ -152,34 +143,6 @@ export function PaymentModal({ isOpen, onClose, amount, frequency }: PaymentModa
                                     className="w-full p-2 border rounded-lg focus:outline-none focus:border-custom-blue border-gray-300"
                                 />
                             </div>
-                            <div className="mb-4">
-                                <label className="block text-sm font-bold mb-2">Selectează banca</label>
-                                <select
-                                    value={selectedBank}
-                                    onChange={(e) => setSelectedBank(e.target.value)}
-                                    required
-                                    className="w-full p-2 border rounded-lg focus:outline-none focus:border-custom-blue border-gray-300"
-                                >
-                                    <option value="">Alege o bancă...</option>
-                                    {banks.map((bank) => (
-                                        <option key={bank.id} value={bank.id}>
-                                            {bank.name}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                            <div className="flex items-center gap-2 mb-4">
-                                <input
-                                    type="checkbox"
-                                    id="subscribe"
-                                    checked={isSubscribed}
-                                    onChange={() => setIsSubscribed(!isSubscribed)}
-                                    className="w-5 h-5 border-gray-500 focus:ring-custom-blue"
-                                />
-                                <label htmlFor="subscribe" className="text-sm">
-                                    Da, îmi pasă și doresc să primesc vești pe email despre proiectele Asociației ONedu.
-                                </label>
-                            </div>
                             <button
                                 type="submit"
                                 className="w-full bg-custom-blue text-white p-3 rounded-lg font-bold hover:bg-custom-blue-dark"
@@ -194,4 +157,4 @@ export function PaymentModal({ isOpen, onClose, amount, frequency }: PaymentModa
     );
 }
 
-export default PaymentModal;
+export default WalletModal;

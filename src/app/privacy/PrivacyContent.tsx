@@ -1,3 +1,4 @@
+// app/privacy/PrivacyContent.tsx (client component)
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
@@ -11,19 +12,18 @@ interface Section {
     content: string; // Markdown brut
 }
 
-interface TermsContentProps {
+interface PrivacyContentProps {
     sections: Section[];
 }
 
-const TermsContent: React.FC<TermsContentProps> = ({ sections }) => {
+export default function PrivacyContent({ sections }: PrivacyContentProps) {
     const [selectedSection, setSelectedSection] = useState<string>(
         sections.length > 0 ? sections[0].id : ""
     );
     const contentRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // Dacă secțiunile s-au actualizat și secțiunea selectată nu există,
-        // selectăm prima secțiune disponibilă.
+        // Dacă secțiunea selectată nu mai există, selectăm prima
         if (sections.length > 0 && !sections.some((sec) => sec.id === selectedSection)) {
             setSelectedSection(sections[0].id);
         }
@@ -36,11 +36,10 @@ const TermsContent: React.FC<TermsContentProps> = ({ sections }) => {
         }, 100);
     };
 
-    // Căutăm conținutul markdown al secțiunii curente.
+    // Căutăm conținutul brut (Markdown) al secțiunii curente
     const currentContent =
         sections.find((section) => section.id === selectedSection)?.content || "";
 
-    // Dacă nu există nicio secțiune, arătăm un mesaj simplu.
     if (!sections || sections.length === 0) {
         return (
             <div className="p-6 text-center">
@@ -53,7 +52,7 @@ const TermsContent: React.FC<TermsContentProps> = ({ sections }) => {
         <div className="flex flex-col md:flex-row w-full">
             {/* Sidebar */}
             <aside className="w-full md:w-1/4 lg:w-1/5 bg-gray-100 p-6">
-                <h2 className="text-2xl font-bold mb-6">Termeni și Condiții</h2>
+                <h2 className="text-2xl font-bold mb-6">Politica de Confidențialitate</h2>
                 <ul className="space-y-4">
                     {sections.map((section) => (
                         <li key={section.id}>
@@ -74,18 +73,12 @@ const TermsContent: React.FC<TermsContentProps> = ({ sections }) => {
 
             {/* Conținutul principal */}
             <main className="w-full md:w-3/4 lg:w-4/5 p-6 overflow-auto">
-                {/* Clasa .prose pentru stiluri tipografice Markdown (dacă ai Tailwind Typography) */}
                 <div ref={contentRef} className="prose max-w-none">
-                    <ReactMarkdown
-
-                        remarkPlugins={[remarkGfm, remarkBreaks]}
-                    >
+                    <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
                         {currentContent}
                     </ReactMarkdown>
                 </div>
             </main>
         </div>
     );
-};
-
-export default TermsContent;
+}
