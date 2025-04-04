@@ -13,7 +13,7 @@ Evenimentele Asociației ONedu au loc la data și ora specificate pe pagina even
 
 Vă rugăm să verificați cu atenție inboxul, dar și folderul de spam sau promoții al adresei dumneavoastră de e-mail, în cazul în care confirmarea noastră ar putea ajunge acolo. Biletele vor fi emise în format electronic, eliminând necesitatea printării acestora. Vă sfătuim să aveți biletele pregătite în format electronic la intrarea în locație, fie pe dispozitivul mobil, fie într-un format ușor accesibil.
 
-Dacă întâmpinați orice dificultăți în privința primirii sau accesării biletelor, vă rugăm să ne contactați imediat la adresa de suport tehnic: secretariat@onedu.ro. În situația în care pe pagina evenimentului este menționată o altă adresă de contact, dedicată evenimentului, vă rugăm să ne contactați prin intermediul acesteia.
+Dacă întâmpinați orice dificultăți în privința primirii sau accesării biletelor, vă rugăm să ne contactați imediat prin http://support.onedu.ro sau la adresa de email aferentă evenimentului. În situația în care pe pagina evenimentului este menționată o altă adresă de contact, dedicată evenimentului, vă rugăm să ne contactați prin intermediul acesteia.
 
 Pentru evenimentele cu kit de participare, ridicarea kiturilor se va efectua conform instrucțiunilor primite ulterior înscrierii pe adresa de email furnizată
 

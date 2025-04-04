@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {submitDonation} from "@/api/Donation";
 
 interface CardModalProps {
     isOpen: boolean;
@@ -13,12 +14,41 @@ export function CardModal({ isOpen, onClose, amount, frequency }: CardModalProps
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [isSubscribed, setIsSubscribed] = useState(false);
+    const [errors, setErrors] = useState<{ firstName?: string; lastName?: string; email?: string; phone?: string }>({});
+
 
     useEffect(() => {
         if (isOpen) {
             setIsSubscribed(true);
         }
     }, [isOpen]);
+
+    const validateForm = () => {
+        const newErrors: { firstName?: string; lastName?: string; email?: string; phone?: string } = {};
+
+        if (!firstName.trim()) {
+            newErrors.firstName = "Prenumele este obligatoriu.";
+        }
+
+        if (!lastName.trim()) {
+            newErrors.lastName = "Numele este obligatoriu.";
+        }
+
+        if (!email.trim()) {
+            newErrors.email = "Email-ul este obligatoriu.";
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            newErrors.email = "Email-ul nu este valid.";
+        }
+
+        if (!phone.trim()) {
+            newErrors.phone = "Numărul de telefon este obligatoriu.";
+        } else if (!/^\d{10}$/.test(phone)) {
+            newErrors.phone = "Numărul de telefon trebuie să conțină 10 cifre.";
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
     const handleOverlayClick = () => {
         onClose();
@@ -28,45 +58,60 @@ export function CardModal({ isOpen, onClose, amount, frequency }: CardModalProps
         e.stopPropagation();
     };
 
+    const redirectToMobilPay = (redirectUri: string, envKey: string, data: string) => {
+        console.log("📌 Pregătire redirecționare către MobilPay...");
+        console.log("🔹 URL:", redirectUri);
+        console.log("🔹 env_key:", envKey);
+        console.log("🔹 data:", data);
+
+        if (!redirectUri || !envKey || !data) {
+            console.error("Datele necesare pentru redirecționare lipsesc!");
+            alert("Datele pentru MobilPay nu sunt valide.");
+            return;
+        }
+
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = redirectUri;
+
+        const envKeyInput = document.createElement("input");
+        envKeyInput.type = "hidden";
+        envKeyInput.name = "env_key";
+        envKeyInput.value = envKey;
+        form.appendChild(envKeyInput);
+
+        const dataInput = document.createElement("input");
+        dataInput.type = "hidden";
+        dataInput.name = "data";
+        dataInput.value = data;
+        form.appendChild(dataInput);
+
+        document.body.appendChild(form);
+        form.submit();
+    };
+
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Formular trimis');
-
-        const payload = {
-            nume: lastName,
-            prenume: firstName,
-            email,
-            telefon: phone,
-            suma: amount,
-            frecventa: frequency,
-            newsletter: isSubscribed,
-        };
+        if (!validateForm()) {
+            return;
+        }
 
         try {
-            const response = await fetch('http://localhost:5000/api/donations/card', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-            });
+            const response = await submitDonation(firstName, lastName, email, phone, amount, frequency, isSubscribed, 'netopia', '');
 
-            if (!response.ok) {
-                const errorText = await response.text();
-                console.error('Eroare API:', errorText);
-                alert('Eroare la trimiterea cererii.');
+            if (response.redirectUri && response.env_key && response.data) {
+                redirectToMobilPay(response.redirectUri, response.env_key, response.data);
             } else {
-                const data = await response.json();
-                const redirectUri = data.redirectUri;
-                if (redirectUri) {
-                    window.location.href = redirectUri;
-                } else {
-                    alert('Link-ul de redirecționare nu a fost găsit.');
-                }
+                alert('Link-ul de redirecționare nu a fost găsit sau datele sunt incomplete.');
             }
         } catch (error) {
-            console.error('Eroare la fetch:', error);
+            console.error("Eroare la trimiterea donației:", error);
             alert('A apărut o eroare la trimiterea donației.');
         }
     };
+
+
 
     return (
         <div
@@ -135,7 +180,7 @@ export function CardModal({ isOpen, onClose, amount, frequency }: CardModalProps
                                 />
                             </div>
                             <div className="mb-4">
-                                <label className="block text-sm font-bold mb-2">Telefon (opțional)</label>
+                                <label className="block text-sm font-bold mb-2">Telefon</label>
                                 <input
                                     type="tel"
                                     value={phone}

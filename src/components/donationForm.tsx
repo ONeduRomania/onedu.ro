@@ -152,21 +152,21 @@ export function DonationForm() {
                 isOpen={isSmartPayModal}
                 onClose={() => setIsSmartPayModal(false)}
                 amount={amount}
-                frequency={frequency === 'lunar' ? 'Lunar' : 'OneTime'}
+                frequency={frequency === 'lunar' ? 'lunar' : 'one_time'}
             />
 
             <CardModal
                 isOpen={isCardModal}
                 onClose={() => setIsCardModal(false)}
                 amount={amount}
-                frequency={frequency === 'lunar' ? 'Lunar' : 'OneTime'}
+                frequency={frequency === 'lunar' ? 'lunar' : 'one_time'}
             />
 
             <WalletModal
                 isOpen={isWalletModal}
                 onClose={() => setIsWalletModal(false)}
                 amount={amount}
-                frequency={frequency === 'lunar' ? 'Lunar' : 'OneTime'}
+                frequency={frequency === 'lunar' ? 'lunar' : 'one_time'}
             />
 
             <TransferModal
