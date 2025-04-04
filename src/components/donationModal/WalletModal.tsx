@@ -96,7 +96,7 @@ export function WalletModal({ isOpen, onClose, amount, frequency }: WalletModalP
                             Donație: {amount} RON{frequency === 'Lunar' ? ' / lună' : ''}
                         </p>
                         <small className="text-sm text-gray-600">
-                            Plățile prin portofel digital sunt procesate prin Google Pay / Apple Pay.
+                            Plățile prin portofel digital sunt procesate prin MobilPay - Netopia Payments.
                         </small>
                     </div>
                     <div className="flex-2">

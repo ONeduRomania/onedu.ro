@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {submitDonation} from "@/api/Donation";
 
 interface PaymentModalProps {
     isOpen: boolean;
@@ -14,6 +15,7 @@ export function SmartPayModal({ isOpen, onClose, amount, frequency }: PaymentMod
     const [phone, setPhone] = useState('');
     const [isSubscribed, setIsSubscribed] = useState(false);
     const [selectedBank, setSelectedBank] = useState('');
+    const [errors, setErrors] = useState<{ firstName?: string; lastName?: string; email?: string; phone?: string }>({});
 
     const banks = [
         { id: 'BCR', name: 'Banca Comercială Română' },
@@ -36,43 +38,55 @@ export function SmartPayModal({ isOpen, onClose, amount, frequency }: PaymentMod
         e.stopPropagation();
     };
 
+
+    const validateForm = () => {
+        const newErrors: { firstName?: string; lastName?: string; email?: string; phone?: string } = {};
+
+        if (!firstName.trim()) {
+            newErrors.firstName = "Prenumele este obligatoriu.";
+        }
+
+        if (!lastName.trim()) {
+            newErrors.lastName = "Numele este obligatoriu.";
+        }
+
+        if (!email.trim()) {
+            newErrors.email = "Email-ul este obligatoriu.";
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            newErrors.email = "Email-ul nu este valid.";
+        }
+
+        if (phone.trim() && !/^\d{10}$/.test(phone)) {
+            newErrors.phone = "Numărul de telefon trebuie să conțină 10 cifre.";
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Formular trimis');
-
-        const payload = {
-            nume: lastName,
-            prenume: firstName,
-            email,
-            telefon: phone,
-            suma: amount,
-            frecventa: frequency,
-            banca: selectedBank,
-            newsletter: isSubscribed,
-        };
+        console.log('Trimitere donație:', { firstName, lastName, email, phone, amount, frequency, isSubscribed, selectedBank });
+        if (!validateForm()) {
+            console.log('Formularul conține erori.');
+            return;
+        }
 
         try {
-            const response = await fetch('http://localhost:5000/api/donations/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-            });
 
-            if (!response.ok) {
-                const errorText = await response.text();
-                console.error('Eroare API:', errorText);
-                alert('Eroare la trimiterea cererii.');
+            const data = await submitDonation(firstName, lastName, email, phone, amount, frequency, isSubscribed, 'smartpay', selectedBank);
+            console.log("Răspuns API:", data);
+
+            const redirectUri = data.redirectUri;
+            if (redirectUri) {
+                console.log("Redirecționare către:", redirectUri);
+                window.location.href = redirectUri;
             } else {
-                const data = await response.json();
-                const redirectUri = data.redirectUri;
-                if (redirectUri) {
-                    window.location.href = redirectUri;
-                } else {
-                    alert('Link-ul de redirecționare nu a fost găsit.');
-                }
+                alert('Link-ul de redirecționare nu a fost găsit.');
             }
+
         } catch (error) {
-            console.error('Eroare la fetch:', error);
+            console.error("Eroare la trimiterea donației:", error);
             alert('A apărut o eroare la trimiterea donației.');
         }
     };

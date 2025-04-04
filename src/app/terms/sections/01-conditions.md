@@ -25,7 +25,7 @@ Fiecare donator online își va putea accesa istoricul donațiilor prin intermed
 
 Pentru donațiile lunare, banii vor fi reținuți din cont lunar, în data de 15. Donațiile recurente pot fi anulate direct de către donator din platforma de donație.
 
-Donatorii, indiferent de valoarea donației sau tipul ei, vor primi un email cu raportul de activitate al organizației pentru anul în care au efectuat donația.  Prin realizarea donației, dacă donatorul își oferă acordul, Asociația ONedu va transmite e-mailuri cu privire la activitatea organizației. Donatorul se poate dezabona oricând prin intermediul emailurilor sau printr-o solicitare scrisă la [comunicare@onedu.ro](mailto:comunicare@onedu.ro).
+Donatorii, indiferent de valoarea donației sau tipul ei, vor primi un email cu raportul de activitate al organizației pentru anul în care au efectuat donația.  Prin realizarea donației, dacă donatorul își oferă acordul, Asociația ONedu va transmite e-mailuri cu privire la activitatea organizației. Donatorul se poate dezabona oricând prin intermediul emailurilor. În subsolul fiecărui email va exista un buton pentru dezabonare.
 
 ---
 
@@ -33,7 +33,7 @@ Donatorii, indiferent de valoarea donației sau tipul ei, vor primi un email cu 
 
 Prin intermediul platformei [www.onedu.ro](https://www.onedu.ro), companiile pot efectua sponsorizări prin redirecționarea a 20% din impozitul pe profit. Compania este responsabilă de corectitudinea datelor transmise prin intermediul formularului automat de generare a contractului de sponsorizare, datele transmise fiind înregistrate în arhivele organizației. 
 
-În urma completării formularului de sponsorizare, compania va primi un email cu contractul de sponsorizare și pașii de urmat (transmiterea contractului semnat la [secretariat@onedu.ro](mailto:secretariat@onedu.ro) sau la sediul organizației). Contravaloarea contractului de sponsorizare se va achita prin bancă, în contul bancar menționat în contract. 
+În urma completării formularului de sponsorizare, compania va primi un email cu contractul de sponsorizare și pașii de urmat (transmiterea contractului semnat ca reply la emailul primit). Contravaloarea contractului de sponsorizare se va achita prin bancă, în contul bancar menționat în contract. 
 
 După ce compania efectuează plata corespunzătoare contractului, va primi în 14 zile pe adresa de e-mail certificatul de sponsor, unde se va menționa suma investită la data respectivă. Fiecare sponsor se va regăsi la secțiunea „Parteneri”.
 
@@ -74,7 +74,7 @@ Livrarea obiectelor cadou se face prin servicii de curierat, doar în urma dona�
 
 ## Mesaje, notificări și informări
 
-Utilizatorii înregistrați ai site-ului, donatorii și sponsorii pot primi în mod ocazional notificări de la site, de la organizație sau de la sponsorii și partenerii acesteia. Dacă utilizatorul/destinatarul mesajului nu dorește să primească asemenea mesaje, ne poate notifica la adresa comunicare@onedu.ro.
+Utilizatorii înregistrați ai site-ului, donatorii și sponsorii pot primi în mod ocazional notificări de la site, de la organizație sau de la sponsorii și partenerii acesteia. Dacă utilizatorul/destinatarul mesajului nu dorește să primească asemenea mesaje, ne poate notifica prin intermediul https://support.onedu.ro.
 
 ---
 

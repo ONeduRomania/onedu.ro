@@ -1,16 +1,15 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function ValidateMagicLinkPage() {
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const token = searchParams.get("token");
 
     useEffect(() => {
         const validateMagicLink = async () => {
-            const queryParams = new URLSearchParams(window.location.search);
-            const token = queryParams.get("token");
-
             if (!token) {
                 alert("Token-ul lipsește sau este invalid.");
                 router.push("/dashboard/login");
@@ -18,27 +17,29 @@ export default function ValidateMagicLinkPage() {
             }
 
             try {
-                let NEXT_PUBLIC_API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-                const response = await fetch(`${NEXT_PUBLIC_API_BASE_URL}/api/auth/validate-magic-link?token=${token}`);
+                const response = await fetch(
+                    `${process.env.BASE_API_URL}api/auth/validate-magic-link?token=${token}`
+                );
                 const data = await response.json();
 
                 if (response.ok) {
                     localStorage.setItem("token", data.token);
-                    router.push("/dashboard");
+
+                    const redirectURL = data.isAdmin ? "/dashboard/admin" : "/dashboard";
+                    router.push(redirectURL);
                 } else {
-                    alert(data.message || "Link-ul este invalid sau expirat.");
+                    alert(data.message || "❌ Link-ul este invalid sau expirat.");
                     router.push("/dashboard/login");
                 }
             } catch (error) {
-                console.error("Eroare la validarea link-ului magic:", error);
-                alert("A apărut o eroare la validarea link-ului magic.");
+                console.error("❌ Eroare la validarea link-ului magic:", error);
+                alert("❌ A apărut o eroare la validarea link-ului magic.");
                 router.push("/dashboard/login");
             }
         };
 
         validateMagicLink();
-    }, [router]);
-
+    }, [router, token]);
 
     return <p>Validarea link-ului magic...</p>;
 }

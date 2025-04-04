@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Footer, Navbar } from '@/components';
@@ -8,8 +9,9 @@ type Article = {
     id: string;
     title: string;
     heroSection: string;
-    heroImage: string;
+    headerImage: string;
     category: string;
+    date: string;
     views: number;
 };
 
@@ -19,7 +21,7 @@ const BlogPage = () => {
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                const response = await axios.get('http://localhost:5001/api/blog/list');
+                const response = await axios.get(`${process.env.BASE_API_URL}api/blog/list`);
                 setArticles(response.data);
             } catch (error) {
                 console.error('Eroare la încărcarea articolelor:', error);
@@ -28,6 +30,12 @@ const BlogPage = () => {
 
         fetchArticles();
     }, []);
+
+    const getArticleImage = (article: Article): string => {
+        const year = new Date(article.date).getFullYear();
+        return `${process.env.BASE_IMAGE_URL}blog/${year}/${article.headerImage}`;
+    };
+
 
     const createSlug = (title: string | undefined): string => {
         if (!title) return '';
@@ -44,7 +52,7 @@ const BlogPage = () => {
 
     const handleArticleClick = (title: string, id: string) => {
         const slug = createSlug(title);
-        window.location.href = `/blog/${id}`;
+        window.location.href = `/blog/${id}-${slug}`;
     };
 
     return (
@@ -59,11 +67,15 @@ const BlogPage = () => {
                     onClick={() => handleArticleClick(articles[0].title, articles[0].id)}
                 >
                     <div className="flex-1 overflow-hidden rounded-lg">
-                        <img
-                            src={articles[0].heroImage || '/placeholder-image.jpg'}
+                        <Image
+                            src={getArticleImage(articles[0])}
                             alt={articles[0].title}
+                            width={600}
+                            height={400}
                             className="w-full h-64 object-cover"
+                            priority
                         />
+
                     </div>
                     <div className="flex-1 space-y-4">
                         <div className="flex items-center space-x-4">
@@ -106,10 +118,13 @@ const BlogPage = () => {
                             className="border rounded-lg p-4 cursor-pointer hover:shadow-lg transition-transform transform hover:scale-105"
                             onClick={() => handleArticleClick(article.title, article.id)}
                         >
-                            <img
-                                src={article.heroImage || '/placeholder-image.jpg'}
+                            <Image
+                                src={getArticleImage(article)}
                                 alt={article.title}
+                                width={400}
+                                height={160}
                                 className="w-full h-40 object-cover rounded-lg"
+                                priority
                             />
                             <div className="mt-4 space-y-2">
                                 <div className="flex items-center space-x-4">

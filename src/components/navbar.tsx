@@ -24,13 +24,13 @@ const MENU_ITEMS = [
     {
         label: "Despre noi", href: "", subMenu: [
             { label: "Despre noi", href: "/despre" },
-            // { label: "Proiecte", href: "/proiecte" },
+            { label: "Proiecte", href: "/proiecte" },
             { label: "Premii", href: "/premii" },
-            // { label: "Rapoarte", href: "/rapoarte" },
+            { label: "Rapoarte", href: "/rapoarte" },
             { label: "Susținători", href: "/parteneri" },
         ]
     },
-    // { label: "Blog", href: "/blog" },
+    { label: "Blog", href: "/blog" },
 ];
 
 export function Navbar() {
