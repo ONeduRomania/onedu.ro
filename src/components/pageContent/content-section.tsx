@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Carousel from 'react-bootstrap/Carousel';
 import './carousel.scss';
@@ -9,10 +9,10 @@ interface ContentSectionProps {
     images: string[];
     altTexts: string[];
     title: string;
-    text: string; // Poți include HTML aici
-    layout?: "left" | "right"; // Poziția layout-ului
-    buttonText?: string;       // Textul butonului (opțional)
-    buttonLink?: string;       // Link-ul la care duce butonul (opțional)
+    text: string;
+    layout?: "left" | "right";
+    buttonText?: string;
+    buttonLink?: string;
 }
 
 export function ContentSection({
@@ -35,16 +35,15 @@ export function ContentSection({
             <div className="container mx-auto px-6">
                 <div
                     className={`
-                flex flex-col 
-                ${layout === "left" ? "md:flex-row" : "md:flex-row-reverse"} 
-                items-start 
-                md:items-center 
-                justify-center 
-                gap-12
-            `}
+                        flex flex-col
+                        ${layout === "left" ? "md:flex-row" : "md:flex-row-reverse"}
+                        items-center
+                        justify-center
+                        gap-12
+                    `}
                 >
-                    {/* Coloană cu Carousel */}
-                    <div className="w-full md:w-1/2 max-w-[600px] relative">
+                    {/* Carousel Column */}
+                    <div className="w-full md:w-1/2 max-w-[600px] relative h-full">
                         <Carousel
                             activeIndex={activeIndex}
                             onSelect={handleSelect}
@@ -54,7 +53,7 @@ export function ContentSection({
                         >
                             {images.map((image, index) => (
                                 <Carousel.Item key={index}>
-                                    <div className="relative w-full h-40 md:min-h-80 overflow-hidden">
+                                    <div className="relative w-full h-full min-h-[300px] md:min-h-[400px] overflow-hidden">
                                         <Image
                                             src={image}
                                             alt={altTexts[index]}
@@ -72,10 +71,7 @@ export function ContentSection({
                                 onClick={() => setActiveIndex(activeIndex + 1)}
                                 aria-label="Next"
                             >
-                        <span
-                            className="carousel-control-next-icon"
-                            aria-hidden="true"
-                        ></span>
+                                <span className="carousel-control-next-icon" aria-hidden="true" />
                             </button>
                         )}
                         {activeIndex > 0 && (
@@ -84,20 +80,16 @@ export function ContentSection({
                                 onClick={() => setActiveIndex(activeIndex - 1)}
                                 aria-label="Previous"
                             >
-                        <span
-                            className="carousel-control-prev-icon"
-                            aria-hidden="true"
-                        ></span>
+                                <span className="carousel-control-prev-icon" aria-hidden="true" />
                             </button>
                         )}
                     </div>
 
-                    {/* Coloană cu text și buton opțional */}
-                    <div className="w-full md:w-1/2 max-w-[600px]">
+                    <div className="w-full md:w-1/2 max-w-[600px] flex flex-col justify-center">
                         <h2 className="text-4xl font-bold mb-6">{title}</h2>
                         <div
                             className="text-lg leading-7"
-                            dangerouslySetInnerHTML={{__html: text}}
+                            dangerouslySetInnerHTML={{ __html: text }}
                         />
                         {buttonText && buttonLink && (
                             <a
@@ -111,7 +103,6 @@ export function ContentSection({
                 </div>
             </div>
         </section>
-
     );
 }
 

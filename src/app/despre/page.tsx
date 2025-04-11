@@ -21,7 +21,7 @@ export default function Homepage() {
             </Hero>
 
             <ContentSection
-                images={[`${process.env.BASE_IMAGE_URL}team-group/sedintaCD_2021.jpg`, `${process.env.BASE_IMAGE_URL}galaCOR_2021.jpg`, `${process.env.BASE_IMAGE_URL}team-group/buc2020.jpg`, `${process.env.BASE_IMAGE_URL}team-group/galatren2022.jpg`]}
+                images={[`${process.env.BASE_IMAGE_URL}team-group/tedxteam2025.jpg`, `${process.env.BASE_IMAGE_URL}team-group/sedintaCD_2021.jpg`, `${process.env.BASE_IMAGE_URL}team-group/galaCOR_2021.jpg`, `${process.env.BASE_IMAGE_URL}team-group/galatren2022.jpg`]}
                 altTexts={['Sedinta CD 2021', 'GalaCOR2021', 'Bucuresti 2020', 'Spre Gala 2022']}
                 title="Povestea noastră"
                 text="Comunitatea ONedu România a început ca un vis curajos al doi elevi din Galați, care în 2019 au văzut o nevoie urgentă: să aducă educația din România mai aproape de generația lor. Cu resurse limitate, dar cu inimi pline de pasiune, au pornit la drum, crezând cu tărie că educația trebuie să fie accesibilă, modernă și adaptată la secolul 21 pentru toți.

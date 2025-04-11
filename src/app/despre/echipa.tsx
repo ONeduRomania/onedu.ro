@@ -29,7 +29,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ imageSrc, name, role, project }
 const TeamSection: React.FC = () => {
     const teamMembers: TeamMemberProps[] = [
         {
-            imageSrc: `${process.env.BASE_IMAGE_URL}team/stefan.png`,
+            imageSrc: `${process.env.BASE_IMAGE_URL}team/stefanP.jpg`,
             name: 'Andrei-Ștefan Poenaru',
             role: 'președinte',
         },
@@ -44,7 +44,7 @@ const TeamSection: React.FC = () => {
             role: 'secretar',
         },
         {
-            imageSrc: `${process.env.BASE_IMAGE_URL}team/raly.png`,
+            imageSrc: `${process.env.BASE_IMAGE_URL}team/ralyT.jpg`,
             name: 'Raly Țonea',
             role: 'director resurse umane',
         },
@@ -54,12 +54,12 @@ const TeamSection: React.FC = () => {
             role: 'asistent manager',
         },
         {
-            imageSrc: `${process.env.BASE_IMAGE_URL}team/darius.png`,
+            imageSrc: `${process.env.BASE_IMAGE_URL}team/darius.jpg`,
             name: 'Darius Bordeanu',
             role: 'web developer',
         },
         {
-            imageSrc: `${process.env.BASE_IMAGE_URL}team/florin.png`,
+            imageSrc: `${process.env.BASE_IMAGE_URL}team/florin.jpg`,
             name: 'Florin Baciu',
             role: 'coordonator voluntari',
             project: 'TEDxAvram Iancu Street',
@@ -71,7 +71,7 @@ const TeamSection: React.FC = () => {
             project: 'TEDxAvram Iancu Street',
         },
         {
-            imageSrc: `${process.env.BASE_IMAGE_URL}team/darius-merian.jpg`,
+            imageSrc: `${process.env.BASE_IMAGE_URL}team/dariusMC.jpg`,
             name: 'Darius Merian',
             role: 'manager comunicare',
             project: 'Gala Voluntariatului',

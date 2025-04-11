@@ -5,41 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="update final politici">
-      <change afterPath="$PROJECT_DIR$/src/api/Donation.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/blog/[slug]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/contract/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/dashboard/AuthContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/dashboard/admin/blog/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/dashboard/admin/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/dashboard/admin/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/dashboard/donator/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/doneaza/status/netopia/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/doneaza/status/smartpay/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/hr/aga/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/hr/onboarding/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/hr/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/hr/parinte/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/hr/voluntar/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/brand/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/hr/identitate/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/blog/[id]/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/blog/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact/ContactInfoSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/ContactInfoSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/validate-magic-link/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/validate-magic-link/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/terms/sections/01-conditions.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/sections/01-conditions.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/terms/sections/02-evenimente.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/sections/02-evenimente.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/terms/sections/03-retur.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/sections/03-retur.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PrivateRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PrivateRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/donationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/donationModal/CardModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/CardModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/donationModal/SmartPayModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/SmartPayModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/donationModal/WalletModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/WalletModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/authService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/authService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact/ContactItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/ContactItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/despre/echipa.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/echipa.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/despre/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/rapoarte/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/rapoarte/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pageContent/content-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageContent/content-section.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="impl_HR" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,11 +71,11 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;impl__sponsorizare&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.10.2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ONedu/backend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ONedu/onedu-website/public/image&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -127,11 +101,11 @@
       <recent name="D:\ONedu\onedu-website\src\app\doneaza" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ONedu\onedu.ro\src\app\dashboard" />
-      <recent name="D:\ONedu\onedu.ro\src\app\doneaza\status\netopia\[slug]" />
       <recent name="D:\ONedu\onedu-website\public\image\solutions" />
       <recent name="D:\ONedu\onedu-website\src\app\dashboard\login" />
       <recent name="D:\ONedu\onedu-website\src\app\merch\[id]" />
+      <recent name="D:\ONedu\onedu-website\src\app\blog\[id]" />
+      <recent name="D:\ONedu\onedu-website\backend\certs" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -193,31 +167,7 @@
       <workItem from="1738003721054" duration="5066000" />
       <workItem from="1738328253538" duration="9894000" />
       <workItem from="1738441784996" duration="15949000" />
-      <workItem from="1738527007508" duration="19000" />
-      <workItem from="1738592096200" duration="3410000" />
-      <workItem from="1738615583582" duration="190000" />
-      <workItem from="1738629954653" duration="5106000" />
-      <workItem from="1738671373331" duration="110000" />
-      <workItem from="1738688073645" duration="5242000" />
-      <workItem from="1738924989584" duration="3246000" />
-      <workItem from="1738965408235" duration="2071000" />
-      <workItem from="1739125222369" duration="4735000" />
-      <workItem from="1739136676925" duration="1240000" />
-      <workItem from="1739140558191" duration="614000" />
-      <workItem from="1739184133168" duration="1616000" />
-      <workItem from="1739564202195" duration="110000" />
-      <workItem from="1740230055085" duration="592000" />
-      <workItem from="1740428290782" duration="18000" />
-      <workItem from="1740862796289" duration="582000" />
-      <workItem from="1741373817723" duration="595000" />
-      <workItem from="1741438588361" duration="560000" />
-      <workItem from="1741688193233" duration="432000" />
-      <workItem from="1741690645477" duration="75000" />
-      <workItem from="1741690963570" duration="7000" />
-      <workItem from="1741877094076" duration="3377000" />
-      <workItem from="1743260494010" duration="790000" />
-      <workItem from="1743470710947" duration="9000" />
-      <workItem from="1743787836770" duration="3801000" />
+      <workItem from="1743849224235" duration="5376000" />
     </task>
     <task id="LOCAL-00026" summary="despre page">
       <option name="closed" value="true" />

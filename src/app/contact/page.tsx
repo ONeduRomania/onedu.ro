@@ -1,4 +1,3 @@
-// components
 import { Navbar, Footer } from "@/components";
 import Hero from "@/components/pageContent/hero";
 import React from "react";
