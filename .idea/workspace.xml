@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="cateva updateuri site majore">
-      <change afterPath="$PROJECT_DIR$/src/app/doneaza/status/netopia/StatusNetopia.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/doneaza/status/smartpay/StatusSmartpay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/admin/blog/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/validate-magic-link/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/validate-magic-link/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/doneaza/status/netopia/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/doneaza/status/netopia/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/doneaza/status/smartpay/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/doneaza/status/smartpay/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hr/onboarding/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/merch/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/merch/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,15 +168,7 @@
       <workItem from="1744458852046" duration="2161000" />
       <workItem from="1744669227558" duration="11000" />
       <workItem from="1746279333926" duration="596000" />
-      <workItem from="1746803834652" duration="105000" />
-    </task>
-    <task id="LOCAL-00027" summary="fix error">
-      <option name="closed" value="true" />
-      <created>1734182025970</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1734182025970</updated>
+      <workItem from="1746803834652" duration="3192000" />
     </task>
     <task id="LOCAL-00028" summary="fix error">
       <option name="closed" value="true" />
@@ -572,7 +554,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744404835213</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="cateva updateuri site majore">
+      <option name="closed" value="true" />
+      <created>1746804388262</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1746804388262</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
