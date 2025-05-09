@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 import { Layout } from "@/components";
 import GlobalScripts from "@/components/GlobalScripts";
 import React, { Suspense } from "react";
+import Script from "next/script";
 
 const roboto = Roboto({
     subsets: ["latin"],
@@ -28,6 +29,19 @@ export default function RootLayout({
     return (
         <html lang="ro">
         <head>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11045417837"></script>
+            <Script
+                src="https://www.googletagmanager.com/gtag/js?id=AW-11045417837"
+                strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+                {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-11045417837');
+          `}
+            </Script>
             <link
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"

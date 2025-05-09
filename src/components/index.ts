@@ -1,7 +1,7 @@
 "use client";
 
-export * from "./navbar";
-export * from "./footer";
+export * from "./Navbar";
+export * from "./Footer";
 export * from "./layout";
 export * from "./pageContent/hero";
 // export * from "./fixed-plugin";

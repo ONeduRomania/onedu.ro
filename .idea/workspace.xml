@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="update final politici">
-      <change afterPath="$PROJECT_DIR$/src/app/brand/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/hr/identitate/page.tsx" afterDir="false" />
+    <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="cateva updateuri site majore">
+      <change afterPath="$PROJECT_DIR$/src/app/doneaza/status/netopia/StatusNetopia.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/doneaza/status/smartpay/StatusSmartpay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact/ContactItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/ContactItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/despre/echipa.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/echipa.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/despre/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/rapoarte/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/rapoarte/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageContent/content-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageContent/content-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/admin/blog/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/validate-magic-link/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/validate-magic-link/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/doneaza/status/netopia/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/doneaza/status/netopia/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/doneaza/status/smartpay/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/doneaza/status/smartpay/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/hr/onboarding/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/merch/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/merch/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,32 +69,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.10.2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ONedu/onedu-website/public/image&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\ONedu\\onedu.ro\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.10.2",
+    "last_opened_file_path": "C:/Users/Cosmin/Desktop/GameDev2D",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/Cosmin/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.15.0/node",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\ONedu\\onedu.ro\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ONedu\onedu-website\public\image" />
@@ -168,14 +172,13 @@
       <workItem from="1738328253538" duration="9894000" />
       <workItem from="1738441784996" duration="15949000" />
       <workItem from="1743849224235" duration="5376000" />
-    </task>
-    <task id="LOCAL-00026" summary="despre page">
-      <option name="closed" value="true" />
-      <created>1734143858648</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1734143858648</updated>
+      <workItem from="1744404662482" duration="883000" />
+      <workItem from="1744405580513" duration="2854000" />
+      <workItem from="1744458661321" duration="5000" />
+      <workItem from="1744458852046" duration="2161000" />
+      <workItem from="1744669227558" duration="11000" />
+      <workItem from="1746279333926" duration="596000" />
+      <workItem from="1746803834652" duration="105000" />
     </task>
     <task id="LOCAL-00027" summary="fix error">
       <option name="closed" value="true" />
@@ -561,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738512441765</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="cateva updateuri site majore">
+      <option name="closed" value="true" />
+      <created>1744404835212</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1744404835213</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,6 +607,7 @@
     <MESSAGE value="final" />
     <MESSAGE value="Politici + some of donation sys" />
     <MESSAGE value="update final politici" />
-    <option name="LAST_COMMIT_MESSAGE" value="update final politici" />
+    <MESSAGE value="cateva updateuri site majore" />
+    <option name="LAST_COMMIT_MESSAGE" value="cateva updateuri site majore" />
   </component>
 </project>
