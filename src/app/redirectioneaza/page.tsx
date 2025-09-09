@@ -2,14 +2,22 @@
 
 import {Navbar, Footer} from "@/components";
 import Hero from "@/app/redirectioneaza/hero";
-import React from "react";
 import ContentSection from "@/components/pageContent/content-section";
 import ColumnSection from "@/components/pageContent/column-section";
 import studentsStories from "../../data/studentsStories.json";
 import FormSubmission from "@/app/redirectioneaza/infoRedirect";
 
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-export default function Homepage() {
+
+export default function RedirectioneazaPage() {
+    const router = useRouter();
+
+    useEffect(() => {
+        router.push("/redirectioneaza/fwd");
+    }, [router]);
+
     return (
         <>
             <Navbar/>

@@ -5,8 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="cateva updateuri site majore">
+      <change afterPath="$PROJECT_DIR$/src/app/proiecte/[slug]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/proiecte/data/hub-educatie-digitala.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/redirectioneaza/fwd/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Donation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Donation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact/ContactInfoSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/ContactInfoSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contract/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contract/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/despre/echipa.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/echipa.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/doneaza/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/doneaza/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/privacy/sections/04-drepturiuseri.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/privacy/sections/04-drepturiuseri.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/privacy/sections/08-modificari.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/privacy/sections/08-modificari.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/redirectioneaza/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/redirectioneaza/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sms/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sponsorizeaza/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sponsorizeaza/hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sponsorizeaza/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sponsorizeaza/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/terms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/terms/sections/03-retur.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/sections/03-retur.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/donationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/donationModal/CardModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/CardModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/donationModal/SmartPayModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/SmartPayModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pageContent/content-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageContent/content-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/ceFacem.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/ceFacem.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/projects.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,33 +83,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.10.2",
-    "last_opened_file_path": "C:/Users/Cosmin/Desktop/GameDev2D",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/Cosmin/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.15.0/node",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\ONedu\\onedu.ro\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.15.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.15.35&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Cosmin/Desktop/GameDev2D&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/Cosmin/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.15.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\onedu.ro\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql",
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ONedu\onedu-website\public\image" />
@@ -101,6 +127,28 @@
       <recent name="D:\ONedu\onedu-website\src\app\blog\[id]" />
       <recent name="D:\ONedu\onedu-website\backend\certs" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -169,6 +217,14 @@
       <workItem from="1744669227558" duration="11000" />
       <workItem from="1746279333926" duration="596000" />
       <workItem from="1746803834652" duration="3192000" />
+      <workItem from="1751831776297" duration="1044000" />
+      <workItem from="1751880784756" duration="23000" />
+      <workItem from="1751888623225" duration="3346000" />
+      <workItem from="1752288621023" duration="1255000" />
+      <workItem from="1752291475758" duration="2651000" />
+      <workItem from="1757178505416" duration="1695000" />
+      <workItem from="1757229294150" duration="6838000" />
+      <workItem from="1757344493785" duration="2689000" />
     </task>
     <task id="LOCAL-00028" summary="fix error">
       <option name="closed" value="true" />

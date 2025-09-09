@@ -24,6 +24,7 @@ export function CardModal({ isOpen, onClose, amount, frequency }: CardModalProps
     }, [isOpen]);
 
     const validateForm = () => {
+
         const newErrors: { firstName?: string; lastName?: string; email?: string; phone?: string } = {};
 
         if (!firstName.trim()) {
@@ -94,10 +95,13 @@ export function CardModal({ isOpen, onClose, amount, frequency }: CardModalProps
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!validateForm()) {
+            alert('Vă rugăm să corectați erorile din formular.');
             return;
         }
 
         try {
+            console.log({ amount, frequency });
+
             const response = await submitDonation(firstName, lastName, email, phone, amount, frequency, isSubscribed, 'netopia', '');
 
             if (response.redirectUri && response.env_key && response.data) {

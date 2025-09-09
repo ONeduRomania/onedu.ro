@@ -14,7 +14,7 @@ import TermsContent from './TermsContent';
 interface Section {
     id: string;
     title: string;
-    content: string;  // Stocăm direct markdown brut
+    content: string;
 }
 
 const getSections = async (): Promise<Section[]> => {

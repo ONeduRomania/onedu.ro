@@ -55,6 +55,13 @@ export function DonationForm() {
 
     return (
         <>
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4" role="alert">
+                <strong className="font-bold">Notă importantă: </strong>
+                <span className="block sm:inline">
+                    Donațiile sunt momentan disponibile doar prin <strong>ordin de plată</strong>, utilizând datele bancare afișate.
+                </span>
+            </div>
+
             <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
                 <div className="mb-4">
                     <label className="block text-sm font-bold mb-2 text-gray-700">

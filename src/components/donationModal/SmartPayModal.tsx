@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {submitDonation} from "@/api/Donation";
+import {getSmartPayBanks, submitDonation} from "@/api/Donation";
 
 interface PaymentModalProps {
     isOpen: boolean;
@@ -16,17 +16,16 @@ export function SmartPayModal({ isOpen, onClose, amount, frequency }: PaymentMod
     const [isSubscribed, setIsSubscribed] = useState(false);
     const [selectedBank, setSelectedBank] = useState('');
     const [errors, setErrors] = useState<{ firstName?: string; lastName?: string; email?: string; phone?: string }>({});
+    const [banks, setBanks] = useState<{ code: string; name: string }[]>([]);
 
-    const banks = [
-        { id: 'BCR', name: 'Banca Comercială Română' },
-        { id: 'BT', name: 'Banca Transilvania' },
-        { id: 'ING', name: 'ING Bank' },
-        { id: 'BRD', name: 'BRD - Groupe Société Générale' },
-    ];
+
 
     useEffect(() => {
         if (isOpen) {
             setIsSubscribed(true);
+            getSmartPayBanks()
+                .then((data) => setBanks(data))
+                .catch(() => alert('Eroare la încărcarea băncilor SmartPay.'));
         }
     }, [isOpen]);
 
@@ -176,12 +175,13 @@ export function SmartPayModal({ isOpen, onClose, amount, frequency }: PaymentMod
                                 >
                                     <option value="">Alege o bancă...</option>
                                     {banks.map((bank) => (
-                                        <option key={bank.id} value={bank.id}>
+                                        <option key={bank.code} value={bank.code}>
                                             {bank.name}
                                         </option>
                                     ))}
                                 </select>
                             </div>
+
                             <div className="flex items-center gap-2 mb-4">
                                 <input
                                     type="checkbox"

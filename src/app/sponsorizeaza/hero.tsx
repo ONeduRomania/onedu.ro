@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
                 </h1>
                 <p className="text-base sm:text-lg text-gray-700 mb-8">
                     Construim un hub de servicii digitale în educație pentru elevi, profesori, școli și părinți.
-                    Modernizăm școlile din România. Ajută-ne să parcurgem harta spre o Românie digitală și modernă.
+                    <br/>Ajută-ne să parcurgem harta spre o Românie digitală și modernă.
                 </p>
 
                 <div className="flex flex-col md:flex-row justify-between gap-8">
@@ -102,8 +102,8 @@ const HeroSection: React.FC = () => {
                         din impozitul de plată la 25 martie al anului următor).
                     </p>
                     <p className="text-gray-700">
-                        <strong>Microîntreprinderile plătitoare de impozit pe venit</strong>
-                        nu mai beneficiază de facilitatea fiscală 20%, începând cu anul 2024.
+                        <strong>Microîntreprinderile plătitoare de impozit pe venit </strong>
+                         nu mai beneficiază de facilitatea fiscală 20%, începând cu anul 2024.
                     </p>
                 </div>
             </div>

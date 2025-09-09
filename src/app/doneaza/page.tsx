@@ -14,8 +14,8 @@ export default function Homepage() {
             <Navbar/>
             <Hero
                 background={`${process.env.BASE_IMAGE_URL}team-group/gvr-people.jpg`}
-                title="Modernizăm educația împreună."
-                subtitle="Anual părinții scot bani din buzunar pentru accesul elevilor din România la educație. Ajută-ne să construim soluții digitale în educație și să renovăm împreună școli."
+                title="2.8 milioane de elevi din România nu au acces la educație digitală"
+                subtitle="Părinții trebuie să scoată bani din buzunar anual pentru a putea asigura acces elevilor la educația digitală. Ajută-ne să construim un ecosistem de soluții digitale pentru educație, gratuite pentru elevi, părinți și profesori"
             >
                 <DonationForm/>
             </Hero>
@@ -24,7 +24,8 @@ export default function Homepage() {
                 images={[`${process.env.BASE_IMAGE_URL}team-group/bkm_centru.jpg`, `${process.env.BASE_IMAGE_URL}team-group/tgmures_abc.jpg`]}
                 altTexts={['bkm_centru', 'tgmures_team']}
                 title="Manifestul nostru"
-                text="În 2019, doi elevi din Galați au inițiat o mișcare civică pentru a digitaliza educația din România. De atunci, această viziune s-a transformat într-o misiune națională: modernizarea educației prin infrastructură, resurse materiale și digitale. Lucrăm pentru a oferi soluții digitale inovatoare pentru elevi, părinți, profesori și școli. Împreună, construim un viitor digital pentru generațiile de azi și de mâine."
+                text="În 2019, doi elevi din Galați au pornit o mișcare curajoasă: să aducă școala românească mai aproape de lumea digitală.
+                În 2019, doi elevi din Galați au inițiat o mișcare civică pentru a digitaliza educația din România. De atunci, această viziune s-a transformat într-o misiune națională: modernizarea educației prin infrastructură, resurse materiale și digitale. Lucrăm pentru a oferi soluții digitale inovatoare pentru elevi, părinți, profesori și școli. Împreună, construim un viitor digital pentru generațiile de azi și de mâine."
                 layout="left"
             />
 

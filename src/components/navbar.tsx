@@ -1,36 +1,36 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaShoppingCart, FaHeart, FaChevronDown } from "react-icons/fa";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import {FaHeart, FaChevronDown, FaUser} from "react-icons/fa";
+import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
 
 const MENU_ITEMS = [
     {
         label: "Donează", href: "", subMenu: [
-            { label: "Donează online", href: "/doneaza" },
-            { label: "Transfer bancar", href: "/transfer" },
+            {label: "Donează online", href: "/doneaza"},
+            {label: "Transfer bancar", href: "/transfer"},
             // { label: "SMS", href: "/sms" },
-            { label: "Redirecționează 3,5%", href: "/redirectioneaza" },
-            { label: "Sponsorizează 20%", href: "/sponsorizeaza" }
+            {label: "Redirecționează 3,5%", href: "/redirectioneaza"},
+            {label: "Sponsorizează 20%", href: "/sponsorizeaza"}
             // { label: "Campania ta", href: "/campanii" },
         ]
     },
-    { label: "Planul nostru", href: "/plan" },
+    {label: "Planul nostru", href: "/plan"},
     // { label: "Școala ONedu", href: "/scoala" },
-    { label: "Sponsorizează 20%", href: "/sponsorizeaza" },
+    {label: "Sponsorizează 20%", href: "/sponsorizeaza"},
     // { label: "Merch", href: "/merch" },
     {
         label: "Despre noi", href: "", subMenu: [
-            { label: "Despre noi", href: "/despre" },
-            { label: "Proiecte", href: "/proiecte" },
-            { label: "Premii", href: "/premii" },
-            { label: "Rapoarte", href: "/rapoarte" },
-            { label: "Susținători", href: "/parteneri" },
+            {label: "Despre noi", href: "/despre"},
+            {label: "Proiecte", href: "/proiecte"},
+            {label: "Premii", href: "/premii"},
+            {label: "Rapoarte", href: "/rapoarte"},
+            {label: "Susținători", href: "/parteneri"},
         ]
     },
-    { label: "Blog", href: "/blog" },
+    {label: "Blog", href: "/blog"},
 ];
 
 export function Navbar() {
@@ -100,7 +100,8 @@ export function Navbar() {
                                         />
                                     </button>
                                 ) : (
-                                    <Link href={item.href} className="font-medium px-2 py-1 rounded-md hover:bg-gray-200 transition">
+                                    <Link href={item.href}
+                                          className="font-medium px-2 py-1 rounded-md hover:bg-gray-200 transition">
                                         {item.label}
                                     </Link>
                                 )}
@@ -136,25 +137,30 @@ export function Navbar() {
                     </ul>
                 </nav>
 
-                <div className="flex items-center gap-4">
-                    {/*<FaShoppingCart className="text-3xl cursor-pointer hover:bg-gray-200 p-2 rounded-md ml-4" />*/}
-                    <Link href="/doneaza">
-                        <button className="ml-4 bg-custom-blue text-white px-3 py-1 rounded-md font-medium text-sm hover:bg-custom-blue-dark flex items-center">
-                            <FaHeart className="hidden lg:inline-block mr-1" /> {/* Iconul este ascuns pe mobil */}
-                            Donează
-                        </button>
+                <div className="flex items-center">
+                    <Link href="https://contulmeu.onedu.ro" target="_blank" rel="noopener noreferrer">
+                        <FaUser className="text-3xl cursor-pointer hover:bg-gray-200 p-2 rounded-md ml-4"/>
                     </Link>
+                    <div className="flex items-center gap-4">
+                        <Link href="/doneaza">
+                            <button
+                                className="ml-4 bg-custom-blue text-white px-3 py-1 rounded-md font-medium text-sm hover:bg-custom-blue-dark flex items-center">
+                                <FaHeart className="hidden lg:inline-block mr-1"/>
+                                Donează
+                            </button>
+                        </Link>
 
-                    <button
-                        className="block lg:hidden text-black"
-                        onClick={() => setMenuOpen(!menuOpen)}
-                    >
-                        {menuOpen ? (
-                            <XMarkIcon className="w-5 h-5" />
-                        ) : (
-                            <Bars3Icon className="w-5 h-5" />
-                        )}
-                    </button>
+                        <button
+                            className="block lg:hidden text-black"
+                            onClick={() => setMenuOpen(!menuOpen)}
+                        >
+                            {menuOpen ? (
+                                <XMarkIcon className="w-5 h-5"/>
+                            ) : (
+                                <Bars3Icon className="w-5 h-5"/>
+                            )}
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>

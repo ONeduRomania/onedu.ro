@@ -34,11 +34,11 @@ Conform legislației aplicabile privind protecția datelor, persoanele juridice 
 
 Persoana vizată poate solicita reconsiderarea deciziei luate în cele 3 cazuri de mai sus.
 
-Toate aceste drepturi pot fi exercitate de către persoanele vizate printr-o cerere transmisă la sediul organizației sau la adresa de e-mail: secretariat@onedu.ro.
+Toate aceste drepturi pot fi exercitate de către persoanele vizate printr-o cerere transmisă la sediul organizației sau prin centrul de ajutor [support.onedu.ro](https://support.onedu.ro).
 
 Organizația trebuie să răspundă oricărei solicitări de exercitare a drepturilor persoanelor vizate în termen de cel mult o lună (de regulă), respectând conținutul minim stabilit de Regulament.
 
-Vă puteți exercita drepturile mai sus menționate și puteți afla mai multe despre astfel de drepturi prin completarea împreună cu noi, în calitate de controlori de date, a unei solicitări scrise către Asociația ONedu prin trimiterea unui e-mail la adresa secretariat@onedu.ro. Aveți, de asemenea, dreptul de a depune o plângere la autoritatea de protecție a datelor. Suntem hotărâți să vă tratăm întotdeauna cererile cu cea mai mare atenție și să ne ocupăm de orice solicitări ați putea avea în cel mai scurt timp posibil.
+Vă puteți exercita drepturile mai sus menționate și puteți afla mai multe despre astfel de drepturi prin completarea împreună cu noi, în calitate de controlori de date, a unei solicitări scrise către Asociația ONedu. Aveți, de asemenea, dreptul de a depune o plângere la autoritatea de protecție a datelor. Suntem hotărâți să vă tratăm întotdeauna cererile cu cea mai mare atenție și să ne ocupăm de orice solicitări ați putea avea în cel mai scurt timp posibil.
 
 # Cât timp păstrăm datele dumneavoastră personale
 Păstrăm informațiile atâta timp cât avem nevoie de ele pentru a ne furniza Produsele, pentru a respecta obligațiile legale sau pentru a proteja interesele noastre ori ale altora. Decidem cât timp avem nevoie de informații pentru fiecare caz în parte. Iată de ce ținem cont atunci când decidem:

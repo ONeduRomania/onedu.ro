@@ -9,14 +9,14 @@ export default function Homepage() {
     return (
         <>
             <Navbar/>
-            <Hero
-                title="Modernizăm educația împreună."
-                subtitle="Anual părinții scot bani din buzunar pentru accesul elevilor din România la educație. Ajută-ne să construim soluții digitale în educație și să renovăm împreună școli."
-            >
-                <SMSCall/>
-            </Hero>
+            {/*<Hero*/}
+            {/*    title="Modernizăm educația împreună."*/}
+            {/*    subtitle="Anual părinții scot bani din buzunar pentru accesul elevilor din România la educație. Ajută-ne să construim soluții digitale în educație și să renovăm împreună școli."*/}
+            {/*>*/}
+            {/*    <SMSCall/>*/}
+            {/*</Hero>*/}
 
-            <SMSinfo/>
+            {/*<SMSinfo/>*/}
             <Footer/>
         </>
     );

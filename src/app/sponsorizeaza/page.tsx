@@ -35,8 +35,10 @@ export default function Homepage() {
                 images={[`${process.env.BASE_IMAGE_URL}team-group/bkm_centru.jpg`, `${process.env.BASE_IMAGE_URL}team-group/tgmures_abc.jpg`]}
                 altTexts={['bkm_centru', 'tgmures_team']}
                 title="Unde merge investiția ta"
-                text="Am pornit ca o mișcare civică în 2019 la inițiativa a doi elevi gălățeni, din dorința de a digitaliza educația din România. Din 2025 modernizăm educația pe toate planurile: infrastructură, resurse materiale și resurse digitale. Construim împreună soluții digitale pentru elevi, părinți, tineri, profesori, școli și modernizăm școlile României. Construim România educată."
+                text="Prin sprijinul tău, contribuim direct la modernizarea educației din România. Investițiile se transformă în soluții digitale gratuite pentru toți elevii, părinții și profesorii, cât și în proiecte pentru comunitate prin care educăm și dăm voce educației. Împreună construim o educație mai echitabilă și mai adaptată nevoilor actuale."
                 layout="right"
+                buttonText="Vezi planul nostru"
+                buttonLink="/plan"
             />
 
             <SponsorshipCalculator/>

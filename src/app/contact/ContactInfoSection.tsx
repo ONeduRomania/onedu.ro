@@ -9,18 +9,21 @@ const ContactInfoSection = () => {
     return (
         <>
 
+            <div className="bg-yellow-100 border border-yellow-400 text-yellow-800 px-4 py-3 rounded-lg mb-6 text-center" role="alert">
+                <strong className="font-bold">Important: </strong>
+                <span className="block sm:inline">
+                    Începând cu <strong>ianuarie 2026</strong>, odată cu lansarea <strong>Portalului de Suport ONedu</strong>,
+                    adresa de email <em>contact@onedu.ro</em> nu va mai fi disponibilă.
+                    Toată comunicarea se va face exclusiv prin portal.
+                </span>
+            </div>
+
             <section className="flex flex-wrap justify-center gap-6 my-12">
                 <ContactItem
                     Icon={FiMail}
                     label="Scrie-ne la"
                     info="contact@onedu.ro"
                     link="mailto:contact@onedu.ro"
-                />
-                <ContactItem
-                    Icon={FiPhone}
-                    label="Sună-ne la"
-                    info="+40 753 491 030"
-                    link="tel:+40753491030"
                 />
             </section>
 

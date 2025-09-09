@@ -5,7 +5,7 @@ title: Modificări și dispoziții finale
 # Cerințe europene
 Dacă legislația privind protecția datelor din Uniunea Europeană (UE) se aplică procesării informațiilor dvs., vă oferim controalele descrise în această politică, astfel încât să vă puteți exercita drepturile de a solicita acces la, actualiza, elimina și restricționa prelucrarea. De asemenea, aveți dreptul de a vă opune prelucrării informațiilor dumneavoastră sau de a vă exporta informațiile către un alt serviciu.
 
-Dacă aveți întrebări sau solicitări suplimentare legate de drepturile dvs., puteți contacta Asociația ONedu și responsabilul nostru pentru protecția datelor, la adresa de email secretariat@onedu.ro.
+Dacă aveți întrebări sau solicitări suplimentare legate de drepturile dvs., puteți contacta Asociația ONedu și responsabilul nostru pentru protecția datelor prin Centrul de suport la [support.onedu.ro](https://support.onedu.ro).
 
 # Litigii
 Legile române vor guverna politica de mai sus și orice dispută de orice fel care ar putea să apară între utilizator și organizație. În cazul unor eventuale conflicte între organizație și utilizatorii săi, se va încerca mai întâi rezolvarea acestora pe cale amiabilă, în minim 30 de zile lucrătoare. Dacă rezolvarea pe cale amiabilă nu va fi posibilă, conflictul va fi soluționat de instanța competentă în conformitate cu legile române în vigoare.
@@ -22,7 +22,7 @@ Prezenta politică se aplică la toate domeniile organizației menționate anter
 # Cum contactați Asociația ONedu?
 Dacă aveți întrebări referitoare la această Politică sau dacă aveți întrebări, plângeri sau solicitări referitoare la informațiile dvs., ne puteți contacta așa cum este descris mai jos.
 
-Operatorul de date responsabil cu informațiile dvs. este Meta Platforms Ireland Limited, pe care îl puteți contacta online la secretariat@onedu.ro.
+Operatorul de date responsabil cu informațiile dvs. este Asociația ONedu, pe care îl puteți contacta online la [support.onedu.ro](https://support.onedu.ro).
 
 De asemenea, aveți dreptul să depuneți o reclamație la autoritatea de supraveghere competentă sau să vă adresați instanței de judecată.
 

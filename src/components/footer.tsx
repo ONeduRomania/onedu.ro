@@ -13,10 +13,11 @@ const FOOTER_MENUS = {
         {href: '/sponsorizeaza', label: 'Sponsorizează 20%'},
     ],
     plan: [
-        {href: 'https://manual.fiide10.ro', label: 'Manual de utilizare'},
-        {href: 'https://support.fiide10.ro', label: 'Suport beneficiari'},
+        {href: 'https://support.onedu.ro', label: 'Suport beneficiari'},
+        {href: 'https://contulmeu.onedu.ro', label: 'Contul meu ONedu'},
         {href: 'https://fiide10.ro', label: 'Hubul Fii de 10!'},
         {href: 'https://ivoluntar.org', label: 'Centrul iVoluntar'},
+
     ],
     organization: [
         {href: '/brand', label: 'Brandul ONedu'},

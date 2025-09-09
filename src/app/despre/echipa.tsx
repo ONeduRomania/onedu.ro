@@ -39,8 +39,8 @@ const TeamSection: React.FC = () => {
             role: 'vicepreședinte',
         },
         {
-            imageSrc: `${process.env.BASE_IMAGE_URL}team/mariana.png`,
-            name: 'Mariana Uhren',
+            imageSrc: `${process.env.BASE_IMAGE_URL}team/crina.png`,
+            name: 'Diana Oloșutean',
             role: 'secretar',
         },
         {
@@ -52,11 +52,6 @@ const TeamSection: React.FC = () => {
             imageSrc: `${process.env.BASE_IMAGE_URL}team/claudiu.png`,
             name: 'Claudiu Chiorean',
             role: 'asistent manager',
-        },
-        {
-            imageSrc: `${process.env.BASE_IMAGE_URL}team/darius.jpg`,
-            name: 'Darius Bordeanu',
-            role: 'web developer',
         },
         {
             imageSrc: `${process.env.BASE_IMAGE_URL}team/florin.jpg`,

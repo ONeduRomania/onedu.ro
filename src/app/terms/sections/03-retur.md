@@ -5,7 +5,7 @@ title: Politica de retur
 # Politica de retur
 
 ## Pentru donatori
-În general, donațiile realizate către Asociația ONedu nu pot fi restituite către donator. Dacă donația a fost realizată eronat sau fără a vă fi dat acordul (e.g. card furat), vă rugăm să ne scrieți în maxim 48 de ore pe (support.onedu.ro)[http://support.onedu.ro] pentru a identifica problema.
+În general, donațiile realizate către Asociația ONedu nu pot fi restituite către donator. Dacă donația a fost realizată eronat sau fără a vă fi dat acordul (e.g. card furat), vă rugăm să ne scrieți în maxim 48 de ore pe [http://support.onedu.ro](support.onedu.ro) pentru a identifica problema.
 
 Sesizarea Asociației ONedu cu privire la o donație eronată nu înseamnă returnarea parțială sau totală a unei donații, ci doar deschiderea unui proces de investigație al echipei noastre. Decizia de restituire a sumei donație, cât și proporția în care este returnată, aparține board-ului Asociației ONedu, în consultare cu reprezentantul contabil al asociației.
 
@@ -17,7 +17,7 @@ Fiecare proiect și eveniment al asociației este unic, astfel există posibilit
 ## Pentru clienții de servicii și produse
 Serviciile achiziționate de la Asociația ONedu sunt nereturnabile.
 
-În termen de 14 zile, din momentul primirii produsului prin curier, trebuie să ne anunți de intenția ta de a returna produsul. Poți face asta, cel mai ușor, completând formularul de pe (support.onedu.ro)[http://support.onedu.ro]. Poți alege una dintre cele două opțiuni de retur: schimb cu un produs diferit sau rambursarea sumei de bani.
+În termen de 14 zile, din momentul primirii produsului prin curier, trebuie să ne anunți de intenția ta de a returna produsul. Poți face asta, cel mai ușor, completând formularul de pe [http://support.onedu.ro](support.onedu.ro). Poți alege una dintre cele două opțiuni de retur: schimb cu un produs diferit sau rambursarea sumei de bani.
 
 Atentie, nu poti anunta intentia de de retur doar telefonic.
 

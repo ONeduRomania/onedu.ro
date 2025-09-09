@@ -43,7 +43,7 @@ export function ContentSection({
                     `}
                 >
                     {/* Carousel Column */}
-                    <div className="w-full md:w-1/2 max-w-[600px] relative h-full">
+                    <div className="w-full md:w-1/2 max-w-[500px] relative max-h-[400px] ">
                         <Carousel
                             activeIndex={activeIndex}
                             onSelect={handleSelect}
@@ -53,7 +53,8 @@ export function ContentSection({
                         >
                             {images.map((image, index) => (
                                 <Carousel.Item key={index}>
-                                    <div className="relative w-full h-full min-h-[300px] md:min-h-[400px] overflow-hidden">
+
+                                    <div className="max-w-[500px] relative max-h-[400px] w-full h-full min-h-[200px] md:min-h-[350px] overflow-hidden">
                                         <Image
                                             src={image}
                                             alt={altTexts[index]}
@@ -94,10 +95,12 @@ export function ContentSection({
                         {buttonText && buttonLink && (
                             <a
                                 href={buttonLink}
-                                className="inline-block mt-5 px-4 py-3 bg-custom-blue text-white font-semibold text-base rounded-lg transition-all duration-300 hover:bg-custom-blue-dark"
+                                className="mt-5 px-4 py-3 bg-custom-blue text-white font-semibold text-base rounded-lg transition-all duration-300 hover:bg-custom-blue-dark block mx-auto md:mx-0 text-center w-max"
                             >
                                 {buttonText}
                             </a>
+
+
                         )}
                     </div>
                 </div>
