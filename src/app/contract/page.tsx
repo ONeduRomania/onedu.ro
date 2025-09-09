@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Input } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
 import { Card, CardBody } from "@nextui-org/react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export default function SponsorshipForm() {
     const [step, setStep] = useState(1);
