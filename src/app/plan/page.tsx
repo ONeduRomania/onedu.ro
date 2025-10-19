@@ -69,9 +69,10 @@ export default function Plan() {
                 images={[`${process.env.BASE_IMAGE_URL}workshop_cj_1.jpg`]}
                 altTexts={['tedx2024']}
                 title="Investitori în educație"
-                text="La Asociația ONedu, investim zi de zi în viitorul educației prin resurse, timp, donații și inovație, încă din 2019. Alături de donatorii și partenerii noștri, transformăm ideile în soluții digitale, proiecte educaționale și evenimente care inspiră și ajung anual la zeci de mii de oameni.
-                Poți investi în educația din România printr-o donație lunară și devii parte din comunitatea investitorilor în educație."
+                text="Încă din 2019, la Asociația ONedu investim în viitorul educației prin timp, resurse, donații și inovație. Cu sprijinul donatorilor și partenerilor noștri transformăm idei în soluții digitale, proiecte educaționale și evenimente care inspiră, atingând anual zeci de mii de oameni. Printr-o donație lunară poți deveni și tu parte din comunitatea care investește în educația din România."
                 layout="left"
+                buttonText="Donează acum"
+                buttonLink="/doneaza"
             />
 
             <ColumnSection
@@ -79,7 +80,6 @@ export default function Plan() {
                 cards={ceFacem}
                 backgroundColor="bg-[#d2e2ff]"
             />
-
 
 
             <ContentSection
@@ -108,7 +108,7 @@ export default function Plan() {
                 images={[`${process.env.BASE_IMAGE_URL}invitati_abc.jpg`]}
                 altTexts={['Centrul iVoluntar']}
                 title="Centrul iVoluntar"
-                text="Născuți din pasiune pentru voluntariat și comunitate, suntem primul centru dedicat tinerilor și voluntarilor din România, din cadrul Asociației ONedu. Construim soluții digitale dedicate tinerilor și organizațiilor non-guvernamentale și organizării de programe de formare a tinerilor și voluntarilor. Organizăm anual Gala Voluntariatului - eveniment dedicat eroilor din comunități."
+                text="Născuți din pasiune pentru voluntariat și comunitate, suntem primul centru dedicat tinerilor și voluntarilor din România, din cadrul Asociației ONedu. Construim soluții digitale dedicate tinerilor și organizațiilor non-guvernamentale și organizăm programe de formare a tinerilor și voluntarilor. Organizăm anual Gala Voluntariatului - eveniment dedicat eroilor din comunități."
                 layout="left"
                 buttonText="Vezi activitatea"
                 buttonLink="https://ivoluntar.org"

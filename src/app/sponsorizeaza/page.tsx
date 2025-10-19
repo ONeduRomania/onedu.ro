@@ -20,8 +20,9 @@ export default function Homepage() {
             <ContentSection
                 images={[`${process.env.BASE_IMAGE_URL}team-group/bkm_centru.jpg`, `${process.env.BASE_IMAGE_URL}team-group/tgmures_abc.jpg`]}
                 altTexts={['bkm_centru', 'tgmures_team']}
-                title="Manifestul nostru"
-                text="În 2019, doi elevi din Galați au inițiat o mișcare civică pentru a digitaliza educația din România. De atunci, această viziune s-a transformat într-o misiune națională: modernizarea educației prin infrastructură, resurse materiale și digitale. Lucrăm pentru a oferi soluții digitale inovatoare pentru elevi, părinți, profesori și școli. Împreună, construim un viitor digital pentru generațiile de azi și de mâine."
+                title="Modernizăm educația împreună"
+                text="În 2019, doi elevi din Galați au pornit o mișcare civică pentru a aduce educația din România în era digitală. Astăzi, această viziune se transformă într-o misiune națională: dezvoltăm, pas cu pas, infrastructura, resursele materiale și soluțiile digitale care vor susține școlile, profesorii, elevii și părinții.
+                Suntem în plin proces de construire a hub-ului nostru educațional și lucrăm intens la primele soluții digitale. Împreună cu parteneri și susținători, punem bazele unui viitor digital pentru generațiile de azi și de mâine."
                 layout="left"
             />
 

@@ -20,6 +20,7 @@ const MENU_ITEMS = [
     {label: "Planul nostru", href: "/plan"},
     // { label: "Școala ONedu", href: "/scoala" },
     {label: "Sponsorizează 20%", href: "/sponsorizeaza"},
+    {label: "Voluntariat", href: "https://docs.google.com/forms/d/e/1FAIpQLSc7C_yOO2HGJFpd2Ofm-h0trW3k8QBjw94ULHe3EBgeqXHEog/viewform?usp=sf_link"},
     // { label: "Merch", href: "/merch" },
     {
         label: "Despre noi", href: "", subMenu: [

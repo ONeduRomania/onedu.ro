@@ -13,9 +13,6 @@ export default function HRPage() {
                     height={40}
                     className="cursor-pointer"
                 />
-                <a href="hr/onboarding" className="mt-4 text-gray-600 hover:text-gray-800 text-lg font-semibold">
-                    Către procesul de onboarding →
-                </a>
             </header>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-20">Alege calitatea ta</h2>
