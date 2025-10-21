@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="fix errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/despre/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/doneaza/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/doneaza/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hr/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hr/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/plan/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/plan/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sponsorizeaza/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sponsorizeaza/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,15 +205,8 @@
       <workItem from="1757344493785" duration="2689000" />
       <workItem from="1757432632416" duration="3324000" />
       <workItem from="1757744936746" duration="2628000" />
-      <workItem from="1760905959471" duration="419000" />
-    </task>
-    <task id="LOCAL-00030" summary="ticketpage">
-      <option name="closed" value="true" />
-      <created>1734266232303</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1734266232303</updated>
+      <workItem from="1760905959471" duration="800000" />
+      <workItem from="1760909471876" duration="574000" />
     </task>
     <task id="LOCAL-00031" summary="ticketpage">
       <option name="closed" value="true" />
@@ -605,7 +592,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757433374393</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="fix errors">
+      <option name="closed" value="true" />
+      <created>1760906423208</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1760906423208</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
