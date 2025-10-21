@@ -29,7 +29,6 @@ export default function RootLayout({
     return (
         <html lang="ro">
         <head>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11045417837"></script>
             <Script
                 src="https://www.googletagmanager.com/gtag/js?id=AW-11045417837"
                 strategy="afterInteractive"
@@ -42,6 +41,7 @@ export default function RootLayout({
             gtag('config', 'AW-11045417837');
           `}
             </Script>
+
             <link
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -49,13 +49,13 @@ export default function RootLayout({
                 crossOrigin="anonymous"
                 referrerPolicy="no-referrer"
             />
+            <title></title>
         </head>
         <body className={roboto.className}>
         <Layout>
             <Suspense fallback={null}>
                 <GlobalScripts />
             </Suspense>
-
             {children}
         </Layout>
         </body>
