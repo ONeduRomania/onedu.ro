@@ -1,10 +1,11 @@
 // src/pages/Rapoarte.tsx
 import { Navbar, Footer } from "@/components";
-import Hero from "@/components/pageContent/hero";
 import React from "react";
 import RaportCard from "@/app/rapoarte/RaportCard";
 import Link from "next/link";
 import { Raport } from "@/app/rapoarte/Raport";
+import HeroRapoarte from "./hero-rapoarte";
+import { FaFilePdf } from "react-icons/fa";
 
 export default function Rapoarte() {
 
@@ -77,46 +78,53 @@ export default function Rapoarte() {
     return (
         <>
             <Navbar />
-            <Hero
+            <HeroRapoarte
                 title="📂 Rapoarte"
                 subtitle="Investim transparent în educație."
             />
 
             {/* Rapoarte de An */}
-            <section className="py-12 px-4">
-                <div className="container mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {rapoarteAnuale.map((raport, index) => (
-                        <RaportCard
-                            key={index}
-                            year={raport.year}
-                            title={raport.title}
-                            links={raport.links}
-                        />
-                    ))}
+            <section className="py-16 px-4 bg-gray-50">
+                <div className="container mx-auto max-w-7xl">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Rapoarte Anuale</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {rapoarteAnuale.map((raport, index) => (
+                            <RaportCard
+                                key={index}
+                                year={raport.year}
+                                title={raport.title}
+                                links={raport.links}
+                            />
+                        ))}
+                    </div>
                 </div>
             </section>
 
-            <h1 className="text-3xl font-bold text-center text-black my-8">Transparență</h1>
-            <section className="py-12 px-4">
-                <div className="container mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {transparenta.map((item, index) => (
-                        <div key={index} className="bg-white rounded-lg p-6 shadow-md">
-                            <h3 className="text-2xl font-bold mb-4 text-black">{item.category}</h3>
-                            {item.links && item.links.length > 0 && (
-                                <>
-                                    <ul className="list-disc list-inside mt-2">
+            {/* Transparență */}
+            <section className="py-16 px-4 bg-white">
+                <div className="container mx-auto max-w-7xl">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Transparență</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {transparenta.map((item, index) => (
+                            <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-custom-blue/30">
+                                <h3 className="text-xl font-bold mb-5 text-gray-900 pb-3 border-b-2 border-custom-blue">{item.category}</h3>
+                                {item.links && item.links.length > 0 && (
+                                    <ul className="space-y-3">
                                         {item.links.map((link, linkIndex) => (
                                             <li key={linkIndex}>
-                                                <Link href={link.href} className="text-black hover:underline">
+                                                <Link 
+                                                    href={link.href} 
+                                                    className="text-gray-700 hover:text-custom-blue transition-colors duration-200 text-sm hover:underline"
+                                                >
                                                     {link.text}
                                                 </Link>
                                             </li>
                                         ))}
                                     </ul>
-                                </>
-                            )}
-                        </div>
-                    ))}
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
             <Footer />

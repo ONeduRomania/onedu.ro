@@ -1,5 +1,4 @@
 import { Navbar, Footer } from "@/components";
-import Hero from "@/components/pageContent/hero";
 import React from "react";
 import ContentSection from "@/components/pageContent/content-section";
 import ColumnSection from "@/components/pageContent/column-section";
@@ -7,18 +6,17 @@ import ceFacem from "@/data/ceFacem.json";
 import TeamSection from "@/app/despre/echipa";
 import DigitalizationSection from "@/app/despre/steps";
 import TransparencySection from "@/app/despre/TransparencySection";
+import HeroDespre from "./hero-despre";
 
 
 export default function Homepage() {
     return (
         <>
             <Navbar />
-            <Hero
+            <HeroDespre
                 background={`${process.env.BASE_IMAGE_URL}tedx_principalphoto.jpg`}
-                title="Modernizăm educația împreună. Pas cu pas."
-                subtitle=""
-            >
-            </Hero>
+                title="Punem bazele unei educații care ține pasul cu viitorul."
+            />
 
             <ContentSection
                 images={[`${process.env.BASE_IMAGE_URL}team-group/tedxteam2025.jpg`, `${process.env.BASE_IMAGE_URL}team-group/sedintaCD_2021.jpg`, `${process.env.BASE_IMAGE_URL}team-group/galaCOR_2021.jpg`, `${process.env.BASE_IMAGE_URL}team-group/galatren2022.jpg`]}

@@ -41,7 +41,7 @@ export default async function PrivacyPage() {
     const sections = await getSections();
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-gray-50">
             <header>
                 <Navbar />
             </header>

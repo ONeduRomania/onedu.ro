@@ -15,10 +15,20 @@ export function WalletModal({ isOpen, onClose, amount, frequency }: WalletModalP
     const [isSubscribed, setIsSubscribed] = useState(false);
 
     useEffect(() => {
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === 'Escape' && isOpen) {
+                onClose();
+            }
+        };
+
         if (isOpen) {
-            setIsSubscribed(true);
+            document.addEventListener('keydown', handleEscape);
         }
-    }, [isOpen]);
+
+        return () => {
+            document.removeEventListener('keydown', handleEscape);
+        };
+    }, [isOpen, onClose]);
 
     const handleOverlayClick = () => {
         onClose();
@@ -84,20 +94,33 @@ export function WalletModal({ isOpen, onClose, amount, frequency }: WalletModalP
                 onClick={handleModalClick}
             >
                 <button
-                    className="absolute top-4 right-4 text-2xl bg-none border-none cursor-pointer"
+                    className="absolute top-2 right-2 md:top-4 md:right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white hover:bg-gray-100 text-gray-600 hover:text-gray-800 shadow-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-custom-blue focus:ring-offset-2 z-10"
                     onClick={onClose}
+                    aria-label="Închide"
                 >
-                    ×
+                    <span className="text-xl leading-none">×</span>
                 </button>
                 <div className="flex flex-col gap-4 md:flex-row md:gap-6">
-                    <div className="flex-1 bg-custom-blue-light p-4 rounded-xl">
-                        <h3 className="text-lg font-semibold">Donația ta</h3>
-                        <p className="text-base">
-                            Donație: {amount} RON{frequency === 'Lunar' ? ' / lună' : ''}
-                        </p>
-                        <small className="text-sm text-gray-600">
-                            Plățile prin portofel digital sunt procesate prin MobilPay - Netopia Payments.
-                        </small>
+                    <div className="flex-1 bg-custom-blue-light p-4 rounded-xl border-2 border-gray-300 flex flex-col justify-between">
+                        <div>
+                            <h3 className="text-lg font-semibold">Donația ta</h3>
+                            <p className="text-base">
+                                Donație: {amount} RON{frequency === 'Lunar' ? ' / lună' : ''}
+                            </p>
+                            <small className="text-sm text-gray-600">
+                                Plățile prin portofel digital sunt procesate prin MobilPay - Netopia Payments.
+                            </small>
+                        </div>
+                        <div className="mt-4 pt-4 border-t border-gray-300">
+                            <div className="bg-white p-1 rounded-lg inline-block">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src="https://mny.ro/np-black-0.svg?id=142505"
+                                    alt="Netopia Payments"
+                                    className="h-4 md:h-5 w-auto"
+                                />
+                            </div>
+                        </div>
                     </div>
                     <div className="flex-2">
                         <h3 className="text-lg font-semibold">Detalii donație</h3>
@@ -110,7 +133,7 @@ export function WalletModal({ isOpen, onClose, amount, frequency }: WalletModalP
                                         value={firstName}
                                         onChange={(e) => setFirstName(e.target.value)}
                                         required
-                                        className="w-full p-2 border rounded-lg focus:outline-none focus:border-blue-800 border-gray-300"
+                                        className="w-full p-2 border-2 border-gray-400 rounded-lg focus:outline-none focus:border-blue-800"
                                     />
                                 </div>
                                 <div className="flex-1">
@@ -120,7 +143,7 @@ export function WalletModal({ isOpen, onClose, amount, frequency }: WalletModalP
                                         value={lastName}
                                         onChange={(e) => setLastName(e.target.value)}
                                         required
-                                        className="w-full p-2 border rounded-lg focus:outline-none focus:border-custom-blue border-gray-300"
+                                        className="w-full p-2 border-2 border-gray-400 rounded-lg focus:outline-none focus:border-custom-blue"
                                     />
                                 </div>
                             </div>
@@ -131,7 +154,7 @@ export function WalletModal({ isOpen, onClose, amount, frequency }: WalletModalP
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
-                                    className="w-full p-2 border rounded-lg focus:outline-none focus:border-custom-blue border-gray-300"
+                                    className="w-full p-2 border-2 border-gray-400 rounded-lg focus:outline-none focus:border-custom-blue"
                                 />
                             </div>
                             <div className="mb-4">
@@ -140,8 +163,22 @@ export function WalletModal({ isOpen, onClose, amount, frequency }: WalletModalP
                                     type="tel"
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
-                                    className="w-full p-2 border rounded-lg focus:outline-none focus:border-custom-blue border-gray-300"
+                                    className="w-full p-2 border-2 border-gray-400 rounded-lg focus:outline-none focus:border-custom-blue"
                                 />
+                            </div>
+                            <div className="bg-white p-4 rounded-lg border border-gray-200 mb-4">
+                                <label className="flex items-start gap-3 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        id="subscribe-wallet"
+                                        checked={isSubscribed}
+                                        onChange={() => setIsSubscribed(!isSubscribed)}
+                                        className="mt-0.5 w-5 h-5 text-custom-blue border-gray-300 rounded focus:ring-2 focus:ring-custom-blue focus:ring-offset-0 bg-white"
+                                    />
+                                    <span className="text-sm text-gray-800 leading-relaxed">
+                                        Da, îmi pasă și doresc să primesc vești pe email despre proiectele Asociației ONedu.
+                                    </span>
+                                </label>
                             </div>
                             <button
                                 type="submit"

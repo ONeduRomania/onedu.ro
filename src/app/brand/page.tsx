@@ -3,25 +3,23 @@
 import React from 'react';
 import Image from 'next/image';
 import {Navbar, Footer} from '@/components';
+import HeroBrand from './hero-brand';
 
 const BrandPage = () => {
     return (
         <>
             <Navbar/>
+            <HeroBrand 
+                title="Brandul ONedu"
+                subtitle="Împreună construim pentru România, sub un singur brand - ON for Education."
+            />
 
-            <section className="py-12 text-center bg-[#16366D] text-white">
-                <h1 className="text-5xl font-bold mb-4">Brandul ONedu</h1>
-                <p className="text-lg max-w-2xl mx-auto">
-                    Împreună construim pentru România, sub un singur brand - ON for Education.
-                </p>
-            </section>
-
-            <main className="max-w-6xl mx-auto px-6 py-16 space-y-16">
-                <section className="grid md:grid-cols-2 gap-10 items-center">
+            <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-12 md:space-y-16">
+                {/* Prima secțiune */}
+                <section className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
                     <div>
-                        <h2 className="text-3xl font-bold text-[#16366D] mb-4">Un singur brand: zeci de soluții
-                            digitale</h2>
-                        <p className="text-black">
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Un singur brand: zeci de soluții digitale</h2>
+                        <p className="text-gray-700 leading-relaxed">
                             Din 2019, Asociația ONedu și-a dezvoltat un brand puternic în comunitate, prin care exprimă
                             puterea a doi tineri de a schimba România. Acest brand este un simbol al educației digitale,
                             al transparenței și al colaborării. Este un brand care inspiră și care aduce împreună oameni
@@ -31,61 +29,69 @@ const BrandPage = () => {
                             ale brandurilor.
                         </p>
                     </div>
-                    <Image
-                        src={`${process.env.BASE_IMAGE_URL}team-group/BKM_voluntari2024.jpg`}
-                        alt="Echipa Asociației ONedu"
-                        width={500}
-                        height={300}
-                        className="rounded-lg shadow-md"
-                    />
+                    <div className="relative rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                            src={`${process.env.BASE_IMAGE_URL}team-group/BKM_voluntari2024.jpg`}
+                            alt="Echipa Asociației ONedu"
+                            width={500}
+                            height={300}
+                            className="rounded-xl w-full h-auto"
+                        />
+                    </div>
                 </section>
 
-                <section className="bg-[#F3F4F6] p-10 rounded-xl text-center space-y-6">
-                    <h2 className="text-3xl font-bold text-[#16366D]">Badge de susținător #ONedu</h2>
-                    <p className="text-gray-700 max-w-2xl mx-auto">
+                {/* Secțiune Badge */}
+                <section className="bg-gray-50 p-8 md:p-10 rounded-xl text-center space-y-6">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Badge de susținător #ONedu</h2>
+                    <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
                         Susții Asociația ONedu? Poți folosi badgeul nostru de susținător în postările tale pentru a
-                        încuraja
-                        și prietenii tăi să susțină educația din România. Descarcă badge-ul de mai jos.
+                        încuraja și prietenii tăi să susțină educația din România. Descarcă badge-ul de mai jos.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6 mt-6">
-                        <a href="/downloads/brand-image1.png" download>
+                        <a href="/downloads/brand-image1.png" download className="group">
                             <Image
                                 src="/images/brand/thumb1.png"
                                 alt="Material ONedu 1"
                                 width={250}
                                 height={150}
-                                className="rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
+                                className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
                             />
                         </a>
-                        <a href="/downloads/brand-image2.png" download>
+                        <a href="/downloads/brand-image2.png" download className="group">
                             <Image
                                 src="/images/brand/thumb2.png"
                                 alt="Material ONedu 2"
                                 width={250}
                                 height={150}
-                                className="rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
+                                className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
                             />
                         </a>
-                        <a href="/downloads/brand-image3.png" download>
+                        <a href="/downloads/brand-image3.png" download className="group">
                             <Image
                                 src="/images/brand/thumb3.png"
                                 alt="Material ONedu 3"
                                 width={250}
                                 height={150}
-                                className="rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
+                                className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
                             />
                         </a>
                     </div>
-                    <p className="text-sm text-gray-500 mt-4">
-                        Ai o idee de colaborare sau vrei să organizezi o strângere de fonduri? Scrie-ne la <a
-                        className="underline text-custom-blue" href="mailto:contact@onedu.ro">contact@onedu.ro</a>
+                    <p className="text-sm text-gray-600 mt-6">
+                        Ai o idee de colaborare sau vrei să organizezi o strângere de fonduri? Scrie-ne la{' '}
+                        <a
+                            className="underline text-custom-blue hover:text-custom-blue-dark transition-colors"
+                            href="mailto:contact@onedu.ro"
+                        >
+                            contact@onedu.ro
+                        </a>
                     </p>
                 </section>
 
-                <section className="grid md:grid-cols-2 gap-8">
-                    <div className="bg-white p-6 rounded-xl border shadow-md">
-                        <h3 className="text-2xl font-bold text-[#16366D] mb-4">Reguli pentru parteneri</h3>
-                        <ul className="list-disc list-inside text-gray-700 space-y-2">
+                {/* Secțiune Reguli */}
+                <section className="grid md:grid-cols-2 gap-6 md:gap-8">
+                    <div className="bg-white p-6 md:p-8 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 pb-3 border-b-2 border-custom-blue">Reguli pentru parteneri</h3>
+                        <ul className="list-disc list-inside text-gray-700 space-y-3 text-sm md:text-base">
                             <li>Folosirea logo-ului și a numelui nostru este permisă în cadrul parteneriatelor,
                                 cu aprobarea prealabilă a echipei de comunicare a Asociației ONedu. Nu folosi logo-ul ONedu în scopuri comerciale fără acordul scris al nostru.
                             </li>
@@ -100,10 +106,9 @@ const BrandPage = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="bg-white p-6 rounded-xl border shadow-md">
-                        <h3 className="text-2xl font-bold text-[#16366D] mb-4">Reguli pentru susținători și
-                            voluntari</h3>
-                        <ul className="list-disc list-inside text-gray-700 space-y-2">
+                    <div className="bg-white p-6 md:p-8 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 pb-3 border-b-2 border-custom-blue">Reguli pentru susținători și voluntari</h3>
+                        <ul className="list-disc list-inside text-gray-700 space-y-3 text-sm md:text-base">
                             <li>Persoanele care strâng fonduri prin crearea unei campanii pe Platforma ONedu, pot folosi numele organizației,
                                 fără a sugera asocierea Asociației cu campania respectivă.</li>
                             <li>Logo-ul asociației poate fi folosit doar de persoanele care strâng fonduri prin crearea unei campanii pe Platforma ONedu,
@@ -116,11 +121,13 @@ const BrandPage = () => {
                     </div>
                 </section>
 
-                <section className="space-y-4">
-                    <h2 className="text-3xl font-bold text-[#16366D] text-center">Universul #ONedu</h2>
-                    <p className="text-center text-gray-700 text-lg">Branduri și soluții digitale sub egida Asociației
-                        ONedu</p>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                {/* Secțiune Universul ONedu */}
+                <section className="space-y-6">
+                    <div className="text-center">
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Universul #ONedu</h2>
+                        <p className="text-gray-700 text-base md:text-lg">Branduri și soluții digitale sub egida Asociației ONedu</p>
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
                         {[
                             {id: 'logo', label: 'Logo ONedu'},
                             {id: 'ivoluntar', label: 'iVoluntar'},
@@ -148,7 +155,7 @@ const BrandPage = () => {
                         ].map(({id, label}) => (
                             <div
                                 key={id}
-                                className="aspect-[4/3] bg-white border rounded-xl shadow flex items-center justify-center p-4 hover:shadow-lg transition"
+                                className="aspect-[4/3] bg-white border border-gray-200 rounded-xl shadow-md flex items-center justify-center p-4 hover:shadow-lg hover:border-custom-blue/30 transition-all duration-300"
                             >
                                 <Image
                                     src={`${process.env.BASE_IMAGE_URL}solutions/${id}.png`}

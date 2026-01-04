@@ -12,20 +12,19 @@ import { useRouter } from "next/navigation";
 
 
 export default function RedirectioneazaPage() {
-    const router = useRouter();
+    // const router = useRouter();
 
-    useEffect(() => {
-        router.push("/redirectioneaza/fwd");
-    }, [router]);
+    // useEffect(() => {
+    //     router.push("/redirectioneaza/fwd");
+    // }, [router]);
 
     return (
         <>
             <Navbar/>
             <Hero
-                background={`${process.env.BASE_IMAGE_URL}tedx/tedx_sala2.jpg`}
-                title="Construim împreună viitorul educației."
-                subtitle="Cu 3,5% din impozitul tău, transformăm modul în care copiii din România învață. Ajută-ne să aducem tehnologia în sălile de clasă și să le oferim elevilor șansa de a se conecta la viitor."
-                // youtubeUrl="https://youtu.be/3WvchgVIOqI"
+                title="Școala n-ar trebui să fie sfârșitul creativității."
+                subtitle="Cu 3,5% din impozitul tău, educația digitală readuce creativitatea acolo unde nu ar trebui să se piardă: în școală."
+                youtubeUrl="https://youtu.be/3WvchgVIOqI"
                 buttonText="Completează formularul"
                 buttonLink="/formular230"
             />
@@ -33,10 +32,12 @@ export default function RedirectioneazaPage() {
             <ContentSection
                 images={[`${process.env.BASE_IMAGE_URL}team-group/tedx2024.jpeg`, `${process.env.BASE_IMAGE_URL}team-group/bkm_centru.jpg`, `${process.env.BASE_IMAGE_URL}team-group/galaCOR2021.jpeg`]}
                 altTexts={['bkm_centru', 'tgmures_team']}
-                title="Manifestul nostru"
-                text="Am pornit la inițiativa a doi elevi gălățeni în 2019, cu scopul de a conecta cei 3.8 milioane de elevi români la viitor.
-                Avem peste 3.8 milioane de motive pentru a moderniza educația din România. Construim zi de zi soluții digitale inovatoare pentru elevi, părinți, profesori și școli. Împreună pentru generațiile de azi și mâine!"
+                title="De ce se pierde creativitatea în școală?"
+                text="Copiii intră în școală curioși, creativi și dornici să descopere. De multe ori însă, sistemul îi învață să reproducă informații, nu să creeze sau să gândească liber. Creativitatea nu dispare, ci rămâne nefolosită.
+                <br/><br/>
+                Educația digitală nu înseamnă ecrane în plus, ci un mod de a învăța care încurajează explorarea, colaborarea și creația. Este șansa de a transforma școala într-un spațiu unde creativitatea nu se oprește, ci crește."
                 layout="left"
+                backgroundColor="bg-white"
             />
 
             <ColumnSection
@@ -49,7 +50,7 @@ export default function RedirectioneazaPage() {
                 images={[`${process.env.BASE_IMAGE_URL}team-group/AmaliaCD.jpeg`, `${process.env.BASE_IMAGE_URL}team-group/abc_GL_2019.jpg`, `${process.env.BASE_IMAGE_URL}team-group/clase.png`, `${process.env.BASE_IMAGE_URL}team-group/caravanaCluj_1.jpg`]}
                 altTexts={['bkm_centru', 'tgmures_team']}
                 title="Unde merge investiția ta?"
-                text='Cu fiecare formular, ecosistemul de <a href="/plan">soluții digitale</a> devine realitate pentru cei 3.8 milioane de elevi din toată țara.
+                text='Cu fiecare formular, ecosistemul de <a href="/plan" class="text-custom-blue font-semibold hover:underline">soluții digitale</a> devine realitate pentru cei 3.8 milioane de elevi din toată țara.
                     Prin investiția ta, conectăm elevii cu viitorul. <br/><br/>
                     Pentru anul 2025, ne-am propus să construim soluțiile:
                     <br/>
@@ -59,17 +60,37 @@ export default function RedirectioneazaPage() {
                     <br/>
                     - <b>Eva</b>: competențe digitale de 10!'
                 layout="right"
+                backgroundColor="bg-gray-50"
             />
 
             <FormSubmission/>
-            <ContentSection
-                images={[`${process.env.BASE_IMAGE_URL}fiscal_details.jpg`]}
-                altTexts={['bkm_centru']}
-                title="Detalii fiscale"
-                text="Formularul 230 se completează de către persoanele fizice care realizează venituri din salarii. Procentul nu trebuie să depăşească plafonul de 3,5% din impozitul pe venit.
-                <br/><br/>Nu pot redirecționa 3,5% din impozitul pe venit: PFA-urile, titularii de întreprinderi individuale și familiale și alții care obțin venituri din activități independente (profesii liberale), cei care obțin venituri din drepturi de autor și pensii, în general cei care puteau face redirecționarea prin completarea formularului 230 sau a rubricii specifice din Declarația Unică (formularul 212)."
-                layout="left"
-            />
+            
+            <section className="w-full py-16 md:py-20 bg-white">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8">
+                        Detalii fiscale
+                    </h2>
+                    <div className="bg-gray-50 rounded-xl p-8 md:p-10 border border-gray-200">
+                        <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
+                            <div>
+                                <p className="mb-4">
+                                    <strong className="text-gray-900">Formularul 230</strong> se completează de către persoanele fizice care realizează venituri din salarii. Procentul nu trebuie să depăşească plafonul de <strong className="text-custom-blue">3,5% din impozitul pe venit</strong>.
+                                </p>
+                            </div>
+                            <div className="border-t border-gray-300 pt-6">
+                                <p className="font-semibold text-gray-900 mb-3">Nu pot redirecționa 3,5% din impozitul pe venit:</p>
+                                <ul className="list-disc list-inside space-y-2 ml-2">
+                                    <li>PFA-urile</li>
+                                    <li>Titularii de întreprinderi individuale și familiale</li>
+                                    <li>Cei care obțin venituri din activități independente (profesii liberale)</li>
+                                    <li>Cei care obțin venituri din drepturi de autor și pensii</li>
+                                    <li>În general, cei care puteau face redirecționarea prin completarea formularului 230 sau a rubricii specifice din Declarația Unică (formularul 212)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <Footer/>
         </>
     );

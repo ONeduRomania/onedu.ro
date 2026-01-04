@@ -19,23 +19,27 @@ export function HeroSection({ heroProject, handleProjectClick }: HeroSectionProp
 
     return (
         <section
-            className="relative w-screen h-[30vh] md:h-[50vh] bg-cover bg-center flex items-end justify-center pb-40 md:pb-20 mb-28"
+            className="relative w-full min-h-[400px] md:min-h-[500px] bg-cover bg-center flex items-center justify-center overflow-hidden"
             style={{ backgroundImage: `url(${heroProject.image})` }}
         >
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
+            
+            {/* Content Card */}
             <div
-                className="absolute bottom-12 left-1/2 transform -translate-x-1/2 translate-y-3/4 md:bottom-0 md:translate-y-1/2 w-4/5 md:w-3/5 bg-white p-8 shadow-md rounded-lg text-center cursor-pointer"
+                className="relative z-10 w-11/12 md:w-4/5 lg:w-3/5 bg-white rounded-xl p-6 md:p-8 lg:p-10 shadow-2xl cursor-pointer transition-all duration-300 hover:shadow-3xl hover:-translate-y-1"
                 onClick={() => handleProjectClick(heroProject.id)}
             >
-                <h1 className="text-lg md:text-2xl font-semibold mb-2">{heroProject.title}</h1>
-                <div className="flex justify-center gap-2 mt-4 flex-wrap">
-                    <span className="hidden md:inline bg-indigo-800 text-white px-4 py-1 rounded-full text-sm">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 leading-tight">{heroProject.title}</h1>
+                <div className="flex justify-center md:justify-start gap-3 mt-6 flex-wrap">
+                    <span className="bg-custom-blue text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
                         {heroProject.category}
                     </span>
-                    <span className="bg-indigo-800 text-white px-4 py-1 rounded-full text-sm">
+                    <span className="bg-gray-700 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
                         {heroProject.status}
                     </span>
                 </div>
-                <span className="text-gray-600 text-sm mt-4 block">{heroProject.date}</span>
+                <span className="text-gray-600 text-sm md:text-base mt-6 block font-medium">{heroProject.date}</span>
             </div>
         </section>
     );

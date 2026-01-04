@@ -15,7 +15,7 @@ export default function Homepage() {
             <Hero
                 background={`${process.env.BASE_IMAGE_URL}team-group/gvr-people.jpg`}
                 title="2.8 milioane de elevi din România nu au acces la educație digitală"
-                subtitle="Părinții trebuie să scoată bani din buzunar anual pentru a putea asigura acces elevilor la educația digitală. Ajută-ne să construim un ecosistem de soluții digitale pentru educație, gratuite pentru elevi, părinți și profesori"
+                subtitle="Părinții trebuie să scoată bani din buzunar anual pentru a putea asigura acces elevilor la educația digitală. Ajută-ne să construim un ecosistem de soluții digitale pentru educație, gratuite pentru elevi, părinți și profesori."
             >
                 <DonationForm/>
             </Hero>

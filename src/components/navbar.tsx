@@ -21,17 +21,19 @@ const MENU_ITEMS = [
     // { label: "Școala ONedu", href: "/scoala" },
     {label: "Sponsorizează 20%", href: "/sponsorizeaza"},
     {label: "Voluntariat", href: "https://docs.google.com/forms/d/e/1FAIpQLSc7C_yOO2HGJFpd2Ofm-h0trW3k8QBjw94ULHe3EBgeqXHEog/viewform?usp=sf_link"},
+    {label: "Centrul iVoluntar", href: "https://ivoluntar.org"},
     // { label: "Merch", href: "/merch" },
     {
         label: "Despre noi", href: "", subMenu: [
             {label: "Despre noi", href: "/despre"},
-            {label: "Proiecte", href: "/proiecte"},
+            {label: "Brandul ONedu", href: "/brand"},
+            // {label: "Proiecte", href: "/proiecte"},
             {label: "Premii", href: "/premii"},
             {label: "Rapoarte", href: "/rapoarte"},
             {label: "Susținători", href: "/parteneri"},
         ]
     },
-    {label: "Blog", href: "/blog"},
+    // {label: "Blog", href: "/blog"},
 ];
 
 export function Navbar() {
@@ -139,9 +141,9 @@ export function Navbar() {
                 </nav>
 
                 <div className="flex items-center">
-                    <Link href="https://contulmeu.onedu.ro" target="_blank" rel="noopener noreferrer">
+                    {/* <Link href="https://contulmeu.onedu.ro" target="_blank" rel="noopener noreferrer">
                         <FaUser className="text-3xl cursor-pointer hover:bg-gray-200 p-2 rounded-md ml-4"/>
-                    </Link>
+                    </Link> */}
                     <div className="flex items-center gap-4">
                         <Link href="/doneaza">
                             <button

@@ -9,7 +9,7 @@ import WalletModal from "@/components/donationModal/WalletModal";
 export function DonationForm() {
     const [amount, setAmount] = useState(100);
     const [frequency, setFrequency] = useState('lunar');
-    const [paymentMethod, setPaymentMethod] = useState('Card');
+    const [paymentMethod, setPaymentMethod] = useState('Date bancare');
     const [error, setError] = useState('');
     const [isSmartPayModal, setIsSmartPayModal] = useState(false);
     const [isTransferModalOpen, setIsTransferModalOpen] = useState(false);
@@ -36,18 +36,23 @@ export function DonationForm() {
         }
     };
 
-    const handleDonationClick = () => {
+    const handleDonationClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
         if (amount < 10) {
             setError('Suma minimă pentru donație este de 10 lei.');
             return;
         }
 
-        if (paymentMethod === 'Transfer bancar') {
-            setIsSmartPayModal(true);
-        } else if (paymentMethod === 'Date bancare') {
+        // Blocare temporară pentru Card și Transfer bancar
+        if (paymentMethod === 'Card' || paymentMethod === 'Transfer bancar') {
+            alert('Această modalitate de plată este temporar indisponibilă. Vă rugăm să folosiți "Date bancare".');
+            return;
+        }
+
+        if (paymentMethod === 'Date bancare') {
             setIsTransferModalOpen(true);
-        } else if (paymentMethod === 'Card') {
-            setIsCardModal(true);
         } else if (paymentMethod === 'Wallet') {
             setIsWalletModal(true);
         }
@@ -55,14 +60,11 @@ export function DonationForm() {
 
     return (
         <>
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4" role="alert">
-                <strong className="font-bold">Notă importantă: </strong>
-                <span className="block sm:inline">
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg w-full max-w-md border border-gray-100">
+                <div className="bg-amber-50 border-l-4 border-amber-400 text-amber-800 px-3 py-2 rounded mb-4 text-xs sm:text-sm" role="alert">
+                    <strong className="font-semibold">Notă: </strong>
                     Donațiile sunt momentan disponibile doar prin <strong>ordin de plată</strong>, utilizând datele bancare afișate.
-                </span>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+                </div>
                 <div className="mb-4">
                     <label className="block text-sm font-bold mb-2 text-gray-700">
                         Suma donată (minim 10lei)
@@ -86,20 +88,24 @@ export function DonationForm() {
                     </label>
                     <div className="flex gap-2">
                         <button
-                            className={`flex-1 p-2 text-sm rounded-lg border transition hover:border-custom-blue ${
-                                frequency === 'lunar' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
+                            className={`flex-1 p-2.5 text-sm rounded-lg border-2 font-semibold transition-all duration-200 ${
+                                frequency === 'lunar' 
+                                    ? 'bg-custom-blue text-white border-custom-blue shadow-md' 
+                                    : 'bg-gray-50 text-gray-700 border-gray-300 hover:border-custom-blue hover:bg-custom-blue-light'
                             }`}
                             onClick={() => setFrequency('lunar')}
                         >
-                            <strong>lunar</strong>
+                            lunar
                         </button>
                         <button
-                            className={`flex-1 p-2 text-sm rounded-lg border transition hover:border-custom-blue ${
-                                frequency === 'o singura data' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
+                            className={`flex-1 p-2.5 text-sm rounded-lg border-2 font-semibold transition-all duration-200 ${
+                                frequency === 'o singura data' 
+                                    ? 'bg-custom-blue text-white border-custom-blue shadow-md' 
+                                    : 'bg-gray-50 text-gray-700 border-gray-300 hover:border-custom-blue hover:bg-custom-blue-light'
                             }`}
                             onClick={() => setFrequency('o singura data')}
                         >
-                            <strong>o singura dată</strong>
+                            o singură dată
                         </button>
                     </div>
                 </div>
@@ -110,45 +116,61 @@ export function DonationForm() {
                     </label>
                     <div className="flex gap-2 flex-wrap justify-center">
                         <button
-                            className={`flex-1 p-2 text-sm rounded-lg border flex flex-col items-center justify-center transition hover:border-custom-blue ${
-                                paymentMethod === 'Card' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
+                            className={`flex-1 p-2 text-xs rounded-lg border-2 flex flex-col items-center justify-center transition-all duration-200 min-w-[80px] opacity-50 cursor-not-allowed ${
+                                paymentMethod === 'Card' 
+                                    ? 'bg-gray-300 text-gray-500 border-gray-300' 
+                                    : 'bg-gray-100 text-gray-400 border-gray-200'
                             }`}
-                            onClick={() => setPaymentMethod('Card')}
+                            onClick={() => {}}
+                            disabled
+                            title="Temporar indisponibil"
                         >
-                            <FaCreditCard className="mb-1"/> Card
+                            <FaCreditCard className="mb-1 text-base"/> 
+                            <span className="font-semibold text-xs">Card</span>
                         </button>
                         {isMobile && (
                             <button
-                                className={`flex-1 p-2 text-sm rounded-lg border flex flex-col items-center justify-center transition hover:border-custom-blue ${
-                                    paymentMethod === 'Wallet' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
+                                className={`flex-1 p-2 text-xs rounded-lg border-2 flex flex-col items-center justify-center transition-all duration-200 min-w-[80px] ${
+                                    paymentMethod === 'Wallet' 
+                                        ? 'bg-custom-blue text-white border-custom-blue shadow-md' 
+                                        : 'bg-gray-50 text-gray-700 border-gray-300 hover:border-custom-blue hover:bg-custom-blue-light'
                                 }`}
                                 onClick={() => setPaymentMethod('Wallet')}
                             >
-                                <FaWallet
-                                    className="mb-1"/> {navigator.userAgent.includes('iPhone') ? 'Apple Pay' : 'Google Pay'}
+                                <FaWallet className="mb-1 text-base"/> 
+                                <span className="font-semibold text-xs">{navigator.userAgent.includes('iPhone') ? 'Apple Pay' : 'Google Pay'}</span>
                             </button>
                         )}
                         <button
-                            className={`flex-1 p-2 text-sm rounded-lg border flex flex-col items-center justify-center transition hover:border-custom-blue ${
-                                paymentMethod === 'Transfer bancar' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
+                            className={`flex-1 p-2 text-xs rounded-lg border-2 flex flex-col items-center justify-center transition-all duration-200 min-w-[80px] opacity-50 cursor-not-allowed ${
+                                paymentMethod === 'Transfer bancar' 
+                                    ? 'bg-gray-300 text-gray-500 border-gray-300' 
+                                    : 'bg-gray-100 text-gray-400 border-gray-200'
                             }`}
-                            onClick={() => setPaymentMethod('Transfer bancar')}
+                            onClick={() => {}}
+                            disabled
+                            title="Temporar indisponibil"
                         >
-                            <FaUniversity className="mb-1"/> Transfer bancar
+                            <FaUniversity className="mb-1 text-base"/> 
+                            <span className="font-semibold text-center text-xs">Transfer bancar</span>
                         </button>
                         <button
-                            className={`flex-1 p-2 text-sm rounded-lg border flex flex-col items-center justify-center transition hover:border-custom-blue ${
-                                paymentMethod === 'Date bancare' ? 'bg-white text-black border-custom-blue' : 'bg-gray-100 text-gray-600 border-gray-300'
+                            className={`flex-1 p-2 text-xs rounded-lg border-2 flex flex-col items-center justify-center transition-all duration-200 min-w-[80px] ${
+                                paymentMethod === 'Date bancare' 
+                                    ? 'bg-custom-blue text-white border-custom-blue shadow-md' 
+                                    : 'bg-gray-50 text-gray-700 border-gray-300 hover:border-custom-blue hover:bg-custom-blue-light'
                             }`}
                             onClick={() => setPaymentMethod('Date bancare')}
                         >
-                            <FaFileInvoice className="mb-1"/> Date bancare
+                            <FaFileInvoice className="mb-1 text-base"/> 
+                            <span className="font-semibold text-center text-xs">Date bancare</span>
                         </button>
                     </div>
                 </div>
 
                 <button
-                    className="w-full p-3 bg-custom-blue text-white font-bold rounded-lg mt-2 hover:bg-custom-blue-dark transition"
+                    type="button"
+                    className="w-full p-4 bg-custom-blue text-white font-bold rounded-lg mt-4 hover:bg-custom-blue-dark transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 text-base cursor-pointer"
                     onClick={handleDonationClick}
                 >
                     Donează online

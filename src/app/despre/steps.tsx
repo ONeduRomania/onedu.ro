@@ -9,10 +9,10 @@ interface StepProps {
 
 const Step: React.FC<StepProps> = ({ number, title, description }) => {
     return (
-        <div className="bg-white p-8 rounded-2xl shadow-md transition-transform transform hover:-translate-y-2 hover:shadow-xl text-center">
-            <span className="text-4xl font-bold text-gray-800 mb-4 block">{number}</span>
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">{title}</h3>
-            <p className="text-gray-600">{description}</p>
+        <div className="bg-white p-6 md:p-8 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 text-center">
+            <span className="text-4xl font-bold text-custom-blue mb-4 block">{number}</span>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+            <p className="text-gray-700 leading-relaxed">{description}</p>
         </div>
     );
 };
@@ -37,10 +37,10 @@ const DigitalizationSection: React.FC = () => {
     ];
 
     return (
-        <section className="bg-[#fdfdff] py-16">
-            <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Cum digitalizăm România?</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="bg-white py-16 md:py-20">
+            <div className="container mx-auto px-4 max-w-6xl">
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12 md:mb-16">Cum digitalizăm România?</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     {steps.map((step, index) => (
                         <Step key={index} number={step.number} title={step.title} description={step.description} />
                     ))}

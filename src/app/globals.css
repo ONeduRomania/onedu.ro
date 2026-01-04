@@ -2,6 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables for consistency */
+:root {
+    --transition-fast: 150ms;
+    --transition-base: 300ms;
+    --transition-slow: 500ms;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Global animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp var(--transition-slow) ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight var(--transition-base) ease-out;
+}
+
+/* Enhanced button styles */
+.btn-primary {
+    @apply bg-custom-blue text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    @apply hover:bg-custom-blue-dark hover:shadow-lg hover:-translate-y-0.5;
+    @apply active:translate-y-0 active:shadow-md;
+}
+
+.btn-secondary {
+    @apply bg-white text-custom-blue border-2 border-custom-blue px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    @apply hover:bg-custom-blue-light hover:shadow-md hover:-translate-y-0.5;
+    @apply active:translate-y-0;
+}
+
+/* Card hover effects */
+.card-hover {
+    @apply transition-all duration-300;
+    @apply hover:shadow-lg hover:-translate-y-1;
+}
+
+/* Link hover effects */
+.link-hover {
+    @apply transition-colors duration-200;
+    @apply hover:text-custom-blue;
+}
+
 @media (max-width: 768px) {
     .slick-prev,
     .slick-next {

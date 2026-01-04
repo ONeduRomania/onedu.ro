@@ -13,6 +13,7 @@ interface ContentSectionProps {
     layout?: "left" | "right";
     buttonText?: string;
     buttonLink?: string;
+    backgroundColor?: string;
 }
 
 export function ContentSection({
@@ -23,6 +24,7 @@ export function ContentSection({
                                    layout = "left",
                                    buttonText,
                                    buttonLink,
+                                   backgroundColor = "bg-[#fdfdff]",
                                }: ContentSectionProps) {
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -31,8 +33,8 @@ export function ContentSection({
     };
 
     return (
-        <section className="w-full py-16 bg-[#fdfdff]">
-            <div className="container mx-auto px-6">
+        <section className={`w-full py-16 md:py-20 lg:py-24 ${backgroundColor}`}>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                 <div
                     className={`
                         flex flex-col
@@ -87,20 +89,18 @@ export function ContentSection({
                     </div>
 
                     <div className="w-full md:w-1/2 max-w-[600px] flex flex-col justify-center">
-                        <h2 className="text-4xl font-bold mb-6">{title}</h2>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight">{title}</h2>
                         <div
-                            className="text-lg leading-7"
+                            className="text-base md:text-lg leading-7 text-gray-700"
                             dangerouslySetInnerHTML={{ __html: text }}
                         />
                         {buttonText && buttonLink && (
                             <a
                                 href={buttonLink}
-                                className="mt-5 px-4 py-3 bg-custom-blue text-white font-semibold text-base rounded-lg transition-all duration-300 hover:bg-custom-blue-dark block mx-auto md:mx-0 text-center w-max"
+                                className="mt-6 px-6 py-3 bg-custom-blue text-white font-semibold text-base rounded-lg transition-all duration-300 hover:bg-custom-blue-dark hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 block mx-auto md:mx-0 text-center w-max"
                             >
                                 {buttonText}
                             </a>
-
-
                         )}
                     </div>
                 </div>

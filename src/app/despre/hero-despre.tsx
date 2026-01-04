@@ -1,21 +1,15 @@
 import React from "react";
 
-interface HeroProps {
-    background?: string; // Imaginea de fundal
-    title: string; // Titlul principal
-    subtitle: string; // Subtitlul
-    children?: React.ReactNode; // Conținut suplimentar (ex. formularul)
+interface HeroDespreProps {
+    background?: string;
+    title: string;
+    subtitle?: string;
 }
 
-export function Hero({
-                         background,
-                         title,
-                         subtitle,
-                         children,
-                     }: HeroProps) {
+export function HeroDespre({ background, title, subtitle }: HeroDespreProps) {
     return (
         <section
-            className="w-full flex flex-col items-center justify-center relative min-h-[350px] md:min-h-[380px] lg:min-h-[400px] overflow-hidden"
+            className="w-full flex flex-col items-center justify-center relative min-h-[250px] md:min-h-[280px] lg:min-h-[300px] overflow-hidden"
             style={{
                 background: background
                     ? `url(${background})`
@@ -50,26 +44,28 @@ export function Hero({
             {/* Subtle decorative overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-custom-blue/4 via-transparent to-transparent"></div>
 
-            <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-10 max-w-screen-xl w-full px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-16">
-                <div className="flex-1 text-black max-w-2xl flex flex-col justify-center space-y-5 animate-fade-in-up">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] text-gray-900 tracking-tight drop-shadow-sm">
-                        {title}
+            <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-8 max-w-screen-xl w-full px-4 sm:px-6 lg:px-8 py-6 md:py-8 lg:py-10">
+                <div className="flex-1 text-black max-w-2xl flex flex-col justify-center space-y-3 animate-fade-in-up">
+                    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-bold leading-snug text-gray-900 tracking-tight drop-shadow-sm">
+                        {title.includes('Punem bazele') ? (
+                            <>
+                                Punem bazele unei educații care<br className="hidden sm:block" />
+                                <span className="sm:ml-0"> ține pasul cu viitorul.</span>
+                            </>
+                        ) : (
+                            title
+                        )}
                     </h1>
                     {subtitle && (
-                        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 leading-relaxed font-normal max-w-xl drop-shadow-sm">
+                        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-800 leading-relaxed font-normal max-w-xl drop-shadow-sm">
                             {subtitle}
                         </p>
                     )}
                 </div>
-
-                {children && (
-                    <div className="flex-1 max-w-md w-full flex flex-col justify-center animate-slide-in-right">
-                        {children}
-                    </div>
-                )}
             </div>
         </section>
     );
 }
 
-export default Hero;
+export default HeroDespre;
+

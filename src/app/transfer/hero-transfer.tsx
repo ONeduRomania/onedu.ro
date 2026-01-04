@@ -10,7 +10,7 @@ const HeroSection = () => {
                 <h1 className="text-4xl font-bold mb-6">Transfer bancar</h1>
                 <p className="text-black text-xl">
                     Investește lunar în educație printr-o donație recurentă online,{" "}
-                    <Link href="/doneaza" className="hover:underline">
+                    <Link href="/doneaza" className="text-custom-blue font-bold underline hover:text-custom-blue-dark transition-colors">
                         de aici
                     </Link>.
                 </p>
