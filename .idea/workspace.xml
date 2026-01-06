@@ -4,27 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="fix errors">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="9ddfd914-ff5c-4fe9-813f-308b619c230a" name="Changes" comment="update site">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/blog/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/brand/hero-brand.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/brand/hero-brand.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/brand/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/brand/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/contact/ContactInfoSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/ContactInfoSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/contact/ContactItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/ContactItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/despre/TransparencySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/TransparencySection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/despre/echipa.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/echipa.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/despre/hero-despre.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/hero-despre.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/despre/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/despre/steps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/despre/steps.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/doneaza/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/doneaza/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/formular230/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/formular230/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/parteneri/PartenerCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/parteneri/PartenerCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/parteneri/hero-parteneri.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/parteneri/hero-parteneri.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/parteneri/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/parteneri/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/plan/SolutionPopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/plan/SolutionPopup.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/plan/digitalsolutions-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/plan/digitalsolutions-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/plan/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/plan/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/premii/PremiuCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/premii/PremiuCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/premii/hero-premii.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/premii/hero-premii.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/premii/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/premii/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/privacy/PrivacyContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/privacy/PrivacyContent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/privacy/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/privacy/page.tsx" afterDir="false" />
@@ -34,8 +36,8 @@
       <change beforePath="$PROJECT_DIR$/src/app/proiecte/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/proiecte/ProjectCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/proiecte/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/proiecte/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/rapoarte/RaportCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/rapoarte/RaportCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/rapoarte/hero-rapoarte.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/rapoarte/hero-rapoarte.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/rapoarte/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/rapoarte/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/redirectioneaza/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/redirectioneaza/hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/redirectioneaza/infoRedirect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/redirectioneaza/infoRedirect.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/redirectioneaza/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/redirectioneaza/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/sponsorizeaza/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sponsorizeaza/hero.tsx" afterDir="false" />
@@ -44,17 +46,14 @@
       <change beforePath="$PROJECT_DIR$/src/app/terms/TermsContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/TermsContent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/terms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/transfer/hero-transfer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/transfer/hero-transfer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/donationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewsletterModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewsletterModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/donationModal/CardModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/CardModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/donationModal/SmartPayModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/SmartPayModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/donationModal/TransferModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/TransferModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/donationModal/WalletModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/donationModal/WalletModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pageContent/carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageContent/carousel.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pageContent/column-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageContent/column-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageContent/content-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageContent/content-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageContent/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageContent/hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/ceFacem.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/ceFacem.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/parteneri.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/parteneri.json" afterDir="false" />
     </list>
@@ -258,23 +257,7 @@
       <workItem from="1760905959471" duration="800000" />
       <workItem from="1760909471876" duration="574000" />
       <workItem from="1761057201968" duration="1197000" />
-      <workItem from="1767429788255" duration="9841000" />
-    </task>
-    <task id="LOCAL-00033" summary="ticketpage">
-      <option name="closed" value="true" />
-      <created>1734267156811</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1734267156811</updated>
-    </task>
-    <task id="LOCAL-00034" summary="corporate page + other mod">
-      <option name="closed" value="true" />
-      <created>1734269067257</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1734269067257</updated>
+      <workItem from="1767429788255" duration="13634000" />
     </task>
     <task id="LOCAL-00035" summary="corporate page + other mod">
       <option name="closed" value="true" />
@@ -652,7 +635,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761058712065</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="update site">
+      <option name="closed" value="true" />
+      <created>1767563885312</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1767563885315</updated>
+    </task>
+    <task id="LOCAL-00083" summary="update site">
+      <option name="closed" value="true" />
+      <created>1767564181375</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1767564181375</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,6 +694,7 @@
     <MESSAGE value="update final politici" />
     <MESSAGE value="cateva updateuri site majore" />
     <MESSAGE value="fix errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix errors" />
+    <MESSAGE value="update site" />
+    <option name="LAST_COMMIT_MESSAGE" value="update site" />
   </component>
 </project>

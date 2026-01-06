@@ -27,8 +27,9 @@ const Formular230Page: React.FC = () => {
     const [selectedSignature, setSelectedSignature] = useState<string>('suggested');
     const [isDrawing, setIsDrawing] = useState<boolean>(false);
     const sigCanvas = useRef<SignatureCanvas>(null);
-    const [isAgreed, setIsAgreed] = useState<boolean>(true);
+    const [isAgreed, setIsAgreed] = useState<boolean>(false);
     const [isSubscribed, setIsSubscribed] = useState<boolean>(false);
+    const [isDataAgreed, setIsDataAgreed] = useState<boolean | null>(null);
 
     const [lastName, setLastName] = useState<string>('');
     const [initialaTatalui, setInitialaTatalui] = useState<string>('');
@@ -113,6 +114,10 @@ const Formular230Page: React.FC = () => {
             setErrorMessage('Județul și orașul sunt obligatorii.');
             return false;
         }
+        if (isDataAgreed === null) {
+            setErrorMessage('Te rugăm să alegi dacă ești de acord sau nu cu comunicarea datelor către entitatea beneficiară.');
+            return false;
+        }
         if (!isAgreed) {
             setErrorMessage('Trebuie să accepți termenii și politica de confidențialitate.');
             return false;
@@ -161,6 +166,7 @@ const Formular230Page: React.FC = () => {
         formData.append("selectedSignature", selectedSignature);
         formData.append("isAgreed", isAgreed.toString());
         formData.append("isSubscribed", isSubscribed.toString());
+        formData.append("isDataAgreed", isDataAgreed !== null ? isDataAgreed.toString() : '');
         if (signatureBlob) {
             formData.append("signature", signatureBlob, "signature.png");
         } else {
@@ -210,46 +216,58 @@ const Formular230Page: React.FC = () => {
         setStaircase('');
         setFloor('');
         setApartment('');
-        setIsAgreed(true);
+        setIsAgreed(false);
         setIsSubscribed(false);
+        setIsDataAgreed(null);
     };
 
     return (
         <>
             <Navbar/>
-            <div className="max-w-4xl mx-auto py-8 px-4">
-                <header className="mb-6 text-center">
-                    <h1 className="text-4xl font-bold text-gray-800 mb-4 mt-8">Redirecționează 3,5%</h1>
-                    <p className="text-base text-gray-600 leading-relaxed mb-6">
-                        Completează formularul de mai jos cu datele tale personale și semnează-l până la <strong>25 mai
-                        2025</strong>.
+            <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+                <header className="mb-8 text-center">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+                        Redirecționează 3,5%
+                    </h1>
+                    <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                        Completează formularul de mai jos cu datele tale personale și semnează-l până la{' '}
+                        <strong className="text-custom-blue">25 mai 2026</strong>.
                     </p>
                 </header>
 
                 {successMessage && (
-                    <div className="mb-4 p-4 text-green-700 bg-green-100 rounded">
-                        {successMessage}
+                    <div className="mb-6 p-4 text-green-800 bg-green-50 border-l-4 border-green-500 rounded-lg shadow-sm">
+                        <div className="flex items-center gap-2">
+                            <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                            <span className="font-medium">{successMessage}</span>
+                        </div>
                     </div>
                 )}
                 {errorMessage && (
-                    <div className="mb-4 p-4 text-red-700 bg-red-100 rounded">
-                        {errorMessage}
+                    <div className="mb-6 p-4 text-red-800 bg-red-50 border-l-4 border-red-500 rounded-lg shadow-sm">
+                        <div className="flex items-center gap-2">
+                            <svg className="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                            </svg>
+                            <span className="font-medium">{errorMessage}</span>
+                        </div>
                     </div>
                 )}
 
-                <form className="space-y-6" onSubmit={handleSubmit}>
-                    <div className="mb-6">
-                        <p className="text-sm font-bold text-gray-600 mb-2">
-                            Pentru ce perioadă dorești să redirecționezi? <span
-                            className="text-red-500 ml-1 text-sm">*</span>
+                <form className="space-y-8" onSubmit={handleSubmit}>
+                    <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <p className="text-base font-semibold text-gray-800 mb-4">
+                            Pentru ce perioadă dorești să redirecționezi? <span className="text-red-500 ml-1">*</span>
                         </p>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-3">
                             <button
                                 type="button"
-                                className={`py-2 px-4 text-sm font-bold border border-gray-300 rounded-lg bg-gray-100 text-gray-600 cursor-pointer transition duration-300 ${
+                                className={`py-3 px-6 text-sm font-semibold border-2 rounded-lg cursor-pointer transition-all duration-300 shadow-sm ${
                                     selectedPeriod === '1'
-                                        ? 'bg-white text-indigo-700 border-2 border-indigo-700'
-                                        : 'hover:bg-gray-200 text-gray-800'
+                                        ? 'bg-custom-blue text-white border-custom-blue shadow-md'
+                                        : 'bg-white text-gray-700 border-gray-300 hover:border-custom-blue hover:bg-custom-blue-light'
                                 }`}
                                 onClick={() => setSelectedPeriod('1')}
                             >
@@ -257,10 +275,10 @@ const Formular230Page: React.FC = () => {
                             </button>
                             <button
                                 type="button"
-                                className={`py-2 px-4 text-sm font-bold border border-gray-300 rounded-lg bg-gray-100 text-gray-600 cursor-pointer transition duration-300 ${
+                                className={`py-3 px-6 text-sm font-semibold border-2 rounded-lg cursor-pointer transition-all duration-300 shadow-sm ${
                                     selectedPeriod === '2'
-                                        ? 'bg-white text-indigo-700 border-2 border-indigo-700'
-                                        : 'hover:bg-gray-200 text-gray-800'
+                                        ? 'bg-custom-blue text-white border-custom-blue shadow-md'
+                                        : 'bg-white text-gray-700 border-gray-300 hover:border-custom-blue hover:bg-custom-blue-light'
                                 }`}
                                 onClick={() => setSelectedPeriod('2')}
                             >
@@ -270,8 +288,10 @@ const Formular230Page: React.FC = () => {
                     </div>
 
                     {/* DATE PERSONALE */}
-                    <section className="mb-6">
-                        <h2 className="text-xl font-bold mb-2">Date personale</h2>
+                    <section className="bg-white rounded-xl shadow-md p-6 md:p-8 border border-gray-100">
+                        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-custom-blue-light">
+                            Date personale
+                        </h2>
 
                         <div className="flex flex-wrap gap-4">
                             {/* Nume de familie */}
@@ -288,7 +308,7 @@ const Formular230Page: React.FC = () => {
                                     // pattern permite doar litere (românești), spații și câteva semne uzuale
                                     pattern="^[A-Za-zĂÂÎȘȚăâîșț \.'-]+$"
                                     title="Te rugăm să introduci doar litere și caractere uzuale ( -, ', . )."
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
                             </div>
 
@@ -309,9 +329,9 @@ const Formular230Page: React.FC = () => {
                                     onChange={(e) => setInitialaTatalui(e.target.value)}
                                     pattern="^[A-Za-zĂÂÎȘȚăâîșț]$"
                                     title="Te rugăm să introduci o singură literă."
-                                    className="w-full p-2 text-base border border-gray-300 rounded
-                                               focus:outline-none focus:border-indigo-600
-                                               transition-colors duration-300 text-center"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg
+                                               focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue
+                                               transition-all duration-200 shadow-sm hover:border-gray-400 text-center"
                                 />
                             </div>
 
@@ -328,7 +348,7 @@ const Formular230Page: React.FC = () => {
                                     onChange={(e) => setFirstName(e.target.value)}
                                     pattern="^[A-Za-zĂÂÎȘȚăâîșț \.'-]+$"
                                     title="Te rugăm să introduci doar litere și caractere uzuale ( -, ', . )."
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
                             </div>
                         </div>
@@ -346,7 +366,7 @@ const Formular230Page: React.FC = () => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     // HTML5 deja validează formatul email
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
                             </div>
                             {/* Telefon (opțional) */}
@@ -361,7 +381,7 @@ const Formular230Page: React.FC = () => {
                                     onChange={(e) => setPhone(e.target.value)}
                                     pattern="^\+?[0-9\s\-\(\)]{7,}$"
                                     title="Număr de telefon valid (minim 7 cifre). Ex: +40712345678"
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
                             </div>
                         </div>
@@ -384,7 +404,7 @@ const Formular230Page: React.FC = () => {
                                     pattern="\d{13}"
                                     maxLength={13}
                                     title="CNP-ul trebuie să conțină exact 13 cifre."
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
 
                             </div>
@@ -392,8 +412,10 @@ const Formular230Page: React.FC = () => {
                     </section>
 
                     {/* ADRESĂ DE DOMICILIU */}
-                    <section className="mb-6">
-                        <h2 className="text-xl font-bold mb-2">Adresă de domiciliu</h2>
+                    <section className="bg-white rounded-xl shadow-md p-6 md:p-8 border border-gray-100">
+                        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-custom-blue-light">
+                            Adresă de domiciliu
+                        </h2>
                         <div className="flex flex-wrap gap-4">
                             <div className="flex-1 min-w-[120px] mb-4">
                                 <label htmlFor="street" className="text-sm font-bold text-gray-600 mb-1 block">
@@ -407,7 +429,7 @@ const Formular230Page: React.FC = () => {
                                     onChange={(e) => setStreet(e.target.value)}
                                     pattern="^[A-Za-zĂÂÎȘȚăâîșț0-9\.\,\-\s]+$"
                                     title="Introdu doar litere, cifre și caractere uzuale (., -)."
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
                             </div>
                             <div className="flex-1 min-w-[120px] mb-4">
@@ -422,7 +444,7 @@ const Formular230Page: React.FC = () => {
                                     onChange={(e) => setNumber(e.target.value)}
                                     pattern="^[0-9A-Za-z\/-]+$"
                                     title="Poți folosi cifre și caractere uzuale (/, -)."
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
                             </div>
                         </div>
@@ -439,7 +461,7 @@ const Formular230Page: React.FC = () => {
                                     onChange={(e) => setBlock(e.target.value)}
                                     pattern="^[0-9A-Za-z]+$"
                                     title="Doar cifre și/sau litere. Poți lăsa gol dacă nu se aplică."
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
                             </div>
                             <div className="flex-1 min-w-[120px] mb-4">
@@ -453,7 +475,7 @@ const Formular230Page: React.FC = () => {
                                     onChange={(e) => setStaircase(e.target.value)}
                                     pattern="^[0-9A-Za-z]+$"
                                     title="Doar cifre și/sau litere. Poți lăsa gol dacă nu se aplică."
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
                             </div>
                             <div className="flex-1 min-w-[120px] mb-4">
@@ -467,7 +489,7 @@ const Formular230Page: React.FC = () => {
                                     onChange={(e) => setFloor(e.target.value)}
                                     pattern="^[0-9A-Za-z]+$"
                                     title="Doar cifre și/sau litere. Poți lăsa gol dacă nu se aplică."
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
                             </div>
                             <div className="flex-1 min-w-[120px] mb-4">
@@ -481,7 +503,7 @@ const Formular230Page: React.FC = () => {
                                     onChange={(e) => setApartment(e.target.value)}
                                     pattern="^[0-9A-Za-z]+$"
                                     title="Doar cifre și/sau litere. Poți lăsa gol dacă nu se aplică."
-                                    className="w-full p-2 text-base border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400"
                                 />
                             </div>
                         </div>
@@ -496,7 +518,7 @@ const Formular230Page: React.FC = () => {
                                     value={selectedCounty}
                                     onChange={(e) => setSelectedCounty(e.target.value)}
                                     required
-                                    className="w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-custom-blue transition-all duration-200 shadow-sm hover:border-gray-400 bg-white"
                                 >
                                     <option value="">Alege județ...</option>
                                     {judete.map((judet) => (
@@ -516,7 +538,7 @@ const Formular230Page: React.FC = () => {
                                     onChange={(e) => setSelectedCity(e.target.value)}
                                     required
                                     disabled={!cities.length}
-                                    className="w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:border-indigo-600 transition-colors duration-300 disabled:opacity-50"
+                                    className="w-full p-3 text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-600 transition-all duration-200 shadow-sm hover:border-gray-400 bg-white disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     <option value="">Alege oraș...</option>
                                     {cities.map((city) => (
@@ -530,16 +552,18 @@ const Formular230Page: React.FC = () => {
                     </section>
 
                     {/* SEMNĂTURĂ */}
-                    <section className="mb-6">
-                        <h2 className="text-xl font-bold mb-2">Semnătură</h2>
-                        <p className="text-sm font-bold text-gray-600 mb-2">Alege cum dorești să semnezi:</p>
-                        <div className="flex flex-wrap gap-2">
+                    <section className="bg-white rounded-xl shadow-md p-6 md:p-8 border border-gray-100">
+                        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 pb-3 border-b-2 border-custom-blue-light">
+                            Semnătură
+                        </h2>
+                        <p className="text-sm font-medium text-gray-600 mb-4">Alege cum dorești să semnezi:</p>
+                        <div className="flex flex-wrap gap-3">
                             <button
                                 type="button"
-                                className={`py-2 px-4 text-sm font-bold border border-gray-300 rounded-lg bg-gray-100 text-gray-600 cursor-pointer transition duration-300 ${
+                                className={`py-3 px-5 text-sm font-semibold border-2 rounded-lg cursor-pointer transition-all duration-300 shadow-sm ${
                                     selectedSignature === 'suggested'
-                                        ? 'bg-white text-indigo-700 border-2 border-indigo-700'
-                                        : 'hover:bg-gray-200 text-gray-800'
+                                        ? 'bg-custom-blue text-white border-custom-blue shadow-md'
+                                        : 'bg-white text-gray-700 border-gray-300 hover:border-custom-blue hover:bg-custom-blue-light'
                                 }`}
                                 onClick={() => {
                                     setSelectedSignature('suggested');
@@ -550,10 +574,10 @@ const Formular230Page: React.FC = () => {
                             </button>
                             <button
                                 type="button"
-                                className={`py-2 px-4 text-sm font-bold border border-gray-300 rounded-lg bg-gray-100 text-gray-600 cursor-pointer transition duration-300 ${
+                                className={`py-3 px-5 text-sm font-semibold border-2 rounded-lg cursor-pointer transition-all duration-300 shadow-sm ${
                                     selectedSignature === 'manual'
-                                        ? 'bg-white text-indigo-700 border-2 border-indigo-700'
-                                        : 'hover:bg-gray-200 text-gray-800'
+                                        ? 'bg-custom-blue text-white border-custom-blue shadow-md'
+                                        : 'bg-white text-gray-700 border-gray-300 hover:border-custom-blue hover:bg-custom-blue-light'
                                 }`}
                                 onClick={() => {
                                     setSelectedSignature('manual');
@@ -565,20 +589,19 @@ const Formular230Page: React.FC = () => {
                         </div>
 
                         {isDrawing && (
-                            <div
-                                className="mt-4 p-4 border border-gray-300 rounded bg-gray-100 flex flex-col items-center gap-4">
+                            <div className="mt-6 p-6 border-2 border-gray-200 rounded-xl bg-gray-50 flex flex-col items-center gap-4 shadow-inner">
                                 <SignatureCanvas
                                     ref={sigCanvas}
                                     penColor="black"
                                     canvasProps={{
                                         width: 500,
                                         height: 200,
-                                        className: "border border-gray-300 rounded bg-white w-full max-w-xs",
+                                        className: "border-2 border-gray-300 rounded-lg bg-white w-full max-w-xs shadow-sm",
                                     }}
                                 />
                                 <button
                                     type="button"
-                                    className="bg-red-500 text-white py-2 px-4 text-sm font-bold rounded cursor-pointer transition-colors duration-300 hover:bg-red-600"
+                                    className="bg-red-500 text-white py-2.5 px-6 text-sm font-semibold rounded-lg cursor-pointer transition-all duration-300 hover:bg-red-600 shadow-md hover:shadow-lg"
                                     onClick={clearSignature}
                                 >
                                     Șterge semnătura
@@ -588,44 +611,85 @@ const Formular230Page: React.FC = () => {
                     </section>
 
                     {/* ACORDURI */}
-                    <section className="mb-6">
-                        <div className="mt-4 p-4 border border-gray-300 rounded bg-gray-100">
-                            <div className="flex items-center gap-2 text-base">
-                                <input
-                                    type="checkbox"
-                                    id="terms"
-                                    checked={isAgreed}
-                                    onChange={(e) => setIsAgreed(e.target.checked)}
-                                    className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
-                                />
-                                <label htmlFor="terms" className="flex-1">
-                                    Sunt de acord cu{' '}
-                                    <Link href="/terms" target="_blank" rel="noopener noreferrer"
-                                          className="text-indigo-700 underline">
-                                        Termenii
-                                    </Link>{' '}
-                                    și{' '}
-                                    <Link href="/privacy" target="_blank" rel="noopener noreferrer"
-                                          className="text-indigo-700 underline">
-                                        Politica de Confidențialitate
-                                    </Link>
-                                </label>
+                    <section className="bg-white rounded-xl shadow-md p-6 md:p-8 border border-gray-100">
+                        <div className="space-y-5">
+                            {/* Notificare ANAF */}
+                            <div className="p-5 bg-amber-50 border-l-4 border-amber-400 rounded-lg shadow-sm">
+                                <div className="flex items-start gap-3">
+                                    <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                                    </svg>
+                                    <p className="text-sm text-gray-800 leading-relaxed">
+                                        În urma noilor reglementări, ANAF poate informa Asociația ONedu cu privire la sumele redirecționate de fiecare persoană fizică. Dacă ne oferi acordul tău, vom putea adăuga această contribuție în contul tău de donator și îți vom mulțumi personal pentru implicare.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </section>
 
-                    <section className="mb-6">
-                        <div className="mt-4 p-4 border border-gray-300 rounded bg-gray-100">
-                            <div className="flex items-center gap-2 text-base">
+                            {/* Acord comunicare date */}
+                            <div className="space-y-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                                <label className="text-sm font-semibold text-gray-800 block">
+                                    Sunt de acord ca datele de identificare (nume, prenume și cod numeric personal/număr de identificare fiscală), precum și suma direcționată să fie comunicate entității beneficiare.
+                                    <span className="text-red-500 ml-1">*</span>
+                                </label>
+                                <div className="flex flex-wrap gap-4">
+                                    <label className="flex items-center gap-2 cursor-pointer group">
+                                        <input
+                                            type="radio"
+                                            name="dataAgreement"
+                                            checked={isDataAgreed === true}
+                                            onChange={() => setIsDataAgreed(true)}
+                                            className="h-5 w-5 text-custom-blue border-gray-300 focus:ring-2 focus:ring-custom-blue cursor-pointer"
+                                        />
+                                        <span className="text-sm text-gray-700 group-hover:text-gray-900">Sunt de acord</span>
+                                    </label>
+                                    <label className="flex items-center gap-2 cursor-pointer group">
+                                        <input
+                                            type="radio"
+                                            name="dataAgreement"
+                                            checked={isDataAgreed === false}
+                                            onChange={() => setIsDataAgreed(false)}
+                                            className="h-5 w-5 text-custom-blue border-gray-300 focus:ring-2 focus:ring-custom-blue cursor-pointer"
+                                        />
+                                        <span className="text-sm text-gray-700 group-hover:text-gray-900">Nu sunt de acord</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            {/* Newsletter */}
+                            <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
                                 <input
                                     type="checkbox"
                                     id="newsletter"
                                     checked={isSubscribed}
                                     onChange={(e) => setIsSubscribed(e.target.checked)}
-                                    className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                    className="h-5 w-5 text-custom-blue border-gray-300 rounded focus:ring-2 focus:ring-custom-blue mt-0.5 cursor-pointer"
                                 />
-                                <label htmlFor="newsletter" className="flex-1">
+                                <label htmlFor="newsletter" className="text-sm text-gray-700 cursor-pointer flex-1">
                                     Da, îmi pasă și doresc să primesc vești pe email despre proiectele Asociației ONedu.
+                                </label>
+                            </div>
+
+                            {/* Termeni și Politică */}
+                            <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-custom-blue transition-colors">
+                                <input
+                                    type="checkbox"
+                                    id="terms"
+                                    checked={isAgreed}
+                                    onChange={(e) => setIsAgreed(e.target.checked)}
+                                    className="h-5 w-5 text-custom-blue border-gray-300 rounded focus:ring-2 focus:ring-custom-blue mt-0.5 cursor-pointer"
+                                />
+                                <label htmlFor="terms" className="text-sm text-gray-700 cursor-pointer flex-1">
+                                    Sunt de acord cu{' '}
+                                    <Link href="/terms" target="_blank" rel="noopener noreferrer"
+                                          className="text-custom-blue underline hover:text-custom-blue-dark font-medium">
+                                        Termenii
+                                    </Link>{' '}
+                                    și{' '}
+                                    <Link href="/privacy" target="_blank" rel="noopener noreferrer"
+                                          className="text-custom-blue underline hover:text-custom-blue-dark font-medium">
+                                        Politica de Confidențialitate
+                                    </Link>
+                                    <span className="text-red-500 ml-1 font-bold">*</span>
                                 </label>
                             </div>
                         </div>
@@ -634,27 +698,45 @@ const Formular230Page: React.FC = () => {
                     <button
                         type="submit"
                         disabled={loading}
-                        className={`bg-custom-blue text-white py-4 px-6 text-lg font-bold border-none rounded-lg cursor-pointer text-center w-full hover:bg-custom-blue-dark transition-colors duration-300 ${
-                            loading ? 'opacity-50 cursor-not-allowed' : ''
+                        className={`bg-custom-blue text-white py-4 px-8 text-lg font-bold border-none rounded-xl cursor-pointer text-center w-full shadow-lg hover:shadow-xl hover:bg-custom-blue-dark transition-all duration-300 transform hover:-translate-y-0.5 ${
+                            loading ? 'opacity-50 cursor-not-allowed transform-none' : ''
                         }`}
                     >
-                        {loading ? 'Trimite...' : 'Trimite Formularul'}
+                        {loading ? (
+                            <span className="flex items-center justify-center gap-2">
+                                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                Trimite...
+                            </span>
+                        ) : (
+                            'Trimite Formularul'
+                        )}
                     </button>
                 </form>
 
 
                 {showModal && (
-                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                        <div className="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full text-center">
-                            <h2 className="text-2xl font-bold mb-4">Formularul a fost semnat cu succes!</h2>
-                            <p className="mb-6 text-lg">
-                                Îți mulțumim pentru generozitatea ta. Ți-am trimis o copie a formularului pe email-ul
-                                comunicat de tine,
-                                alături de certificatul tău de donator pentru educație.
-                            </p>
+                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50 p-4 backdrop-blur-sm">
+                        <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-lg w-full text-center transform transition-all">
+                            <div className="mb-6">
+                                <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-4">
+                                    <svg className="h-10 w-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                                    Formularul a fost semnat cu succes!
+                                </h2>
+                                <p className="text-base text-gray-600 leading-relaxed">
+                                    Îți mulțumim pentru generozitatea ta. Ți-am trimis o copie a formularului pe email-ul
+                                    comunicat de tine, alături de certificatul tău de donator pentru educație.
+                                </p>
+                            </div>
                             <button
                                 onClick={closeModal}
-                                className="bg-custom-blue text-white px-6 py-3 text-lg font-bold rounded-lg hover:bg-custom-blue-dark transition-colors duration-300"
+                                className="bg-custom-blue text-white px-8 py-3 text-lg font-semibold rounded-xl hover:bg-custom-blue-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-full sm:w-auto"
                             >
                                 Am înțeles
                             </button>
