@@ -34,7 +34,7 @@
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.509.0",
     "multer": "2.0.2",
-    "next": "14.2.5",
+    "next": "14.2.35",
     "nprogress": "^0.2.0",
     "ntp-logo-react": "^1.0.0",
     "postcss": "8",
