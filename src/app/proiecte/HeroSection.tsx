@@ -1,4 +1,8 @@
-import React from "react";
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface HeroProject {
     id: string;
@@ -11,36 +15,45 @@ interface HeroProject {
 
 interface HeroSectionProps {
     heroProject: HeroProject | null;
-    handleProjectClick: (id: string) => void;
+    handleProjectClick?: (id: string) => void;
 }
 
-export function HeroSection({ heroProject, handleProjectClick }: HeroSectionProps) {
+export function HeroSection({ heroProject }: HeroSectionProps) {
     if (!heroProject) return null;
 
     return (
-        <section
-            className="relative w-full min-h-[400px] md:min-h-[500px] bg-cover bg-center flex items-center justify-center overflow-hidden"
-            style={{ backgroundImage: `url(${heroProject.image})` }}
-        >
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
-            
-            {/* Content Card */}
-            <div
-                className="relative z-10 w-11/12 md:w-4/5 lg:w-3/5 bg-white rounded-xl p-6 md:p-8 lg:p-10 shadow-2xl cursor-pointer transition-all duration-300 hover:shadow-3xl hover:-translate-y-1"
-                onClick={() => handleProjectClick(heroProject.id)}
-            >
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 leading-tight">{heroProject.title}</h1>
-                <div className="flex justify-center md:justify-start gap-3 mt-6 flex-wrap">
-                    <span className="bg-custom-blue text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
-                        {heroProject.category}
-                    </span>
-                    <span className="bg-gray-700 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
-                        {heroProject.status}
-                    </span>
+        <section className="relative w-full overflow-hidden">
+            <Link href={`/proiecte/${heroProject.id}`} className="block group">
+                <div className="relative w-full aspect-[21/9] max-h-[360px] overflow-hidden">
+                    <Image
+                        src={heroProject.image}
+                        alt={heroProject.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="100vw"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                    <div className="absolute bottom-8 left-0 right-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span className="inline-block bg-custom-blue text-white px-3 py-1.5 rounded-lg text-sm font-semibold mb-3">
+                            {heroProject.category}
+                        </span>
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-2">
+                            {heroProject.title}
+                        </h1>
+                        <div className="flex flex-wrap gap-3 text-white/90 text-sm">
+                            <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">{heroProject.status}</span>
+                            <span>{heroProject.date}</span>
+                        </div>
+                        <span className="inline-flex items-center gap-2 mt-4 text-white font-medium group-hover:gap-3 transition-all">
+                            Descoperă proiectul
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </span>
+                    </div>
                 </div>
-                <span className="text-gray-600 text-sm md:text-base mt-6 block font-medium">{heroProject.date}</span>
-            </div>
+            </Link>
         </section>
     );
 }

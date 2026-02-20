@@ -22,18 +22,18 @@ const MENU_ITEMS = [
     {label: "Sponsorizează 20%", href: "/sponsorizeaza"},
     {label: "Voluntariat", href: "https://docs.google.com/forms/d/e/1FAIpQLSc7C_yOO2HGJFpd2Ofm-h0trW3k8QBjw94ULHe3EBgeqXHEog/viewform?usp=sf_link"},
     {label: "Centrul iVoluntar", href: "https://ivoluntar.org"},
+    {label: "Blog", href: "/blog"},
     // { label: "Merch", href: "/merch" },
     {
         label: "Despre noi", href: "", subMenu: [
             {label: "Despre noi", href: "/despre"},
             {label: "Brandul ONedu", href: "/brand"},
-            // {label: "Proiecte", href: "/proiecte"},
+            {label: "Proiecte", href: "/proiecte"},
             {label: "Premii", href: "/premii"},
             {label: "Rapoarte", href: "/rapoarte"},
             {label: "Susținători", href: "/parteneri"},
         ]
     },
-    // {label: "Blog", href: "/blog"},
 ];
 
 export function Navbar() {
